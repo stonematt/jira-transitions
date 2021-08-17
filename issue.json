@@ -1,0 +1,664 @@
+{
+  "expand": "renderedFields,names,schema,transitions,operations,editmeta,changelog,versionedRepresentations,customfield_12400.requestTypePractice",
+  "id": "113605",
+  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113605",
+  "key": "SUPPORT-60933",
+  "transitions": [
+    {
+      "id": "81",
+      "name": "Start Delivery",
+      "to": {
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10436",
+        "description": "Work has been started on the delivery board.",
+        "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+        "name": "In Delivery",
+        "id": "10436",
+        "statusCategory": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+          "id": 4,
+          "key": "indeterminate",
+          "colorName": "yellow",
+          "name": "In Progress"
+        }
+      },
+      "hasScreen": false,
+      "isGlobal": false,
+      "isInitial": false,
+      "isAvailable": true,
+      "isConditional": false,
+      "isLooped": false
+    }
+  ],
+  "fields": {
+    "statuscategorychangedate": "2021-06-30T14:14:16.280-0400",
+    "customfield_13100": null,
+    "fixVersions": [],
+    "customfield_13500": null,
+    "customfield_13501": null,
+    "customfield_12403": null,
+    "customfield_14947": null,
+    "customfield_14945": null,
+    "customfield_14948": null,
+    "customfield_12806": null,
+    "customfield_12807": null,
+    "lastViewed": "2021-08-16T16:32:05.224-0400",
+    "priority": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+      "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+      "name": "Minor",
+      "id": "4"
+    },
+    "customfield_12400": null,
+    "customfield_14940": null,
+    "customfield_12402": null,
+    "labels": ["AvayaLaunch", "ClarusLaunch", "PCMMigration", "PVUE"],
+    "customfield_14941": null,
+    "customfield_12401": null,
+    "customfield_14935": {
+      "id": "37",
+      "name": "1 day tickets",
+      "_links": {
+        "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113605/sla/37"
+      },
+      "completedCycles": []
+    },
+    "customfield_13207": null,
+    "customfield_14936": {
+      "id": "38",
+      "name": "5 day tickets",
+      "_links": {
+        "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113605/sla/38"
+      },
+      "completedCycles": []
+    },
+    "customfield_13206": 2.9304071e7,
+    "customfield_12513": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12644",
+      "value": "Avaya",
+      "id": "12644"
+    },
+    "customfield_14933": null,
+    "customfield_14934": null,
+    "aggregatetimeoriginalestimate": null,
+    "timeestimate": null,
+    "customfield_14937": {
+      "id": "39",
+      "name": "15 day tickets",
+      "_links": {
+        "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113605/sla/39"
+      },
+      "completedCycles": []
+    },
+    "customfield_14938": {
+      "id": "40",
+      "name": "6 week tickets",
+      "_links": {
+        "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113605/sla/40"
+      },
+      "completedCycles": []
+    },
+    "issuelinks": [
+      {
+        "id": "48212",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48212",
+        "type": {
+          "id": "10500",
+          "name": "SOW",
+          "inward": "SOW of",
+          "outward": "in SOW",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+        },
+        "inwardIssue": {
+          "id": "113478",
+          "key": "AVAYA-1",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113478",
+          "fields": {
+            "summary": "Avaya Project Kickoff - 2.1",
+            "status": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10020",
+              "description": "(draft) Definition of Done: Client Signoff on Estimate/SOW, Story, Definition of Done, Client availability",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+              "name": "Analyzing",
+              "id": "10020",
+              "statusCategory": {
+                "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                "id": 4,
+                "key": "indeterminate",
+                "colorName": "yellow",
+                "name": "In Progress"
+              }
+            },
+            "priority": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+              "name": "Minor",
+              "id": "4"
+            },
+            "issuetype": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/6",
+              "id": "6",
+              "description": "Created by JIRA Software - do not edit or delete. Issue type for a big user story that needs to be broken down.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10607&avatarType=issuetype",
+              "name": "Epic",
+              "subtask": false,
+              "avatarId": 10607,
+              "hierarchyLevel": 1
+            }
+          }
+        }
+      },
+      {
+        "id": "48525",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48525",
+        "type": {
+          "id": "10500",
+          "name": "SOW",
+          "inward": "SOW of",
+          "outward": "in SOW",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+        },
+        "inwardIssue": {
+          "id": "113892",
+          "key": "AVAYA-7",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113892",
+          "fields": {
+            "summary": "Spin up Clarus Lower Environments and Complete Initial Configuration ",
+            "status": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/6",
+              "description": "The issue is considered finished, the Engineering is Complete. Issues which are closed can be reopened.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/closed.png",
+              "name": "Complete",
+              "id": "6",
+              "statusCategory": {
+                "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/3",
+                "id": 3,
+                "key": "done",
+                "colorName": "green",
+                "name": "Done"
+              }
+            },
+            "priority": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/2",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/critical.svg",
+              "name": "Critical",
+              "id": "2"
+            },
+            "issuetype": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+              "id": "3",
+              "description": "A task that needs to be done.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+              "name": "Task",
+              "subtask": false,
+              "avatarId": 10618,
+              "hierarchyLevel": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "48515",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48515",
+        "type": {
+          "id": "10500",
+          "name": "SOW",
+          "inward": "SOW of",
+          "outward": "in SOW",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+        },
+        "inwardIssue": {
+          "id": "113887",
+          "key": "AVAYA-2",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113887",
+          "fields": {
+            "summary": "Tools Spin Up and Prep",
+            "status": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/6",
+              "description": "The issue is considered finished, the Engineering is Complete. Issues which are closed can be reopened.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/closed.png",
+              "name": "Complete",
+              "id": "6",
+              "statusCategory": {
+                "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/3",
+                "id": 3,
+                "key": "done",
+                "colorName": "green",
+                "name": "Done"
+              }
+            },
+            "priority": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+              "name": "Minor",
+              "id": "4"
+            },
+            "issuetype": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+              "id": "3",
+              "description": "A task that needs to be done.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+              "name": "Task",
+              "subtask": false,
+              "avatarId": 10618,
+              "hierarchyLevel": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "49222",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/49222",
+        "type": {
+          "id": "10500",
+          "name": "SOW",
+          "inward": "SOW of",
+          "outward": "in SOW",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+        },
+        "inwardIssue": {
+          "id": "114406",
+          "key": "AVAYA-13",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114406",
+          "fields": {
+            "summary": "Configure SFTP Site",
+            "status": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/6",
+              "description": "The issue is considered finished, the Engineering is Complete. Issues which are closed can be reopened.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/closed.png",
+              "name": "Complete",
+              "id": "6",
+              "statusCategory": {
+                "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/3",
+                "id": 3,
+                "key": "done",
+                "colorName": "green",
+                "name": "Done"
+              }
+            },
+            "priority": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+              "name": "Minor",
+              "id": "4"
+            },
+            "issuetype": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+              "id": "3",
+              "description": "A task that needs to be done.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+              "name": "Task",
+              "subtask": false,
+              "avatarId": 10618,
+              "hierarchyLevel": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "48535",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48535",
+        "type": {
+          "id": "10500",
+          "name": "SOW",
+          "inward": "SOW of",
+          "outward": "in SOW",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+        },
+        "inwardIssue": {
+          "id": "113896",
+          "key": "AVAYA-11",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113896",
+          "fields": {
+            "summary": "Scope and Schedule Document Creation ",
+            "status": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+              "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+              "name": "Grooming",
+              "id": "10934",
+              "statusCategory": {
+                "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                "id": 4,
+                "key": "indeterminate",
+                "colorName": "yellow",
+                "name": "In Progress"
+              }
+            },
+            "priority": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/3",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/major.svg",
+              "name": "Major",
+              "id": "3"
+            },
+            "issuetype": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+              "id": "3",
+              "description": "A task that needs to be done.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+              "name": "Task",
+              "subtask": false,
+              "avatarId": 10618,
+              "hierarchyLevel": 0
+            }
+          }
+        }
+      },
+      {
+        "id": "48528",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48528",
+        "type": {
+          "id": "10500",
+          "name": "SOW",
+          "inward": "SOW of",
+          "outward": "in SOW",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+        },
+        "inwardIssue": {
+          "id": "113893",
+          "key": "AVAYA-8",
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113893",
+          "fields": {
+            "summary": "Configure Staff Logins",
+            "status": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+              "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+              "name": "Grooming",
+              "id": "10934",
+              "statusCategory": {
+                "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                "id": 4,
+                "key": "indeterminate",
+                "colorName": "yellow",
+                "name": "In Progress"
+              }
+            },
+            "priority": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+              "name": "Minor",
+              "id": "4"
+            },
+            "issuetype": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+              "id": "3",
+              "description": "A task that needs to be done.",
+              "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+              "name": "Task",
+              "subtask": false,
+              "avatarId": 10618,
+              "hierarchyLevel": 0
+            }
+          }
+        }
+      }
+    ],
+    "assignee": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5d3f5330b7f3ac0da80c79f0",
+      "accountId": "5d3f5330b7f3ac0da80c79f0",
+      "emailAddress": "crickrode@thebrightlink.com",
+      "avatarUrls": {
+        "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/48",
+        "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/24",
+        "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/16",
+        "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/32"
+      },
+      "displayName": "Cassidy Rickrode",
+      "active": true,
+      "timeZone": "America/New_York",
+      "accountType": "atlassian"
+    },
+    "status": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/11136",
+      "description": "",
+      "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+      "name": "Scheduled",
+      "id": "11136",
+      "statusCategory": {
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+        "id": 4,
+        "key": "indeterminate",
+        "colorName": "yellow",
+        "name": "In Progress"
+      }
+    },
+    "customfield_14932": null,
+    "customfield_13600": null,
+    "customfield_14930": null,
+    "customfield_13713": null,
+    "customfield_14924": null,
+    "customfield_14925": 41250.0,
+    "customfield_14405": null,
+    "customfield_14922": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12535",
+      "value": "Not Billable",
+      "id": "12535"
+    },
+    "aggregatetimeestimate": null,
+    "customfield_14929": {
+      "id": "33",
+      "name": "Level 1 SLA",
+      "_links": {
+        "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113605/sla/33"
+      },
+      "completedCycles": []
+    },
+    "customfield_14926": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12585",
+      "value": "Tech Services Project",
+      "id": "12585"
+    },
+    "customfield_14927": null,
+    "creator": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5d3f5330b7f3ac0da80c79f0",
+      "accountId": "5d3f5330b7f3ac0da80c79f0",
+      "emailAddress": "crickrode@thebrightlink.com",
+      "avatarUrls": {
+        "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/48",
+        "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/24",
+        "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/16",
+        "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/32"
+      },
+      "displayName": "Cassidy Rickrode",
+      "active": true,
+      "timeZone": "America/New_York",
+      "accountType": "atlassian"
+    },
+    "subtasks": [],
+    "reporter": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5d3f5330b7f3ac0da80c79f0",
+      "accountId": "5d3f5330b7f3ac0da80c79f0",
+      "emailAddress": "crickrode@thebrightlink.com",
+      "avatarUrls": {
+        "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/48",
+        "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/24",
+        "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/16",
+        "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d3f5330b7f3ac0da80c79f0/2243e9f6-14ed-4542-b38d-7622b84dbcf9/32"
+      },
+      "displayName": "Cassidy Rickrode",
+      "active": true,
+      "timeZone": "America/New_York",
+      "accountType": "atlassian"
+    },
+    "customfield_13310": null,
+    "aggregateprogress": { "progress": 0, "total": 0 },
+    "customfield_14920": null,
+    "customfield_14800": [],
+    "customfield_12501": [],
+    "customfield_12500": "0|i0enmf:",
+    "customfield_13306": null,
+    "customfield_14913": null,
+    "customfield_14914": null,
+    "customfield_13305": null,
+    "customfield_13308": null,
+    "customfield_14911": "2021-06-30T14:13:42.459-0400",
+    "customfield_13704": null,
+    "customfield_14912": null,
+    "customfield_13307": null,
+    "customfield_14917": null,
+    "customfield_14918": null,
+    "customfield_13309": null,
+    "customfield_14915": null,
+    "customfield_14916": { "languageCode": "en", "displayName": "English" },
+    "progress": { "progress": 0, "total": 0 },
+    "customfield_13709": null,
+    "customfield_14919": null,
+    "votes": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-60933/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "worklog": { "startAt": 0, "maxResults": 20, "total": 0, "worklogs": [] },
+    "issuetype": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10201",
+      "id": "10201",
+      "description": "Statement of Work",
+      "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10604&avatarType=issuetype",
+      "name": "SOW",
+      "subtask": false,
+      "avatarId": 10604,
+      "hierarchyLevel": 0
+    },
+    "timespent": null,
+    "project": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/11601",
+      "id": "11601",
+      "key": "SUPPORT",
+      "name": "Client Success",
+      "projectTypeKey": "service_desk",
+      "simplified": false,
+      "avatarUrls": {
+        "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?pid=11601&avatarId=10508",
+        "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&pid=11601&avatarId=10508",
+        "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&pid=11601&avatarId=10508",
+        "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&pid=11601&avatarId=10508"
+      },
+      "projectCategory": {
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/projectCategory/10602",
+        "id": "10602",
+        "description": "",
+        "name": "Client Success"
+      }
+    },
+    "customfield_13302": null,
+    "aggregatetimespent": null,
+    "customfield_13301": {
+      "hasEpicLinkFieldDependency": false,
+      "showField": false,
+      "nonEditableReason": {
+        "reason": "TOP_OF_HIERARCHY",
+        "message": "An issue at the top of the hierarchy cannot have a parent set."
+      }
+    },
+    "customfield_14910": null,
+    "customfield_13304": null,
+    "customfield_13303": null,
+    "customfield_12602": null,
+    "customfield_12601": {
+      "id": "36",
+      "name": "Resolve Time",
+      "_links": {
+        "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113605/sla/36"
+      },
+      "completedCycles": []
+    },
+    "customfield_14900": "{}",
+    "resolutiondate": null,
+    "workratio": -1,
+    "customfield_14908": null,
+    "customfield_14909": null,
+    "watches": {
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-60933/watchers",
+      "watchCount": 0,
+      "isWatching": false
+    },
+    "issuerestriction": { "issuerestrictions": {}, "shouldDisplay": false },
+    "created": "2021-06-30T14:13:41.677-0400",
+    "customfield_14502": null,
+    "customfield_14503": null,
+    "customfield_14500": null,
+    "updated": "2021-08-13T08:50:15.225-0400",
+    "timeoriginalestimate": null,
+    "description": null,
+    "customfield_13400": null,
+    "customfield_10007": null,
+    "customfield_10008": null,
+    "attachment": [],
+    "summary": "Avaya Launch",
+    "customfield_14200": null,
+    "customfield_14601": null,
+    "customfield_14600": null,
+    "customfield_10004": null,
+    "customfield_13900": null,
+    "duedate": null,
+    "customfield_13905": null,
+    "comment": {
+      "comments": [
+        {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113605/comment/238995",
+          "id": "238995",
+          "author": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43",
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "emailAddress": "mstone@thebrightlink.com",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32"
+            },
+            "displayName": "Matt Stone",
+            "active": true,
+            "timeZone": "America/Los_Angeles",
+            "accountType": "atlassian"
+          },
+          "body": {
+            "version": 1,
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "This issue requires your attention. "
+                  },
+                  {
+                    "type": "mention",
+                    "attrs": {
+                      "id": "5d3f230b4125b20c3159982a",
+                      "text": "Wiphan BL Intake 1",
+                      "accessLevel": ""
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "updateAuthor": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43",
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "emailAddress": "mstone@thebrightlink.com",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32"
+            },
+            "displayName": "Matt Stone",
+            "active": true,
+            "timeZone": "America/Los_Angeles",
+            "accountType": "atlassian"
+          },
+          "created": "2021-06-30T14:13:42.459-0400",
+          "updated": "2021-06-30T14:13:42.459-0400",
+          "jsdPublic": false
+        }
+      ],
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113605/comment",
+      "maxResults": 1,
+      "total": 1,
+      "startAt": 0
+    }
+  }
+}

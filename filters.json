@@ -1,0 +1,2506 @@
+[
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16006",
+        "jql": "project = SUPPORT AND issuetype = Ticket AND \"BL Ticket Type\" not in (DevEscalation, Deferred) AND status != Resolved ORDER BY created DESC",
+        "name": "open Support-SuccessOnly",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+issuetype+%3D+Ticket+AND+%22BL+Ticket+Type%22+not+in+(DevEscalation,+Deferred)+AND+status+!%3D+Resolved+ORDER+BY+created+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16006",
+        "sharePermissions": [
+            {
+                "id": 16725,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16006"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16113",
+        "jql": "project = \"Client Success\" AND Client = NHA AND created > 2018-8-31 AND reporter != qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:7b917846-be20-48a5-b435-578e66cb5467 ORDER BY created ASC",
+        "name": "stone-NHA Support",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+%22Client+Success%22+AND+Client+%3D+NHA+AND+created+%3E+2018-8-31+AND+reporter+!%3D+qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:7b917846-be20-48a5-b435-578e66cb5467+ORDER+BY+created+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16113",
+        "sharePermissions": [
+            {
+                "id": 16822,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16113"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16263",
+        "jql": "project = support AND status in (\"Level 2\") AND \"15 day tickets\" = everbreached() AND Client not in (nha, cdca, cita)",
+        "name": "Open L2 SLA Breached Core",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+status+in+(%22Level+2%22)+AND+%2215+day+tickets%22+%3D+everbreached()+AND+Client+not+in+(nha,+cdca,+cita)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16263",
+        "sharePermissions": [
+            {
+                "id": 17231,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16263"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16005",
+        "jql": "project = SUPPORT AND \"BL Ticket Type\" = Level1 AND created >= -10w ORDER BY updated DESC",
+        "name": "Created Support last11w -level 1",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+%22BL+Ticket+Type%22+%3D+Level1+AND+created+%3E%3D+-10w+ORDER+BY+updated+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16005",
+        "sharePermissions": [
+            {
+                "id": 16723,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16005"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16281",
+        "jql": "labels = DbEscalation ORDER BY created DESC",
+        "name": "DBEscalation",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=labels+%3D+DbEscalation+ORDER+BY+created+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16281",
+        "sharePermissions": [
+            {
+                "id": 17256,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16281"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 2,
+        "id": "16157",
+        "jql": "(labels = 2ndOrder OR \"Team[Team]\" = 22) AND status not in (Suspended) ORDER BY Rank ASC",
+        "name": "second_order_scrumboard",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=(labels+%3D+2ndOrder+OR+%22Team%5BTeam%5D%22+%3D+22)+AND+status+not+in+(Suspended)+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16157",
+        "sharePermissions": [
+            {
+                "id": 17289,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16157"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16268",
+        "jql": "project = support AND \"BL Ticket Type[Dropdown]\" = Level2 AND \"Client[Dropdown]\" not in (NHA, CDCA, CITA) AND \"5 day tickets\" = everbreached()",
+        "name": "BLTicketType L2 - Ever Breached - Core",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+%22BL+Ticket+Type%5BDropdown%5D%22+%3D+Level2+AND+%22Client%5BDropdown%5D%22+not+in+(NHA,+CDCA,+CITA)+AND+%225+day+tickets%22+%3D+everbreached()",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16268",
+        "sharePermissions": [
+            {
+                "id": 17236,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16268"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16008",
+        "jql": "project = SUPPORT AND issuetype in (Ticket, \"Technical Services Project\", SOW) AND status not in (Resolved, Converted) ORDER BY Rank ASC",
+        "name": "OpenSupport-Board",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+issuetype+in+(Ticket,+%22Technical+Services+Project%22,+SOW)+AND+status+not+in+(Resolved,+Converted)+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16008",
+        "sharePermissions": [
+            {
+                "id": 16937,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16008"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16011",
+        "jql": "project = \"BrightLink Invoicing\"",
+        "name": "BLClients",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+%22BrightLink+Invoicing%22",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16011",
+        "sharePermissions": [
+            {
+                "id": 16732,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16011"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16267",
+        "jql": "project = support AND \"BL Ticket Type[Dropdown]\" = Level2 AND \"Client[Dropdown]\" not in (NHA, CDCA, CITA) AND \"5 day tickets\" = everbreached()",
+        "name": "BLTicketType L2 - Ever Breached - All",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+%22BL+Ticket+Type%5BDropdown%5D%22+%3D+Level2+AND+%22Client%5BDropdown%5D%22+not+in+(NHA,+CDCA,+CITA)+AND+%225+day+tickets%22+%3D+everbreached()",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16267",
+        "sharePermissions": [
+            {
+                "id": 17235,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16267"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "14712",
+        "jql": "project = 11601 ORDER BY Rank ASC",
+        "name": "Filter for Program Management",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+11601+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/14712",
+        "sharePermissions": [
+            {
+                "id": 16403,
+                "project": {
+                    "assigneeType": "PROJECT_LEAD",
+                    "avatarUrls": {
+                        "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&pid=11601&avatarId=10508",
+                        "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&pid=11601&avatarId=10508",
+                        "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&pid=11601&avatarId=10508",
+                        "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?pid=11601&avatarId=10508"
+                    },
+                    "id": "11601",
+                    "key": "SUPPORT",
+                    "name": "Client Success",
+                    "projectCategory": {
+                        "description": "",
+                        "id": "10602",
+                        "name": "Client Success",
+                        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/projectCategory/10602"
+                    },
+                    "projectTypeKey": "service_desk",
+                    "properties": {},
+                    "roles": {},
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/11601",
+                    "simplified": false,
+                    "style": "classic"
+                },
+                "type": "project"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 87,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=14712"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "15501",
+        "jql": "project = SUPPORT AND priority in (Blocker, Critical, Major) AND \"BL Ticket Type\" != Level1 AND status != Resolved",
+        "name": "Open+ImportantSupport",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+priority+in+(Blocker,+Critical,+Major)+AND+%22BL+Ticket+Type%22+!%3D+Level1+AND+status+!%3D+Resolved",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/15501",
+        "sharePermissions": [
+            {
+                "id": 16209,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=15501"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16114",
+        "jql": "project = \"Client Success\" AND Client = NHA AND created > 2018-8-31 AND reporter != qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:7b917846-be20-48a5-b435-578e66cb5467 ORDER BY created ASC",
+        "name": "stone-NHA Support2",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+%22Client+Success%22+AND+Client+%3D+NHA+AND+created+%3E+2018-8-31+AND+reporter+!%3D+qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:7b917846-be20-48a5-b435-578e66cb5467+ORDER+BY+created+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16114",
+        "sharePermissions": [
+            {
+                "id": 16823,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16114"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16127",
+        "jql": "status in (\"Needs Estimate\", \"Prep Client SOW\", \"Sent to Client\", \"In Delivery\") AND \"General Services SOW\" is EMPTY OR labels = NeedsEstimate ORDER BY Rank ASC",
+        "name": "Estimating Tickets and Projects",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=status+in+(%22Needs+Estimate%22,+%22Prep+Client+SOW%22,+%22Sent+to+Client%22,+%22In+Delivery%22)+AND+%22General+Services+SOW%22+is+EMPTY+OR+labels+%3D+NeedsEstimate+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16127",
+        "sharePermissions": [
+            {
+                "id": 16891,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16127"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16144",
+        "jql": "status not in (Garage, Suspended) AND labels not in (ignoreEpic, Burndown) AND issuetype not in (SOW) AND (resolution = Unresolved OR resolutiondate > startOfWeek(-15)) ORDER BY Rank ASC",
+        "name": "Issues - Active and Recently Closed",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=status+not+in+(Garage,+Suspended)+AND+labels+not+in+(ignoreEpic,+Burndown)+AND+issuetype+not+in+(SOW)+AND+(resolution+%3D+Unresolved+OR+resolutiondate+%3E+startOfWeek(-15))+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16144",
+        "sharePermissions": [
+            {
+                "id": 16926,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16144"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "15900",
+        "jql": "labels = RetiringDBVisualizer",
+        "name": "retiringDBViz",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=labels+%3D+RetiringDBVisualizer",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/15900",
+        "sharePermissions": [
+            {
+                "id": 16602,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=15900"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "15702",
+        "jql": "project = SUPPORT AND resolved >= -10w ORDER BY updated DESC",
+        "name": "reslvd Support last11w",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+resolved+%3E%3D+-10w+ORDER+BY+updated+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/15702",
+        "sharePermissions": [
+            {
+                "id": 16414,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=15702"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16004",
+        "jql": "status = Resolved AND project = \"Client Success\" AND created >= -10w ORDER BY created ASC, updated ASC",
+        "name": "Created Support last11w",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=status+%3D+Resolved+AND+project+%3D+%22Client+Success%22+AND+created+%3E%3D+-10w+ORDER+BY+created+ASC,+updated+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16004",
+        "sharePermissions": [
+            {
+                "id": 16947,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16004"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16192",
+        "jql": "project = support AND (\"BL Ticket Type[Dropdown]\" = Level2 OR status was \"Level 2\") AND \"Client[Dropdown]\" not in (NHA, CDCA, CITA)",
+        "name": "BLTicketType L2",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+(%22BL+Ticket+Type%5BDropdown%5D%22+%3D+Level2+OR+status+was+%22Level+2%22)+AND+%22Client%5BDropdown%5D%22+not+in+(NHA,+CDCA,+CITA)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16192",
+        "sharePermissions": [
+            {
+                "id": 17065,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16192"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 2,
+        "id": "16172",
+        "jql": "issuetype = SOW AND labels in (launch) ORDER BY due ASC",
+        "name": "LaunchSOWs",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=issuetype+%3D+SOW+AND+labels+in+(launch)+ORDER+BY+due+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16172",
+        "sharePermissions": [
+            {
+                "id": 16997,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16172"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16112",
+        "jql": "labels in (CMA_wishlist, CSA_wishlist, Retool) ORDER BY Rank ASC",
+        "name": "CMA Wishlist",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=labels+in+(CMA_wishlist,+CSA_wishlist,+Retool)+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16112",
+        "sharePermissions": [
+            {
+                "id": 16989,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16112"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16193",
+        "jql": "project = support AND \"BL Ticket Type[Dropdown]\" = Level2 AND \"Client[Dropdown]\" not in (NHA, CDCA, CITA) AND \"5 day tickets\" = everbreached()",
+        "name": "BLTicketType L2 - Ever Breached",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+%22BL+Ticket+Type%5BDropdown%5D%22+%3D+Level2+AND+%22Client%5BDropdown%5D%22+not+in+(NHA,+CDCA,+CITA)+AND+%225+day+tickets%22+%3D+everbreached()",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16193",
+        "sharePermissions": [
+            {
+                "id": 17051,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16193"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "15605",
+        "jql": "project = SUPPORT AND issuetype = Ticket AND status != Resolved ORDER BY created DESC",
+        "name": "open Support",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+issuetype+%3D+Ticket+AND+status+!%3D+Resolved+ORDER+BY+created+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/15605",
+        "sharePermissions": [
+            {
+                "id": 16303,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=15605"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16115",
+        "jql": "project = \"Client Success\" AND Client = NHA AND created > 2018-8-31 AND reporter not in (qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:7b917846-be20-48a5-b435-578e66cb5467, qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:ca0425f3-51e3-4e66-9a92-1d3f919d4804, qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:c91ac8b8-207d-4e23-b454-809a97a296be, qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:8e48e5b1-07c6-440c-b3b6-69da00249157) ORDER BY created ASC",
+        "name": "stone-NHA SupportB",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+%22Client+Success%22+AND+Client+%3D+NHA+AND+created+%3E+2018-8-31+AND+reporter+not+in+(qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:7b917846-be20-48a5-b435-578e66cb5467,+qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:ca0425f3-51e3-4e66-9a92-1d3f919d4804,+qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:c91ac8b8-207d-4e23-b454-809a97a296be,+qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:8e48e5b1-07c6-440c-b3b6-69da00249157)+ORDER+BY+created+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16115",
+        "sharePermissions": [
+            {
+                "id": 16828,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16115"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16160",
+        "jql": "project = \"Client Success\" AND \"Customer Request Type\" in (\"Technical Services Project (SUPPORT)\", \"Incremental Update Project (SUPPORT)\") OR issuetype = SOW AND status not in (Closed, Suspended, Complete) ORDER BY Rank ASC",
+        "name": "SuccessProjects-NoEngineering",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+%22Client+Success%22+AND+%22Customer+Request+Type%22+in+(%22Technical+Services+Project+(SUPPORT)%22,+%22Incremental+Update+Project+(SUPPORT)%22)+OR+issuetype+%3D+SOW+AND+status+not+in+(Closed,+Suspended,+Complete)+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16160",
+        "sharePermissions": [
+            {
+                "id": 16964,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16160"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 2,
+        "id": "16264",
+        "jql": "project = support AND status in (\"Level 2\") AND Client not in (nha, cdca, cita)",
+        "name": "Open L2 - Core",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+status+in+(%22Level+2%22)+AND+Client+not+in+(nha,+cdca,+cita)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16264",
+        "sharePermissions": [
+            {
+                "id": 17232,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16264"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16266",
+        "jql": "project = support AND (\"BL Ticket Type[Dropdown]\" = Level2 OR status was \"Level 2\")",
+        "name": "BLTicketType L2 - All",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+(%22BL+Ticket+Type%5BDropdown%5D%22+%3D+Level2+OR+status+was+%22Level+2%22)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16266",
+        "sharePermissions": [
+            {
+                "id": 17234,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16266"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16124",
+        "jql": "project = SUPPORT AND issuetype = Ticket AND status != Resolved AND \"BL Ticket Type\" not in (DevEscalation, Deferred) ORDER BY updated ASC, created DESC",
+        "name": "OpenSuccess-byOldestUpdate",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+issuetype+%3D+Ticket+AND+status+!%3D+Resolved+AND+%22BL+Ticket+Type%22+not+in+(DevEscalation,+Deferred)+ORDER+BY+updated+ASC,+created+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16124",
+        "sharePermissions": [
+            {
+                "id": 16880,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16124"
+    },
+    {
+        "description": "",
+        "favourite": false,
+        "favouritedCount": 2,
+        "id": "14006",
+        "jql": "project = 11601 AND (\"Product Line\" in (Clarus, Infrastructure) OR status = triage) AND status not in (\"Post Mortem\", Solved, Resolved, \"Pending Client Input\") ORDER BY created ASC",
+        "name": "Imaginext Open",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+11601+AND+(%22Product+Line%22+in+(Clarus,+Infrastructure)+OR+status+%3D+triage)+AND+status+not+in+(%22Post+Mortem%22,+Solved,+Resolved,+%22Pending+Client+Input%22)+ORDER+BY+created+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/14006",
+        "sharePermissions": [
+            {
+                "id": 16407,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=14006"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16121",
+        "jql": "labels in (NeedsEstimate) OR status = \"Needs Estimate\" ORDER BY Rank ASC",
+        "name": "Needs Estimate",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=labels+in+(NeedsEstimate)+OR+status+%3D+%22Needs+Estimate%22+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16121",
+        "sharePermissions": [
+            {
+                "id": 16878,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16121"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16123",
+        "jql": "project = SUPPORT AND issuetype = Ticket AND status != Resolved AND \"BL Ticket Type\" not in (DevEscalation, Deferred) ORDER BY updated ASC, created DESC",
+        "name": "Open Early Support by Oldest Update",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+issuetype+%3D+Ticket+AND+status+!%3D+Resolved+AND+%22BL+Ticket+Type%22+not+in+(DevEscalation,+Deferred)+ORDER+BY+updated+ASC,+created+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16123",
+        "sharePermissions": [
+            {
+                "id": 16879,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16123"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16106",
+        "jql": "issuetype = SOW ORDER BY Rank ASC",
+        "name": "SOWs in flight",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=issuetype+%3D+SOW+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16106",
+        "sharePermissions": [
+            {
+                "id": 16837,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16106"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16109",
+        "jql": "project = \"BrightLink Invoicing\"",
+        "name": "Client List - stone",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+%22BrightLink+Invoicing%22",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16109",
+        "sharePermissions": [
+            {
+                "id": 16814,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16109"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16014",
+        "jql": "project = SUPPORT AND (resolved >= -10w OR created >= -10w) ORDER BY updated DESC",
+        "name": "reslvd+Created Support last 11w",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+(resolved+%3E%3D+-10w+OR+created+%3E%3D+-10w)+ORDER+BY+updated+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16014",
+        "sharePermissions": [
+            {
+                "id": 16738,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16014"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16236",
+        "jql": "(filter in (\"Active Launches\") OR \"Team[Team]\" = 22) AND issuetype = Epic ORDER BY Rank ASC",
+        "name": "Launch and 2ndO Epics",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=(filter+in+(%22Active+Launches%22)+OR+%22Team%5BTeam%5D%22+%3D+22)+AND+issuetype+%3D+Epic+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16236",
+        "sharePermissions": [
+            {
+                "id": 17167,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16236"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "15801",
+        "jql": "project = SUPPORT AND resolution = Unresolved ORDER BY Rank ASC",
+        "name": "PMTriage v190521",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+SUPPORT+AND+resolution+%3D+Unresolved+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/15801",
+        "sharePermissions": [
+            {
+                "id": 16501,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=15801"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16258",
+        "jql": "project = BLINFRA AND issuetype != Epic AND status not in (Suspended, Garage) AND (labels is EMPTY OR labels != isms_user_access) AND created >= 2020-01-01 ORDER BY created ASC, Rank",
+        "name": "ISMS Infrastrucute Changes",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+BLINFRA+AND+issuetype+!%3D+Epic+AND+status+not+in+(Suspended,+Garage)+AND+(labels+is+EMPTY+OR+labels+!%3D+isms_user_access)+AND+created+%3E%3D+2020-01-01+ORDER+BY+created+ASC,+Rank",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16258",
+        "sharePermissions": [
+            {
+                "id": 17223,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16258"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16117",
+        "jql": "project = \"Client Success\" AND created > 2016-8-31 AND reporter not in (qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:7b917846-be20-48a5-b435-578e66cb5467, qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:ca0425f3-51e3-4e66-9a92-1d3f919d4804, qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:c91ac8b8-207d-4e23-b454-809a97a296be, qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:8e48e5b1-07c6-440c-b3b6-69da00249157) ORDER BY created ASC",
+        "name": "SupportHistoryDump",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+%22Client+Success%22+AND+created+%3E+2016-8-31+AND+reporter+not+in+(qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:7b917846-be20-48a5-b435-578e66cb5467,+qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:ca0425f3-51e3-4e66-9a92-1d3f919d4804,+qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:c91ac8b8-207d-4e23-b454-809a97a296be,+qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:8e48e5b1-07c6-440c-b3b6-69da00249157)+ORDER+BY+created+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16117",
+        "sharePermissions": [
+            {
+                "id": 16829,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16117"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16000",
+        "jql": "type = Epic AND labels in (clarusRoadmap, BLWC, ink, gg, da) ORDER BY Rank ASC",
+        "name": "Filter for COR board",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=type+%3D+Epic+AND+labels+in+(clarusRoadmap,+BLWC,+ink,+gg,+da)+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16000",
+        "sharePermissions": [
+            {
+                "id": 16841,
+                "project": {
+                    "assigneeType": "PROJECT_LEAD",
+                    "avatarUrls": {
+                        "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&avatarId=11903",
+                        "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&avatarId=11903",
+                        "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&avatarId=11903",
+                        "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?avatarId=11903"
+                    },
+                    "id": "13100",
+                    "key": "COR",
+                    "name": "coreProjects",
+                    "projectTypeKey": "software",
+                    "properties": {},
+                    "roles": {},
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/13100",
+                    "simplified": false,
+                    "style": "classic"
+                },
+                "type": "project"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 86,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16000"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16142",
+        "jql": "type = epic AND issue in linkedIssues(corebt-12642)",
+        "name": "epics in sow",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=type+%3D+epic+AND+issue+in+linkedIssues(corebt-12642)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16142",
+        "sharePermissions": [
+            {
+                "id": 16924,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16142"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16257",
+        "jql": "reporter = \"no-reply@sns.amazonaws.com\" AND summary ~ ALARM AND summary !~ CDCA AND summary !~ EAS AND summary !~ NHA AND created > 2020-11-01 ORDER BY summary ASC, created DESC",
+        "name": "ISO-CloudwatchAutomation",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=reporter+%3D+%22no-reply@sns.amazonaws.com%22+AND+summary+~+ALARM+AND+summary+!~+CDCA+AND+summary+!~+EAS+AND+summary+!~+NHA+AND+created+%3E+2020-11-01+ORDER+BY+summary+ASC,+created+DESC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16257",
+        "sharePermissions": [
+            {
+                "id": 17221,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16257"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16195",
+        "jql": "project = support AND status was \"Level 2\" AND resolved is not EMPTY",
+        "name": "Resolved L2",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+status+was+%22Level+2%22+AND+resolved+is+not+EMPTY",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16195",
+        "sharePermissions": [
+            {
+                "id": 17046,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16195"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "15402",
+        "jql": "issuetype = SOW AND status in (Planning, \"In Delivery\", Retrospective) ORDER BY due ASC",
+        "name": "Active SOWs",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=issuetype+%3D+SOW+AND+status+in+(Planning,+%22In+Delivery%22,+Retrospective)+ORDER+BY+due+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/15402",
+        "sharePermissions": [
+            {
+                "id": 16106,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=15402"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16265",
+        "jql": "project = support AND (\"BL Ticket Type[Dropdown]\" = Level2 OR status was \"Level 2\") AND \"Client[Dropdown]\" not in (NHA, CDCA, CITA)",
+        "name": "BLTicketType L2 - Core",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+(%22BL+Ticket+Type%5BDropdown%5D%22+%3D+Level2+OR+status+was+%22Level+2%22)+AND+%22Client%5BDropdown%5D%22+not+in+(NHA,+CDCA,+CITA)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16265",
+        "sharePermissions": [
+            {
+                "id": 17233,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16265"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16155",
+        "jql": "project = \"Client Success\" AND \"Customer Request Type\" in (\"Technical Services Project (SUPPORT)\", \"Engineering Project (SUPPORT)\", \"Incremental Update Project (SUPPORT)\") OR issuetype = SOW AND status not in (Suspended) AND \"General Services SOW\" is EMPTY ORDER BY Rank ASC",
+        "name": "SuccessProjectBacklog",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+%22Client+Success%22+AND+%22Customer+Request+Type%22+in+(%22Technical+Services+Project+(SUPPORT)%22,+%22Engineering+Project+(SUPPORT)%22,+%22Incremental+Update+Project+(SUPPORT)%22)+OR+issuetype+%3D+SOW+AND+status+not+in+(Suspended)+AND+%22General+Services+SOW%22+is+EMPTY+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16155",
+        "sharePermissions": [
+            {
+                "id": 16973,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16155"
+    },
+    {
+        "description": "",
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16256",
+        "jql": "issuekey in (SUPPORT-58886, SUPPORT-58882, SUPPORT-58025, SUPPORT-57897, SUPPORT-58070, SUPPORT-59008, SUPPORT-57588) ORDER BY resolved",
+        "name": "NACE-21Feb Get Estimates",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=issuekey+in+(SUPPORT-58886,+SUPPORT-58882,+SUPPORT-58025,+SUPPORT-57897,+SUPPORT-58070,+SUPPORT-59008,+SUPPORT-57588)+ORDER+BY+resolved",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16256",
+        "sharePermissions": [
+            {
+                "id": 17225,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16256"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16119",
+        "jql": "labels in (Inklings, INK, Ink) ORDER BY Rank ASC",
+        "name": "Board: Inklings v20.01",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=labels+in+(Inklings,+INK,+Ink)+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16119",
+        "sharePermissions": [
+            {
+                "id": 16838,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16119"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16146",
+        "jql": "issuetype = epic AND labels in (DA, DAKanban, Inklings, inklings, INK, Ink, da, DA_Kanban, DACommitted, nova, ATDLaunch, nace, IBLCELaunch, CMA_wishlist, CMA_Speed, clarusRoadmap, ClarusLaunch) AND status not in (Garage, Suspended) AND labels not in (ignoreEpic, Burndown) AND issuetype not in (SOW) ORDER BY Rank ASC",
+        "name": "NOVA Epics",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=issuetype+%3D+epic+AND+labels+in+(DA,+DAKanban,+Inklings,+inklings,+INK,+Ink,+da,+DA_Kanban,+DACommitted,+nova,+ATDLaunch,+nace,+IBLCELaunch,+CMA_wishlist,+CMA_Speed,+clarusRoadmap,+ClarusLaunch)+AND+status+not+in+(Garage,+Suspended)+AND+labels+not+in+(ignoreEpic,+Burndown)+AND+issuetype+not+in+(SOW)+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16146",
+        "sharePermissions": [
+            {
+                "id": 16928,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16146"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16259",
+        "jql": "issuekey in (SUPPORT-58024, SUPPORT-57910, SUPPORT-57398, SUPPORT-57597)",
+        "name": "NACE-21Feb-KeyProjectsCommitted",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=issuekey+in+(SUPPORT-58024,+SUPPORT-57910,+SUPPORT-57398,+SUPPORT-57597)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16259",
+        "sharePermissions": [
+            {
+                "id": 17224,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16259"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16262",
+        "jql": "project = support AND status in (\"Level 2\") AND \"15 day tickets\" = everbreached()",
+        "name": "Open L2 SLA Breached - All",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+status+in+(%22Level+2%22)+AND+%2215+day+tickets%22+%3D+everbreached()",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16262",
+        "sharePermissions": [
+            {
+                "id": 17230,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16262"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16107",
+        "jql": "issuetype = SOW AND status not in (Closed, Suspended, Complete) ORDER BY Rank ASC",
+        "name": "SOWs in flight - all",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=issuetype+%3D+SOW+AND+status+not+in+(Closed,+Suspended,+Complete)+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16107",
+        "sharePermissions": [
+            {
+                "id": 16811,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16107"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "15800",
+        "jql": "project = Support AND cf[12600] in (Clarus, Infrastructure, MobileLink, EAS, EMPTY) AND resolution = Unresolved ORDER BY status DESC, priority DESC, createdDate ASC",
+        "name": "Imaginext Kanban v190521",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+Support+AND+cf%5B12600%5D+in+(Clarus,+Infrastructure,+MobileLink,+EAS,+EMPTY)+AND+resolution+%3D+Unresolved+ORDER+BY+status+DESC,+priority+DESC,+createdDate+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/15800",
+        "sharePermissions": [
+            {
+                "id": 16500,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=15800"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16187",
+        "jql": "project = support AND status in (\"Level 2\") AND \"15 day tickets\" = everbreached() AND Client not in (nha, cdca, cita)",
+        "name": "Open L2 SLA Breached",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+status+in+(%22Level+2%22)+AND+%2215+day+tickets%22+%3D+everbreached()+AND+Client+not+in+(nha,+cdca,+cita)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16187",
+        "sharePermissions": [
+            {
+                "id": 17229,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16187"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16272",
+        "jql": "(filter in (\"Active Launches\") OR \"Team[Team]\" = 22) AND issuetype = Epic ORDER BY rank",
+        "name": "deleteme",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=(filter+in+(%22Active+Launches%22)+OR+%22Team%5BTeam%5D%22+%3D+22)+AND+issuetype+%3D+Epic+ORDER+BY+rank",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16272",
+        "sharePermissions": [
+            {
+                "id": 17245,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16272"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 0,
+        "id": "16010",
+        "jql": "project = IBLCE ORDER BY Rank ASC",
+        "name": "Filter for IBLCE board",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+IBLCE+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16010",
+        "sharePermissions": [
+            {
+                "id": 16731,
+                "project": {
+                    "assigneeType": "PROJECT_LEAD",
+                    "avatarUrls": {
+                        "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&pid=13101&avatarId=13545",
+                        "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&pid=13101&avatarId=13545",
+                        "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&pid=13101&avatarId=13545",
+                        "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?pid=13101&avatarId=13545"
+                    },
+                    "id": "13101",
+                    "key": "IBLCE",
+                    "name": "IBLCE",
+                    "projectCategory": {
+                        "description": "",
+                        "id": "10300",
+                        "name": "Clarus",
+                        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/projectCategory/10300"
+                    },
+                    "projectTypeKey": "software",
+                    "properties": {},
+                    "roles": {},
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/13101",
+                    "simplified": false,
+                    "style": "classic"
+                },
+                "type": "project"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 86,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16010"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16261",
+        "jql": "project = support AND status in (\"Level 2\")",
+        "name": "Open L2-All",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+support+AND+status+in+(%22Level+2%22)",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16261",
+        "sharePermissions": [
+            {
+                "id": 17227,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16261"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16009",
+        "jql": "labels = BSE ORDER BY Rank ASC",
+        "name": "BSEs",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=labels+%3D+BSE+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16009",
+        "sharePermissions": [
+            {
+                "id": 17131,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16009"
+    },
+    {
+        "favourite": false,
+        "favouritedCount": 1,
+        "id": "16247",
+        "jql": "project = BLINFRA AND issuetype != Epic AND status not in (Suspended, Garage) AND created >= 2020-01-01 ORDER BY Rank ASC",
+        "name": "ISO 27001 Infra Control 210127",
+        "owner": {
+            "accountId": "5c4917c15fbf9d2d03169d43",
+            "active": true,
+            "avatarUrls": {
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32",
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48"
+            },
+            "displayName": "Matt Stone",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43"
+        },
+        "searchUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/search?jql=project+%3D+BLINFRA+AND+issuetype+!%3D+Epic+AND+status+not+in+(Suspended,+Garage)+AND+created+%3E%3D+2020-01-01+ORDER+BY+Rank+ASC",
+        "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/filter/16247",
+        "sharePermissions": [
+            {
+                "id": 17280,
+                "type": "loggedin"
+            }
+        ],
+        "sharedUsers": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 26,
+            "start-index": 0
+        },
+        "subscriptions": {
+            "end-index": 0,
+            "items": [],
+            "max-results": 1000,
+            "size": 0,
+            "start-index": 0
+        },
+        "viewUrl": "https://thebrightlink.atlassian.net/issues/?filter=16247"
+    }
+]
