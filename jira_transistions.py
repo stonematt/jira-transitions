@@ -5,7 +5,6 @@ from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
 from pprint import pprint
 import json
-import time
 import pandas as pd
 import collections
 
@@ -36,7 +35,7 @@ def _get(url, params={}):
         print(f"HTTPError: {hterr}")
         raise hterr
     else:
-        # print(r.text)
+        print(r.text)
         return json.loads(r.text)
 
 
@@ -48,6 +47,26 @@ def list_filters():
 def print_filters():
     for f in list_filters():
         print(f"{f['id']}, {f['name']} ")
+
+
+def get_issues_from_filter(filter):
+    """return dictionary of issues in filter
+    filter = filter name"""
+
+    url = "search"
+    params = {
+        "jql": "filter=" + filter,
+        "maxResults": 5,
+        "fields": "key,summary,status,created,customfield_14925",
+        "startAt": 0,
+    }
+
+    issues = _get(url, params)
+
+
+# todo: delete this
+issues = get_issues_from_filter("backlog_approved_waiting")
+# print(issues["issues"])
 
 
 def get_issue(issueid):
@@ -99,14 +118,14 @@ def get_status_changes(log, status_list):
 
 
 ### playground
-log = get_issue_changelog("support-60933")
+# log = get_issue_changelog("support-60933")
 
 
 sold_statuses = ["In Backlog", "Scheduled"]
 pending_statuses = ["Sent to Client", "Response Review"]
-sold = get_status_changes(log, sold_statuses)
+# sold = get_status_changes(log, sold_statuses)
 
-pending = get_status_changes(log, pending_statuses)
+# pending = get_status_changes(log, pending_statuses)
 
 #### program
 # get issues from filter
