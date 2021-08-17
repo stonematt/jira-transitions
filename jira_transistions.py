@@ -76,15 +76,14 @@ def get_issue_changelog(issueid):
     return issue_log
 
 
-### playground
-log = get_issue_changelog("support-60933")
-
-
-def get_status_changes(log):
+def get_status_changes(log, status_list):
+    """return dataframe of age of status
+    log - dictionary of jira change log
+    status_list - list of statuses to extract"""
     status_changes = collections.defaultdict(list)
     for v in log["values"]:
         for i in v["items"]:
-            if i["field"] == "status":
+            if i["field"] == "status" and i["toString"] in status_list:
                 # elapsed =
                 # print(f"{v['id']}, {v['created']}, {i['fromString']}, {i['toString']} ")
                 status_changes["id"].append(v["id"])
@@ -93,22 +92,21 @@ def get_status_changes(log):
                 status_changes["toString"].append(i["toString"])
     sc = pd.DataFrame(status_changes)
 
-    # pprint(status_changes)
-    print(sc)
-    print(sc.dtypes)
-    # df['A'] = pd.to_datetime(df['A'])
-    sc["created"] = pd.to_datetime(sc["created"])
-    print(sc.dtypes)
-    # print(pd.Timestamp.now(tz="GMT-4"))
-    # sc["time since"] = (
-    #     sc["created"] - pd.Timestamp.now(tz='pytz.FixedOffset(-240)")')
-    # ).dt.days
-    # sc["elapsed"] = time.time() - sc["created"]
-    print(sc)
+    sc["created"] = pd.to_datetime(sc["created"], utc=True)
+    sc["days_since"] = (sc["created"] - pd.Timestamp.now(tz="UTC")).dt.days
+    # print(sc)
     return sc
 
 
-get_status_changes(log)
+### playground
+log = get_issue_changelog("support-60933")
+
+
+sold_statuses = ["In Backlog", "Scheduled"]
+pending_statuses = ["Sent to Client", "Response Review"]
+sold = get_status_changes(log, sold_statuses)
+
+pending = get_status_changes(log, pending_statuses)
 
 #### program
 # get issues from filter
