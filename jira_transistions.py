@@ -1,28 +1,20 @@
-# This code sample uses the 'requests' library:
-# http://docs.python-requests.org
 import requests
 from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
-from pprint import pprint
 import json
 import pandas as pd
 import collections
 
+# from pprint import pprint
 
+
+# this includes an individuals api key.  use it carefully it.
 token = json.load(open("me.json"))
-
-
-# cloudID = "029ed131-584c-4a3e-b4ae-473022fcbdd6"
-# urlbase = "https://api.atlassian.com/ex/jira/" + cloudID + "/rest/api/3/"
-# # auth = HTTPBasicAuth("email@example.com", "<api_token>")
-# auth = HTTPBasicAuth(token["user"], token["token"])
-# headers = {"Accept": "application/json"}
 
 
 def _get(url, params={}):
     cloudID = "029ed131-584c-4a3e-b4ae-473022fcbdd6"
     urlbase = "https://api.atlassian.com/ex/jira/" + cloudID + "/rest/api/3/"
-    # auth = HTTPBasicAuth("email@example.com", "<api_token>")
     auth = HTTPBasicAuth(token["user"], token["token"])
     headers = {"Accept": "application/json"}
 
@@ -35,7 +27,6 @@ def _get(url, params={}):
         print(f"HTTPError: {hterr}")
         raise hterr
     else:
-        print(r.text)
         return json.loads(r.text)
 
 
@@ -49,30 +40,49 @@ def print_filters():
         print(f"{f['id']}, {f['name']} ")
 
 
-def get_issues_from_filter(filter):
+def get_issues_from_filter_page(filter, start_at=0):
     """return dictionary of issues in filter
-    filter = filter name"""
+    filter - filter name
+    getall - if true, iterate through pagination"""
+    max_results = 20
 
     url = "search"
     params = {
         "jql": "filter=" + filter,
-        "maxResults": 5,
-        "fields": "key,summary,status,created,customfield_14925",
-        "startAt": 0,
+        "fields": "key,summary,status,created,customfield_14925,customfield_12513",
+        "maxResults": max_results,
+        "startAt": start_at,
     }
 
     issues = _get(url, params)
+    return issues
 
 
-# todo: delete this
-issues = get_issues_from_filter("backlog_approved_waiting")
-# print(issues["issues"])
+def get_issues_from_filter(filter, getall=False, start_at=0):
+    """return dictionary of issues in filter
+    filter - filter name
+    getall - if true, iterate through pagination"""
+
+    only_issues = []
+    issues = get_issues_from_filter_page(filter)
+    only_issues = only_issues + issues["issues"]
+
+    # check to see if we got them all
+    nextpage = issues["startAt"] + len(only_issues)
+    while nextpage < issues["total"]:
+        next_issues = get_issues_from_filter_page(filter, start_at=nextpage)
+        only_issues = only_issues + next_issues["issues"]
+        nextpage = next_issues["startAt"] + len(next_issues["issues"])
+
+    # print(f"only issues: {len(only_issues)}")
+
+    return only_issues
 
 
 def get_issue(issueid):
     """returns a json blob of issue details"""
-    id = issueid
-    url = "issue/" + id
+    issueid = issueid
+    url = "issue/" + issueid
 
     params = {"expand": "transitions"}
     issue = _get(url, params)
@@ -80,55 +90,106 @@ def get_issue(issueid):
 
 
 def get_issue_transistions(issueid):
-    id = issueid
-    url = "issue/" + id + "/transitions"
+    issueid = issueid
+    url = "issue/" + issueid + "/transitions"
 
     issue_transitions = _get(url)
     return issue_transitions
 
 
 def get_issue_changelog(issueid):
-    id = issueid
-    url = "issue/" + id + "/changelog"
+    """Return issue dictionary of issue change log"""
+
+    issueid = issueid
+    url = "issue/" + issueid + "/changelog"
 
     issue_log = _get(url)
     return issue_log
 
 
-def get_status_changes(log, status_list):
-    """return dataframe of age of status
-    log - dictionary of jira change log
+def get_status_changes_old(issue_log, status_list):
+    """Decided to do this a different way.
+    return dataframe of age of status
+    issure_log - dictionary of jira change log
     status_list - list of statuses to extract"""
     status_changes = collections.defaultdict(list)
-    for v in log["values"]:
+    for v in issue_log["values"]:
         for i in v["items"]:
             if i["field"] == "status" and i["toString"] in status_list:
-                # elapsed =
-                # print(f"{v['id']}, {v['created']}, {i['fromString']}, {i['toString']} ")
                 status_changes["id"].append(v["id"])
                 status_changes["created"].append(v["created"])
                 status_changes["fromString"].append(i["fromString"])
                 status_changes["toString"].append(i["toString"])
+    return status_changes
+    # todo: this works, but should be later in the process
     sc = pd.DataFrame(status_changes)
 
     sc["created"] = pd.to_datetime(sc["created"], utc=True)
     sc["days_since"] = (sc["created"] - pd.Timestamp.now(tz="UTC")).dt.days
-    # print(sc)
     return sc
 
 
-### playground
-# log = get_issue_changelog("support-60933")
+"""
+ # get issues from filter
+ # get transistions form chage log
+ #      todo: deal w/ multiple trans to same status
+ # todo:calculate date delta
+ # todo:put in pd.dataframe, calc date buckets for aging
+ # todo:make visualization
+"""
+
+
+def get_transistions_for_issues(jira_issues, status_list):
+    """return dictionary of issues w/ status change information"""
+    status_list = status_list
+    issues = []
+    for i in jira_issues:
+        issue = {}
+
+        issue["key"] = i["key"]
+        issue["summary"] = i["fields"]["summary"]
+        issue["client_estimate"] = i["fields"]["customfield_14925"]
+        issue["client"] = i["fields"]["customfield_12513"]["value"]
+        issue["created"] = i["fields"]["created"]
+        issue["current_status"] = i["fields"]["status"]["name"]
+        # assemble the list of status transitions
+        issue["transistions_sold"] = []
+        issue["transistions_sold"].append(
+            get_status_changes(get_issue_changelog(i["key"]), status_list)
+        )
+
+        issues.append(issue)
+    # pprint(issue
+    return issues
+
+
+def get_status_changes(issue_log, status_list):
+    """return an transistions dict from an issue's log"""
+    status_changes = []
+    for v in issue_log["values"]:
+        for i in v["items"]:
+            if i["field"] == "status" and i["toString"] in status_list:
+                status_change = {}
+                status_change["created"] = v["created"]
+                status_change["fromString"] = i["fromString"]
+                status_change["toString"] = i["toString"]
+                status_changes.append(status_change)
+    return status_changes
+
+
+def export_json(dict, file):
+    """ save a json dictionary to a file for later
+    dict - json dictionary to save
+    file - filename to save"""
+    with open(file, "w") as fp:
+        json.dump(dict, fp, sort_keys=True, indent=2)
 
 
 sold_statuses = ["In Backlog", "Scheduled"]
 pending_statuses = ["Sent to Client", "Response Review"]
-# sold = get_status_changes(log, sold_statuses)
 
-# pending = get_status_changes(log, pending_statuses)
-
-#### program
-# get issues from filter
-# for each issue get transistion
-
-# from transistion, find date of status x->y change
+sold_jira_issues = get_issues_from_filter("backlog_approved_waiting")
+sold_issues = get_transistions_for_issues(sold_jira_issues, sold_statuses)
+# pprint(sold_issues)
+export_json(sold_issues, "./examples/sold_issues.json")
+print(len(sold_issues))

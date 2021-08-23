@@ -1,0 +1,3334 @@
+{
+  "expand": "schema,names",
+  "startAt": 0,
+  "maxResults": 5,
+  "total": 51,
+  "issues": [
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields,customfield_12400.requestTypePractice",
+      "id": "114264",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114264",
+      "key": "SUPPORT-61294",
+      "fields": {
+        "statuscategorychangedate": "2021-08-12T12:50:47.139-0400",
+        "customfield_13100": null,
+        "fixVersions": [],
+        "customfield_13500": null,
+        "customfield_13501": null,
+        "customfield_12403": null,
+        "customfield_14947": null,
+        "customfield_14945": null,
+        "customfield_14948": null,
+        "customfield_12806": null,
+        "customfield_12807": null,
+        "lastViewed": "2021-08-16T16:28:12.992-0400",
+        "customfield_12400": {
+          "_links": {
+            "jiraRest": "https://thebrightlink.atlassian.net/rest/api/2/issue/114264",
+            "web": "https://thebrightlink.atlassian.net/servicedesk/customer/portal/2/SUPPORT-61294",
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114264",
+            "agent": "https://thebrightlink.atlassian.net/browse/SUPPORT-61294"
+          },
+          "requestType": {
+            "_expands": ["field"],
+            "id": "27",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/servicedesk/2/requesttype/27"
+            },
+            "name": "Engineering Project",
+            "description": "A project requiring software engineering",
+            "helpText": "",
+            "issueTypeId": "10201",
+            "serviceDeskId": "2",
+            "groupIds": [],
+            "icon": {
+              "id": "13439",
+              "_links": {
+                "iconUrls": {
+                  "48x48": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=13439&size=large",
+                  "24x24": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=13439&size=small",
+                  "16x16": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=13439&size=xsmall",
+                  "32x32": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=13439&size=medium"
+                }
+              }
+            }
+          },
+          "currentStatus": {
+            "status": "In Queue",
+            "statusCategory": "INDETERMINATE",
+            "statusDate": {
+              "iso8601": "2021-08-05T06:52:57-0700",
+              "jira": "2021-08-05T09:52:57.239-0400",
+              "friendly": "05/Aug/21 6:52 AM",
+              "epochMillis": 1628171577239
+            }
+          }
+        },
+        "priority": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+          "name": "Minor",
+          "id": "4"
+        },
+        "customfield_12402": null,
+        "customfield_14940": null,
+        "labels": [],
+        "customfield_14941": null,
+        "customfield_12401": null,
+        "customfield_14935": {
+          "id": "37",
+          "name": "1 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114264/sla/37"
+          },
+          "completedCycles": []
+        },
+        "customfield_13207": null,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12589",
+          "value": "Apple",
+          "id": "12589"
+        },
+        "customfield_14936": {
+          "id": "38",
+          "name": "5 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114264/sla/38"
+          },
+          "completedCycles": []
+        },
+        "customfield_13206": 2.9683141e7,
+        "customfield_14933": null,
+        "customfield_14934": null,
+        "aggregatetimeoriginalestimate": null,
+        "timeestimate": null,
+        "customfield_14937": {
+          "id": "39",
+          "name": "15 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114264/sla/39"
+          },
+          "completedCycles": []
+        },
+        "customfield_14938": {
+          "id": "40",
+          "name": "6 week tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114264/sla/40"
+          },
+          "completedCycles": []
+        },
+        "issuelinks": [
+          {
+            "id": "49210",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/49210",
+            "type": {
+              "id": "10600",
+              "name": "Problem/Incident",
+              "inward": "is caused by",
+              "outward": "causes",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10600"
+            },
+            "inwardIssue": {
+              "id": "114396",
+              "key": "COREBT-14468",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114396",
+              "fields": {
+                "summary": "Reflected XSS Vulnerability",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+                  "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Grooming",
+                  "id": "10934",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "yellow",
+                    "name": "In Progress"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/1",
+                  "id": "1",
+                  "description": "A problem which impairs or prevents the functions of the product.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10603&avatarType=issuetype",
+                  "name": "Bug",
+                  "subtask": false,
+                  "avatarId": 10603,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "49009",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/49009",
+            "type": {
+              "id": "10400",
+              "name": "Requirement Fulfillment",
+              "inward": "is fulfilled by",
+              "outward": "fulfills",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10400"
+            },
+            "outwardIssue": {
+              "id": "114213",
+              "key": "SUPPORT-61286",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114213",
+              "fields": {
+                "summary": "XSS Vulnerability",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/11410",
+                  "description": "Converted to some SOW type of issue",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Converted",
+                  "id": "11410",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "green",
+                    "name": "Done"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/3",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/major.svg",
+                  "name": "Major",
+                  "id": "3"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10002",
+                  "id": "10002",
+                  "description": "",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10608&avatarType=issuetype",
+                  "name": "Ticket",
+                  "subtask": false,
+                  "avatarId": 10608,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          }
+        ],
+        "assignee": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5c4917c15fbf9d2d03169d43",
+          "accountId": "5c4917c15fbf9d2d03169d43",
+          "emailAddress": "mstone@thebrightlink.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5c4917c15fbf9d2d03169d43/6e2a8e40-fde9-4733-8e11-2914143dfd3a/32"
+          },
+          "displayName": "Matt Stone",
+          "active": true,
+          "timeZone": "America/Los_Angeles",
+          "accountType": "atlassian"
+        },
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        },
+        "customfield_14932": null,
+        "customfield_14930": null,
+        "customfield_13600": null,
+        "customfield_13713": null,
+        "customfield_14924": null,
+        "customfield_14925": 0.0,
+        "customfield_14922": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12536",
+          "value": "Hourly",
+          "id": "12536"
+        },
+        "customfield_14405": null,
+        "aggregatetimeestimate": null,
+        "customfield_14929": {
+          "id": "33",
+          "name": "Level 1 SLA",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114264/sla/33"
+          },
+          "completedCycles": []
+        },
+        "customfield_14926": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12585",
+          "value": "Tech Services Project",
+          "id": "12585"
+        },
+        "customfield_14927": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "This was not identified in the recent PEN test."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The risk is raw HTML passed in the param of "
+                },
+                {
+                  "type": "text",
+                  "text": "tg_flash",
+                  "marks": [{ "type": "code" }]
+                },
+                {
+                  "type": "text",
+                  "text": " that is rendered in the browser.  If the param were encoded, an attacker would not be able to inject alternative HTML in to the user experience."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                { "type": "text", "text": "Rather than seeing something like:" }
+              ]
+            },
+            {
+              "type": "codeBlock",
+              "attrs": {},
+              "content": [
+                {
+                  "type": "text",
+                  "text": "?tg_flash=%3Cp%3EWe%27re+connecting+to+our+exam+delivery+partner--sometimes+this+takes+a+little+time.+Reloading+this+page+may+help.+%3C%2Fp%3E%0A%0A%3Cp%3E%3Ca+class%3D%22btn-link%22+style%3D%22color%3A%23337ab7%3B%22+href%3D%22https%3A%2F%2Fapple.useclarus.com%2Fpearson_vue%2Fsso%22%3EAlternatively+you+may+continue+at+Pearson+VUE.%3C%2Fa%3E%3C%2Fp%3E"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "we could render a language token like this:"
+                }
+              ]
+            },
+            {
+              "type": "codeBlock",
+              "attrs": {},
+              "content": [{ "type": "text", "text": "?tg_flash=LT_12342321" }]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "or an encoded string like this (if we want to skip the language token management):"
+                }
+              ]
+            },
+            {
+              "type": "codeBlock",
+              "attrs": {},
+              "content": [
+                {
+                  "type": "text",
+                  "text": "?tg_flash=\"b'gAAAAABhFS1fFnmNAj1Hrnb63LOJEXkC-6VdqV1VYVfCx-7iMDZo1aPU5Tp0TOnsjY9TtEJRUT2eM5Ya04ChiUv6LvyVtG31E77bjsVBfDdao7Bj5FE7-mq1efnywptpvq3L9b-TO_XSoZATbo7gjW1dNe-oHZKE5zubHlwvuBVw_qVmq32zcaBRYioekwf2L9SPNtce6TUa-1VrQqYLYsUrNpstXyTdWokqt3LFBOaS52PdQXYcwqW-sZkZ4TYJKZ99THBpHYuJqSPk73k_c5LPp_1OLEqlRqEqZ7l5710ENfMb9GOwLD6ab91Hfe0z_ndRO07SVM9WYC5u7uajsSAjaE7UUWGjTcZZGb7jh1v_QwpJLBwZZ75cGsTUVC7FC-wcUfJdCwavPAlz-ZxqhSmjttPeSZvGbN23QXIG_6Aqwch2FA0Uf9WpIB4eTJGqdEdXypxzkhCyrG60t_CumUp1q0p04PgXPAzzR4InhNMg97_jlxDcRk3jtW45SoqTGr1mkB8xzsd8dpAHbLgrkn5T7V8vHPCX1w=='\""
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The above is encrypted in python w/ Fernet from "
+                },
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://stackoverflow.com/questions/2490334/simple-way-to-encode-a-string-according-to-a-password"
+                  }
+                },
+                { "type": "text", "text": " " }
+              ]
+            }
+          ]
+        },
+        "creator": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=557058%3Ae70e82e4-3685-4af5-b606-39489e365ad8",
+          "accountId": "557058:e70e82e4-3685-4af5-b606-39489e365ad8",
+          "emailAddress": "ewlooney@thebrightlink.com",
+          "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "24x24": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "16x16": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "32x32": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png"
+          },
+          "displayName": "E.W. Looney",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "atlassian"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3Ab1ae1d45-bdce-486a-b13a-222c6c811619",
+          "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:b1ae1d45-bdce-486a-b13a-222c6c811619",
+          "emailAddress": "winkelman@apple.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+          },
+          "displayName": "Drew Winkelman",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "customer"
+        },
+        "customfield_13310": null,
+        "aggregateprogress": { "progress": 0, "total": 0 },
+        "customfield_14920": null,
+        "customfield_14800": [
+          {
+            "id": "22",
+            "name": "Apple",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/organization/22"
+            }
+          }
+        ],
+        "customfield_12501": [
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3Aef81cbe4-09fd-4457-afa5-e5e4b1e409dd",
+            "key": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:ef81cbe4-09fd-4457-afa5-e5e4b1e409dd",
+            "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:ef81cbe4-09fd-4457-afa5-e5e4b1e409dd",
+            "emailAddress": "colleen_davis@apple.com",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+            },
+            "displayName": "Colleen Davis",
+            "active": true,
+            "timeZone": "America/Chicago",
+            "accountType": "customer"
+          },
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3Ab1ae1d45-bdce-486a-b13a-222c6c811619",
+            "key": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:b1ae1d45-bdce-486a-b13a-222c6c811619",
+            "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:b1ae1d45-bdce-486a-b13a-222c6c811619",
+            "emailAddress": "winkelman@apple.com",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+            },
+            "displayName": "Drew Winkelman",
+            "active": true,
+            "timeZone": "America/New_York",
+            "accountType": "customer"
+          }
+        ],
+        "customfield_12500": "0|i0erjb:",
+        "customfield_14913": null,
+        "customfield_13306": null,
+        "customfield_14914": null,
+        "customfield_13305": null,
+        "customfield_13704": null,
+        "customfield_14911": "2021-08-05T09:52:58.126-0400",
+        "customfield_13308": null,
+        "customfield_13307": null,
+        "customfield_14912": null,
+        "customfield_14917": null,
+        "customfield_13309": null,
+        "customfield_14918": null,
+        "customfield_14915": null,
+        "customfield_14916": { "languageCode": "en", "displayName": "English" },
+        "progress": { "progress": 0, "total": 0 },
+        "customfield_13709": null,
+        "votes": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-61294/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "customfield_14919": null,
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        },
+        "issuetype": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10201",
+          "id": "10201",
+          "description": "Statement of Work",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10604&avatarType=issuetype",
+          "name": "SOW",
+          "subtask": false,
+          "avatarId": 10604,
+          "hierarchyLevel": 0
+        },
+        "timespent": null,
+        "project": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/11601",
+          "id": "11601",
+          "key": "SUPPORT",
+          "name": "Client Success",
+          "projectTypeKey": "service_desk",
+          "simplified": false,
+          "avatarUrls": {
+            "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?pid=11601&avatarId=10508",
+            "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&pid=11601&avatarId=10508",
+            "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&pid=11601&avatarId=10508",
+            "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&pid=11601&avatarId=10508"
+          },
+          "projectCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/projectCategory/10602",
+            "id": "10602",
+            "description": "",
+            "name": "Client Success"
+          }
+        },
+        "aggregatetimespent": null,
+        "customfield_13302": null,
+        "customfield_13301": {
+          "hasEpicLinkFieldDependency": false,
+          "showField": false,
+          "nonEditableReason": {
+            "reason": "TOP_OF_HIERARCHY",
+            "message": "An issue at the top of the hierarchy cannot have a parent set."
+          }
+        },
+        "customfield_14910": null,
+        "customfield_13304": null,
+        "customfield_13303": null,
+        "customfield_12602": null,
+        "customfield_12601": {
+          "id": "36",
+          "name": "Resolve Time",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114264/sla/36"
+          },
+          "completedCycles": []
+        },
+        "customfield_14900": "{}",
+        "resolutiondate": null,
+        "workratio": -1,
+        "customfield_14908": null,
+        "customfield_14909": null,
+        "watches": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-61294/watchers",
+          "watchCount": 0,
+          "isWatching": false
+        },
+        "issuerestriction": { "issuerestrictions": {}, "shouldDisplay": false },
+        "created": "2021-08-05T09:52:57.239-0400",
+        "customfield_14502": null,
+        "customfield_14503": null,
+        "customfield_14500": null,
+        "updated": "2021-08-13T08:59:20.407-0400",
+        "timeoriginalestimate": null,
+        "description": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "There appears to be a reflected XSS vulnerability in the website "
+                },
+                {
+                  "type": "text",
+                  "text": "apple.useclarus.com",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": { "href": "http://apple.useclarus.com" }
+                    }
+                  ]
+                },
+                { "type": "text", "text": "." }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The Apple Infosec team was reviewing this site "
+                },
+                {
+                  "type": "inlineCard",
+                  "attrs": { "url": "https://training.apple.com/us/en/courses" }
+                },
+                {
+                  "type": "text",
+                  "text": "  and from the schedule exam option, was redirected to "
+                },
+                {
+                  "type": "text",
+                  "text": "https://apple.useclarus.com/credentials/browse/",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://apple.useclarus.com/credentials/browse/"
+                      }
+                    }
+                  ]
+                },
+                { "type": "text", "text": "." }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [{ "type": "text", "text": "PoC" }]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                { "type": "text", "text": "1- Go to " },
+                {
+                  "type": "inlineCard",
+                  "attrs": { "url": "https://training.apple.com/us/en/courses" }
+                },
+                { "type": "text", "text": " " },
+                { "type": "hardBreak" },
+                { "type": "text", "text": "2- Go to Schedule Exam." },
+                { "type": "hardBreak" },
+                { "type": "text", "text": "3- You are being redirected to " },
+                {
+                  "type": "text",
+                  "text": "https://apple.useclarus.com/credentials/browse/",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://apple.useclarus.com/credentials/browse/"
+                      }
+                    }
+                  ]
+                },
+                { "type": "hardBreak" },
+                {
+                  "type": "text",
+                  "text": "4- Login with your account and go to "
+                },
+                {
+                  "type": "text",
+                  "text": "https://apple.useclarus.com/apply/application?id=366",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://apple.useclarus.com/apply/application?id=366"
+                      }
+                    }
+                  ]
+                },
+                { "type": "hardBreak" },
+                {
+                  "type": "text",
+                  "text": "5- There is an error displaying, and at this domain "
+                },
+                {
+                  "type": "text",
+                  "text": "https://apple.useclarus.com/dashboard/?tg_flash=",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://apple.useclarus.com/dashboard/?tg_flash="
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " , there is some HTML code that is showing."
+                },
+                { "type": "hardBreak" },
+                {
+                  "type": "text",
+                  "text": "6- Add any payload there, and it is being reflected."
+                }
+              ]
+            }
+          ]
+        },
+        "customfield_13400": null,
+        "customfield_10007": null,
+        "customfield_10008": null,
+        "attachment": [],
+        "summary": "XSS Vulnerability",
+        "customfield_14200": null,
+        "customfield_14601": null,
+        "customfield_10004": null,
+        "customfield_14600": null,
+        "customfield_13900": null,
+        "duedate": null,
+        "customfield_13905": null
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields,customfield_12400.requestTypePractice",
+      "id": "114138",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114138",
+      "key": "SUPPORT-61253",
+      "fields": {
+        "statuscategorychangedate": "2021-08-05T15:29:23.126-0400",
+        "customfield_13100": null,
+        "fixVersions": [],
+        "customfield_13500": null,
+        "customfield_13501": null,
+        "customfield_14947": null,
+        "customfield_12403": null,
+        "customfield_14945": null,
+        "customfield_14948": null,
+        "customfield_12806": null,
+        "customfield_12807": null,
+        "lastViewed": "2021-08-16T12:20:31.697-0400",
+        "priority": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+          "name": "Minor",
+          "id": "4"
+        },
+        "customfield_12400": {
+          "_links": {
+            "jiraRest": "https://thebrightlink.atlassian.net/rest/api/2/issue/114138",
+            "web": "https://thebrightlink.atlassian.net/servicedesk/customer/portal/2/SUPPORT-61253",
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114138",
+            "agent": "https://thebrightlink.atlassian.net/browse/SUPPORT-61253"
+          },
+          "requestType": {
+            "_expands": ["field"],
+            "id": "27",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/servicedesk/2/requesttype/27"
+            },
+            "name": "Engineering Project",
+            "description": "A project requiring software engineering",
+            "helpText": "",
+            "issueTypeId": "10201",
+            "serviceDeskId": "2",
+            "groupIds": [],
+            "icon": {
+              "id": "13439",
+              "_links": {
+                "iconUrls": {
+                  "48x48": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=13439&size=large",
+                  "24x24": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=13439&size=small",
+                  "16x16": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=13439&size=xsmall",
+                  "32x32": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=13439&size=medium"
+                }
+              }
+            }
+          },
+          "currentStatus": {
+            "status": "In Queue",
+            "statusCategory": "INDETERMINATE",
+            "statusDate": {
+              "iso8601": "2021-08-02T07:13:22-0700",
+              "jira": "2021-08-02T10:13:22.087-0400",
+              "friendly": "02/Aug/21 7:13 AM",
+              "epochMillis": 1627913602087
+            }
+          }
+        },
+        "customfield_12402": null,
+        "customfield_14940": null,
+        "labels": [],
+        "customfield_12401": null,
+        "customfield_14941": null,
+        "customfield_13207": null,
+        "customfield_14935": {
+          "id": "37",
+          "name": "1 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114138/sla/37"
+          },
+          "completedCycles": []
+        },
+        "customfield_14936": {
+          "id": "38",
+          "name": "5 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114138/sla/38"
+          },
+          "completedCycles": []
+        },
+        "customfield_13206": 2.9628674e7,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12538",
+          "value": "IBLCE",
+          "id": "12538"
+        },
+        "customfield_14933": null,
+        "customfield_14934": null,
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "customfield_14937": {
+          "id": "39",
+          "name": "15 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114138/sla/39"
+          },
+          "completedCycles": []
+        },
+        "customfield_14938": {
+          "id": "40",
+          "name": "6 week tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114138/sla/40"
+          },
+          "completedCycles": []
+        },
+        "issuelinks": [
+          {
+            "id": "48811",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48811",
+            "type": {
+              "id": "10400",
+              "name": "Requirement Fulfillment",
+              "inward": "is fulfilled by",
+              "outward": "fulfills",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10400"
+            },
+            "outwardIssue": {
+              "id": "114068",
+              "key": "SUPPORT-61219",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114068",
+              "fields": {
+                "summary": "Review Packet Not Completing",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/11410",
+                  "description": "Converted to some SOW type of issue",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Converted",
+                  "id": "11410",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "green",
+                    "name": "Done"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10002",
+                  "id": "10002",
+                  "description": "",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10608&avatarType=issuetype",
+                  "name": "Ticket",
+                  "subtask": false,
+                  "avatarId": 10608,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "49020",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/49020",
+            "type": {
+              "id": "10500",
+              "name": "SOW",
+              "inward": "SOW of",
+              "outward": "in SOW",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+            },
+            "inwardIssue": {
+              "id": "114279",
+              "key": "COREBT-14453",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114279",
+              "fields": {
+                "summary": "Candidate CE page blocked by \"certifications\"",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+                  "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Grooming",
+                  "id": "10934",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "yellow",
+                    "name": "In Progress"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/1",
+                  "id": "1",
+                  "description": "A problem which impairs or prevents the functions of the product.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10603&avatarType=issuetype",
+                  "name": "Bug",
+                  "subtask": false,
+                  "avatarId": 10603,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          }
+        ],
+        "assignee": null,
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        },
+        "customfield_14932": null,
+        "customfield_13600": null,
+        "customfield_14930": null,
+        "customfield_13713": null,
+        "customfield_14924": null,
+        "customfield_14925": 0.0,
+        "customfield_14405": null,
+        "customfield_14922": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12536",
+          "value": "Hourly",
+          "id": "12536"
+        },
+        "aggregatetimeestimate": null,
+        "customfield_14929": {
+          "id": "33",
+          "name": "Level 1 SLA",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114138/sla/33"
+          },
+          "completedCycles": []
+        },
+        "customfield_14926": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12585",
+          "value": "Tech Services Project",
+          "id": "12585"
+        },
+        "customfield_14927": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Need engineering assistance to determine why, for a particular candidate in production, the CE is blocked by whether exists a “certification” or not."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                { "type": "text", "text": "Candidate Susan Tanner (173966)" }
+              ]
+            }
+          ]
+        },
+        "creator": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=557058%3Ae70e82e4-3685-4af5-b606-39489e365ad8",
+          "accountId": "557058:e70e82e4-3685-4af5-b606-39489e365ad8",
+          "emailAddress": "ewlooney@thebrightlink.com",
+          "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "24x24": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "16x16": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "32x32": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png"
+          },
+          "displayName": "E.W. Looney",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "atlassian"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3A8be5dffb-3901-4de9-8ca7-7f6f83f0bdc5",
+          "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:8be5dffb-3901-4de9-8ca7-7f6f83f0bdc5",
+          "emailAddress": "lphillips@iblce.org",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+          },
+          "displayName": "Lesley Phillips",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "customer"
+        },
+        "aggregateprogress": { "progress": 0, "total": 0 },
+        "customfield_13310": null,
+        "customfield_14920": null,
+        "customfield_14800": [
+          {
+            "id": "4",
+            "name": "IBLCE",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/organization/4"
+            }
+          }
+        ],
+        "customfield_12501": [
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3A28269bae-a10e-4d55-b7ac-b245c24d38dd",
+            "key": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:28269bae-a10e-4d55-b7ac-b245c24d38dd",
+            "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:28269bae-a10e-4d55-b7ac-b245c24d38dd",
+            "emailAddress": "lhua@iblce.org",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+            },
+            "displayName": "Long Hua",
+            "active": true,
+            "timeZone": "America/New_York",
+            "accountType": "customer"
+          },
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3A8be5dffb-3901-4de9-8ca7-7f6f83f0bdc5",
+            "key": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:8be5dffb-3901-4de9-8ca7-7f6f83f0bdc5",
+            "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:8be5dffb-3901-4de9-8ca7-7f6f83f0bdc5",
+            "emailAddress": "lphillips@iblce.org",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+            },
+            "displayName": "Lesley Phillips",
+            "active": true,
+            "timeZone": "America/New_York",
+            "accountType": "customer"
+          },
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3Ac25d4f5c-0b06-41fa-807b-f29a90f2dfb6",
+            "key": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:c25d4f5c-0b06-41fa-807b-f29a90f2dfb6",
+            "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:c25d4f5c-0b06-41fa-807b-f29a90f2dfb6",
+            "emailAddress": "pweber@iblce.org",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+            },
+            "displayName": "Pam Weber",
+            "active": true,
+            "timeZone": "America/New_York",
+            "accountType": "customer"
+          }
+        ],
+        "customfield_12500": "0|i0eqsf:",
+        "customfield_13306": null,
+        "customfield_14913": null,
+        "customfield_14914": null,
+        "customfield_13305": null,
+        "customfield_13308": null,
+        "customfield_13704": null,
+        "customfield_14911": "2021-08-02T10:13:22.956-0400",
+        "customfield_14912": null,
+        "customfield_13307": null,
+        "customfield_14917": null,
+        "customfield_13309": null,
+        "customfield_14918": null,
+        "customfield_14915": null,
+        "customfield_14916": { "languageCode": "en", "displayName": "English" },
+        "customfield_13709": null,
+        "progress": { "progress": 0, "total": 0 },
+        "customfield_14919": null,
+        "votes": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-61253/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        },
+        "issuetype": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10201",
+          "id": "10201",
+          "description": "Statement of Work",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10604&avatarType=issuetype",
+          "name": "SOW",
+          "subtask": false,
+          "avatarId": 10604,
+          "hierarchyLevel": 0
+        },
+        "timespent": null,
+        "project": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/11601",
+          "id": "11601",
+          "key": "SUPPORT",
+          "name": "Client Success",
+          "projectTypeKey": "service_desk",
+          "simplified": false,
+          "avatarUrls": {
+            "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?pid=11601&avatarId=10508",
+            "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&pid=11601&avatarId=10508",
+            "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&pid=11601&avatarId=10508",
+            "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&pid=11601&avatarId=10508"
+          },
+          "projectCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/projectCategory/10602",
+            "id": "10602",
+            "description": "",
+            "name": "Client Success"
+          }
+        },
+        "customfield_13302": null,
+        "aggregatetimespent": null,
+        "customfield_13301": {
+          "hasEpicLinkFieldDependency": false,
+          "showField": false,
+          "nonEditableReason": {
+            "reason": "TOP_OF_HIERARCHY",
+            "message": "An issue at the top of the hierarchy cannot have a parent set."
+          }
+        },
+        "customfield_14910": null,
+        "customfield_13304": null,
+        "customfield_13303": null,
+        "customfield_12602": null,
+        "customfield_12601": {
+          "id": "36",
+          "name": "Resolve Time",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114138/sla/36"
+          },
+          "completedCycles": []
+        },
+        "customfield_14900": "{}",
+        "resolutiondate": null,
+        "workratio": -1,
+        "customfield_14908": null,
+        "customfield_14909": null,
+        "watches": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-61253/watchers",
+          "watchCount": 0,
+          "isWatching": false
+        },
+        "issuerestriction": { "issuerestrictions": {}, "shouldDisplay": false },
+        "created": "2021-08-02T10:13:22.087-0400",
+        "customfield_14502": null,
+        "customfield_14503": null,
+        "customfield_14500": null,
+        "updated": "2021-08-05T15:30:57.575-0400",
+        "timeoriginalestimate": null,
+        "description": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "except the CERPs portfolio is showing the following message:"
+                }
+              ]
+            },
+            {
+              "type": "mediaSingle",
+              "attrs": { "width": 50, "layout": "center" },
+              "content": [
+                {
+                  "type": "media",
+                  "attrs": {
+                    "id": "6aeba3ac-81b8-40bb-8ff2-92fd28d49c26",
+                    "type": "file",
+                    "collection": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "“You must have at least one current certification in order to obtain Continuing Education credits.”"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Since the candidate has a current certification, it seems like this is incorrect. Can you look into it?"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [{ "type": "text", "text": "Thanks! Lesley" }]
+            }
+          ]
+        },
+        "customfield_13400": null,
+        "customfield_10007": null,
+        "customfield_10008": null,
+        "attachment": [
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/attachment/49741",
+            "id": "49741",
+            "filename": "image-20210730-211232.png",
+            "author": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5d3f52f5d99e6c0da904a1b5",
+              "accountId": "5d3f52f5d99e6c0da904a1b5",
+              "emailAddress": "jwaldron@thebrightlink.com",
+              "avatarUrls": {
+                "48x48": "https://secure.gravatar.com/avatar/1d7893f8472201ab196e1ceca0177cc8?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-1.png",
+                "24x24": "https://secure.gravatar.com/avatar/1d7893f8472201ab196e1ceca0177cc8?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-1.png",
+                "16x16": "https://secure.gravatar.com/avatar/1d7893f8472201ab196e1ceca0177cc8?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-1.png",
+                "32x32": "https://secure.gravatar.com/avatar/1d7893f8472201ab196e1ceca0177cc8?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-1.png"
+              },
+              "displayName": "Jim Waldron",
+              "active": true,
+              "timeZone": "America/Chicago",
+              "accountType": "atlassian"
+            },
+            "created": "2021-08-02T10:24:45.843-0400",
+            "size": 33973,
+            "mimeType": "image/png",
+            "content": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/attachment/49741/image-20210730-211232.png",
+            "thumbnail": "https://thebrightlink.atlassian.net/secure/thumbnail/49741/image-20210730-211232.png"
+          }
+        ],
+        "summary": "Candidate CE page blocked by \"certifications\"",
+        "customfield_14200": null,
+        "customfield_14601": null,
+        "customfield_14600": null,
+        "customfield_10004": null,
+        "customfield_13900": null,
+        "duedate": null,
+        "customfield_13905": null
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields,customfield_12400.requestTypePractice",
+      "id": "114057",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114057",
+      "key": "SUPPORT-61212",
+      "fields": {
+        "statuscategorychangedate": "2021-08-03T10:54:11.917-0400",
+        "customfield_13100": null,
+        "fixVersions": [],
+        "customfield_13500": null,
+        "resolution": null,
+        "customfield_13501": null,
+        "customfield_14947": null,
+        "customfield_12403": null,
+        "customfield_14948": null,
+        "customfield_12807": null,
+        "lastViewed": null,
+        "customfield_12400": {
+          "_links": {
+            "jiraRest": "https://thebrightlink.atlassian.net/rest/api/2/issue/114057",
+            "web": "https://thebrightlink.atlassian.net/servicedesk/customer/portal/2/SUPPORT-61212",
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114057",
+            "agent": "https://thebrightlink.atlassian.net/browse/SUPPORT-61212"
+          },
+          "requestType": {
+            "_expands": ["field"],
+            "id": "29",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/servicedesk/2/requesttype/29"
+            },
+            "name": "Technical Services Project",
+            "description": "",
+            "helpText": "",
+            "issueTypeId": "10905",
+            "serviceDeskId": "2",
+            "groupIds": [],
+            "icon": {
+              "id": "12032",
+              "_links": {
+                "iconUrls": {
+                  "48x48": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=large",
+                  "24x24": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=small",
+                  "16x16": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=xsmall",
+                  "32x32": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=medium"
+                }
+              }
+            }
+          },
+          "currentStatus": {
+            "status": "In Queue",
+            "statusCategory": "INDETERMINATE",
+            "statusDate": {
+              "iso8601": "2021-07-27T13:09:38-0700",
+              "jira": "2021-07-27T16:09:38.282-0400",
+              "friendly": "27/Jul/21 1:09 PM",
+              "epochMillis": 1627416578282
+            }
+          }
+        },
+        "priority": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/3",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/major.svg",
+          "name": "Major",
+          "id": "3"
+        },
+        "customfield_14940": null,
+        "customfield_12402": null,
+        "labels": [],
+        "customfield_14941": null,
+        "customfield_12401": null,
+        "customfield_14935": {
+          "id": "37",
+          "name": "1 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114057/sla/37"
+          },
+          "completedCycles": []
+        },
+        "customfield_13207": null,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12593",
+          "value": "NBPTS",
+          "id": "12593"
+        },
+        "customfield_13206": 2.9566697e7,
+        "customfield_14936": {
+          "id": "38",
+          "name": "5 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114057/sla/38"
+          },
+          "completedCycles": []
+        },
+        "customfield_14933": null,
+        "customfield_14934": null,
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "customfield_14937": {
+          "id": "39",
+          "name": "15 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114057/sla/39"
+          },
+          "completedCycles": []
+        },
+        "customfield_14938": {
+          "id": "40",
+          "name": "6 week tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114057/sla/40"
+          },
+          "completedCycles": []
+        },
+        "issuelinks": [
+          {
+            "id": "48722",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48722",
+            "type": {
+              "id": "10400",
+              "name": "Requirement Fulfillment",
+              "inward": "is fulfilled by",
+              "outward": "fulfills",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10400"
+            },
+            "outwardIssue": {
+              "id": "113930",
+              "key": "SUPPORT-61127",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113930",
+              "fields": {
+                "summary": "Question:  Bulk change of Credential Expiration Dates",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/11410",
+                  "description": "Converted to some SOW type of issue",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Converted",
+                  "id": "11410",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "green",
+                    "name": "Done"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/3",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/major.svg",
+                  "name": "Major",
+                  "id": "3"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10002",
+                  "id": "10002",
+                  "description": "",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10608&avatarType=issuetype",
+                  "name": "Ticket",
+                  "subtask": false,
+                  "avatarId": 10608,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          }
+        ],
+        "assignee": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=557058%3A51214233-7e05-49e6-ba14-27fbee6f66a5",
+          "accountId": "557058:51214233-7e05-49e6-ba14-27fbee6f66a5",
+          "emailAddress": "smiller@thebrightlink.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:51214233-7e05-49e6-ba14-27fbee6f66a5/fede75cc-f30c-418d-9480-03da545db900/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:51214233-7e05-49e6-ba14-27fbee6f66a5/fede75cc-f30c-418d-9480-03da545db900/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:51214233-7e05-49e6-ba14-27fbee6f66a5/fede75cc-f30c-418d-9480-03da545db900/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:51214233-7e05-49e6-ba14-27fbee6f66a5/fede75cc-f30c-418d-9480-03da545db900/32"
+          },
+          "displayName": "Sarah Miller",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "atlassian"
+        },
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        },
+        "components": [],
+        "customfield_12510": null,
+        "customfield_14932": null,
+        "customfield_14930": null,
+        "customfield_13600": null,
+        "customfield_13713": null,
+        "customfield_14924": null,
+        "customfield_12503": null,
+        "customfield_14925": 1100.0,
+        "customfield_14922": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12536",
+          "value": "Hourly",
+          "id": "12536"
+        },
+        "customfield_14405": null,
+        "aggregatetimeestimate": null,
+        "customfield_12507": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/11205",
+          "value": "Story",
+          "id": "11205"
+        },
+        "customfield_14929": {
+          "id": "33",
+          "name": "Level 1 SLA",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114057/sla/33"
+          },
+          "completedCycles": []
+        },
+        "customfield_14926": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12585",
+          "value": "Tech Services Project",
+          "id": "12585"
+        },
+        "customfield_14927": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "NBPTS to provide list of candidates to update. Project is blocked until this list is received. "
+                }
+              ]
+            },
+            { "type": "paragraph", "content": [] },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "I think from a product standpoint we would want to the APIs to allow for this, and allow for a dynamic tool to be built for it, but I think there might be a couple gaps. "
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "I think this “first” time at least is a project (estimated 2pts), and we probably will just do it via the database for expediency, but I think we should use it as a requirement gathering exercise so we can figure out what we need to ask for as far as Clarity enhancements."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://docs.google.com/spreadsheets/d/1PVp6FYnVVhYd2sdcnG6eHWtpYthonvv99f7V_8Z2xoo/edit#gid=0"
+                  }
+                },
+                { "type": "text", "text": " " }
+              ]
+            }
+          ]
+        },
+        "customfield_12508": null,
+        "creator": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=557058%3Ae70e82e4-3685-4af5-b606-39489e365ad8",
+          "accountId": "557058:e70e82e4-3685-4af5-b606-39489e365ad8",
+          "emailAddress": "ewlooney@thebrightlink.com",
+          "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "24x24": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "16x16": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png",
+            "32x32": "https://secure.gravatar.com/avatar/c2f5bac3190948eda55f75aae9cd71fb?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FEL-3.png"
+          },
+          "displayName": "E.W. Looney",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "atlassian"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3A86dee47f-6a7d-414c-9459-e382f50951be",
+          "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:86dee47f-6a7d-414c-9459-e382f50951be",
+          "emailAddress": "joan.cooney@pearson.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+          },
+          "displayName": "Joan Cooney",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "customer"
+        },
+        "aggregateprogress": { "progress": 0, "total": 0 },
+        "customfield_13310": null,
+        "customfield_14920": null,
+        "customfield_14800": [
+          {
+            "id": "19",
+            "name": "NBPTS",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/organization/19"
+            }
+          }
+        ],
+        "customfield_12501": [
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3Aefe48b69-7442-44b4-82dd-1699826fb5b7",
+            "key": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:efe48b69-7442-44b4-82dd-1699826fb5b7",
+            "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:efe48b69-7442-44b4-82dd-1699826fb5b7",
+            "emailAddress": "angela.street@pearson.com",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+            },
+            "displayName": "Angela Street",
+            "active": true,
+            "timeZone": "America/New_York",
+            "accountType": "customer"
+          },
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3A86dee47f-6a7d-414c-9459-e382f50951be",
+            "key": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:86dee47f-6a7d-414c-9459-e382f50951be",
+            "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:86dee47f-6a7d-414c-9459-e382f50951be",
+            "emailAddress": "joan.cooney@pearson.com",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+            },
+            "displayName": "Joan Cooney",
+            "active": true,
+            "timeZone": "America/New_York",
+            "accountType": "customer"
+          }
+        ],
+        "customfield_12500": "0|i0dhau:",
+        "customfield_13306": null,
+        "customfield_14913": null,
+        "customfield_13305": null,
+        "customfield_14914": null,
+        "customfield_13308": null,
+        "customfield_14911": "2021-07-27T16:09:38.986-0400",
+        "customfield_13704": null,
+        "customfield_13307": null,
+        "customfield_14912": null,
+        "customfield_14917": null,
+        "customfield_13309": null,
+        "customfield_14918": null,
+        "customfield_14915": null,
+        "customfield_14916": { "languageCode": "en", "displayName": "English" },
+        "progress": { "progress": 0, "total": 0 },
+        "customfield_13709": null,
+        "customfield_14919": null,
+        "votes": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-61212/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        },
+        "issuetype": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10905",
+          "id": "10905",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10604&avatarType=issuetype",
+          "name": "Technical Services Project",
+          "subtask": false,
+          "avatarId": 10604,
+          "hierarchyLevel": 0
+        },
+        "timespent": null,
+        "project": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/11601",
+          "id": "11601",
+          "key": "SUPPORT",
+          "name": "Client Success",
+          "projectTypeKey": "service_desk",
+          "simplified": false,
+          "avatarUrls": {
+            "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?pid=11601&avatarId=10508",
+            "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&pid=11601&avatarId=10508",
+            "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&pid=11601&avatarId=10508",
+            "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&pid=11601&avatarId=10508"
+          },
+          "projectCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/projectCategory/10602",
+            "id": "10602",
+            "description": "",
+            "name": "Client Success"
+          }
+        },
+        "aggregatetimespent": null,
+        "customfield_13302": null,
+        "customfield_13301": {
+          "hasEpicLinkFieldDependency": false,
+          "showField": false,
+          "nonEditableReason": {
+            "reason": "TOP_OF_HIERARCHY",
+            "message": "An issue at the top of the hierarchy cannot have a parent set."
+          }
+        },
+        "customfield_14910": null,
+        "customfield_13304": null,
+        "customfield_13303": null,
+        "customfield_12602": null,
+        "customfield_12601": {
+          "id": "36",
+          "name": "Resolve Time",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/114057/sla/36"
+          },
+          "completedCycles": []
+        },
+        "customfield_14900": "{}",
+        "resolutiondate": null,
+        "workratio": -1,
+        "customfield_14908": null,
+        "customfield_14909": null,
+        "watches": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-61212/watchers",
+          "watchCount": 0,
+          "isWatching": false
+        },
+        "issuerestriction": { "issuerestrictions": {}, "shouldDisplay": false },
+        "created": "2021-07-27T16:09:38.282-0400",
+        "customfield_12200": null,
+        "customfield_14502": null,
+        "customfield_14503": null,
+        "customfield_14500": null,
+        "updated": "2021-08-12T11:12:30.309-0400",
+        "timeoriginalestimate": null,
+        "description": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "With deferrals, we need to extend expiration dates for a subset of candidates with credentials (approx. 2000+). "
+                }
+              ]
+            }
+          ]
+        },
+        "customfield_13400": null,
+        "timetracking": {},
+        "customfield_10007": null,
+        "security": null,
+        "customfield_10008": null,
+        "attachment": [
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/attachment/49764",
+            "id": "49764",
+            "filename": "Screen Shot 2021-08-03 at 10.51.48 AM.png",
+            "author": {
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5f6b4ee106e3420071195dec",
+              "accountId": "5f6b4ee106e3420071195dec",
+              "emailAddress": "acheeves@thebrightlink.com",
+              "avatarUrls": {
+                "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/48",
+                "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/24",
+                "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/16",
+                "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/32"
+              },
+              "displayName": "Andrew Cheeves",
+              "active": true,
+              "timeZone": "America/New_York",
+              "accountType": "atlassian"
+            },
+            "created": "2021-08-03T10:53:38.534-0400",
+            "size": 133926,
+            "mimeType": "image/png",
+            "content": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/attachment/49764/Screen+Shot+2021-08-03+at+10.51.48+AM.png",
+            "thumbnail": "https://thebrightlink.atlassian.net/secure/thumbnail/49764/Screen+Shot+2021-08-03+at+10.51.48+AM.png"
+          }
+        ],
+        "summary": "Question:  Bulk change of Credential Expiration Dates",
+        "customfield_14200": null,
+        "customfield_14601": null,
+        "customfield_10002": null,
+        "customfield_14600": null,
+        "customfield_10004": null,
+        "customfield_13900": null,
+        "customfield_13902": null,
+        "environment": null,
+        "duedate": null,
+        "customfield_13905": null
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields,customfield_12400.requestTypePractice",
+      "id": "113879",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113879",
+      "key": "SUPPORT-61095",
+      "fields": {
+        "statuscategorychangedate": "2021-08-02T14:07:12.183-0400",
+        "customfield_13100": null,
+        "fixVersions": [],
+        "customfield_13500": null,
+        "customfield_13501": null,
+        "customfield_12403": null,
+        "customfield_14947": null,
+        "customfield_14945": null,
+        "customfield_14948": null,
+        "customfield_12806": null,
+        "customfield_12807": null,
+        "lastViewed": null,
+        "priority": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/3",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/major.svg",
+          "name": "Major",
+          "id": "3"
+        },
+        "customfield_12400": {
+          "_links": {
+            "jiraRest": "https://thebrightlink.atlassian.net/rest/api/2/issue/113879",
+            "web": "https://thebrightlink.atlassian.net/servicedesk/customer/portal/2/SUPPORT-61095",
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113879",
+            "agent": "https://thebrightlink.atlassian.net/browse/SUPPORT-61095"
+          },
+          "requestType": {
+            "_expands": ["field"],
+            "id": "30",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/servicedesk/2/requesttype/30"
+            },
+            "name": "Incremental Update Project",
+            "description": "",
+            "helpText": "",
+            "issueTypeId": "10201",
+            "serviceDeskId": "2",
+            "groupIds": [],
+            "icon": {
+              "id": "12032",
+              "_links": {
+                "iconUrls": {
+                  "48x48": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=large",
+                  "24x24": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=small",
+                  "16x16": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=xsmall",
+                  "32x32": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=medium"
+                }
+              }
+            }
+          },
+          "currentStatus": {
+            "status": "In Queue",
+            "statusCategory": "INDETERMINATE",
+            "statusDate": {
+              "iso8601": "2021-07-15T09:37:54-0700",
+              "jira": "2021-07-15T12:37:54.729-0400",
+              "friendly": "15/Jul/21 9:37 AM",
+              "epochMillis": 1626367074729
+            }
+          }
+        },
+        "customfield_12402": null,
+        "customfield_14940": null,
+        "customfield_12401": null,
+        "customfield_14941": null,
+        "labels": ["NBPTS"],
+        "customfield_13207": null,
+        "customfield_14935": {
+          "id": "37",
+          "name": "1 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113879/sla/37"
+          },
+          "completedCycles": []
+        },
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12593",
+          "value": "NBPTS",
+          "id": "12593"
+        },
+        "customfield_14936": {
+          "id": "38",
+          "name": "5 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113879/sla/38"
+          },
+          "completedCycles": []
+        },
+        "customfield_13206": 2.96298e7,
+        "customfield_14933": null,
+        "customfield_14934": null,
+        "aggregatetimeoriginalestimate": null,
+        "timeestimate": null,
+        "customfield_14937": {
+          "id": "39",
+          "name": "15 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113879/sla/39"
+          },
+          "completedCycles": []
+        },
+        "customfield_14938": {
+          "id": "40",
+          "name": "6 week tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113879/sla/40"
+          },
+          "completedCycles": []
+        },
+        "issuelinks": [
+          {
+            "id": "48497",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48497",
+            "type": {
+              "id": "10001",
+              "name": "Cloners",
+              "inward": "is cloned by",
+              "outward": "clones",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10001"
+            },
+            "outwardIssue": {
+              "id": "113662",
+              "key": "SUPPORT-60974",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113662",
+              "fields": {
+                "summary": "Exam Application Withdraw Reason (staff)",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/11421",
+                  "description": "",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Ready for Invoice",
+                  "id": "11421",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/3",
+                    "id": 3,
+                    "key": "done",
+                    "colorName": "green",
+                    "name": "Done"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/3",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/major.svg",
+                  "name": "Major",
+                  "id": "3"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10201",
+                  "id": "10201",
+                  "description": "Statement of Work",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10604&avatarType=issuetype",
+                  "name": "SOW",
+                  "subtask": false,
+                  "avatarId": 10604,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "48746",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48746",
+            "type": {
+              "id": "10500",
+              "name": "SOW",
+              "inward": "SOW of",
+              "outward": "in SOW",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+            },
+            "inwardIssue": {
+              "id": "114097",
+              "key": "NBPTS-258",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114097",
+              "fields": {
+                "summary": "Allow candidates to provide a reason when requesting a withdraw of their exam app",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10334",
+                  "description": "",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/",
+                  "name": "Backlog",
+                  "id": "10334",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/2",
+                    "id": 2,
+                    "key": "new",
+                    "colorName": "blue-gray",
+                    "name": "To Do"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/6",
+                  "id": "6",
+                  "description": "Created by JIRA Software - do not edit or delete. Issue type for a big user story that needs to be broken down.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10607&avatarType=issuetype",
+                  "name": "Epic",
+                  "subtask": false,
+                  "avatarId": 10607,
+                  "hierarchyLevel": 1
+                }
+              }
+            }
+          },
+          {
+            "id": "48749",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48749",
+            "type": {
+              "id": "10500",
+              "name": "SOW",
+              "inward": "SOW of",
+              "outward": "in SOW",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+            },
+            "inwardIssue": {
+              "id": "114098",
+              "key": "NBPTS-259",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114098",
+              "fields": {
+                "summary": "Make a portion of the withdraw DF have a drop down for withdraw reason",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+                  "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Grooming",
+                  "id": "10934",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "yellow",
+                    "name": "In Progress"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+                  "id": "3",
+                  "description": "A task that needs to be done.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+                  "name": "Task",
+                  "subtask": false,
+                  "avatarId": 10618,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "48752",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48752",
+            "type": {
+              "id": "10500",
+              "name": "SOW",
+              "inward": "SOW of",
+              "outward": "in SOW",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+            },
+            "inwardIssue": {
+              "id": "114099",
+              "key": "NBPTS-260",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114099",
+              "fields": {
+                "summary": "Add 2 columns to withdraw queue",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+                  "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Grooming",
+                  "id": "10934",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "yellow",
+                    "name": "In Progress"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+                  "id": "3",
+                  "description": "A task that needs to be done.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+                  "name": "Task",
+                  "subtask": false,
+                  "avatarId": 10618,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "48755",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48755",
+            "type": {
+              "id": "10500",
+              "name": "SOW",
+              "inward": "SOW of",
+              "outward": "in SOW",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+            },
+            "inwardIssue": {
+              "id": "114100",
+              "key": "NBPTS-261",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114100",
+              "fields": {
+                "summary": "Write data to Secure message custom data",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+                  "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Grooming",
+                  "id": "10934",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "yellow",
+                    "name": "In Progress"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+                  "id": "3",
+                  "description": "A task that needs to be done.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+                  "name": "Task",
+                  "subtask": false,
+                  "avatarId": 10618,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "48758",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48758",
+            "type": {
+              "id": "10500",
+              "name": "SOW",
+              "inward": "SOW of",
+              "outward": "in SOW",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+            },
+            "inwardIssue": {
+              "id": "114101",
+              "key": "NBPTS-262",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114101",
+              "fields": {
+                "summary": "Promote to live",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+                  "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Grooming",
+                  "id": "10934",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "yellow",
+                    "name": "In Progress"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+                  "id": "3",
+                  "description": "A task that needs to be done.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+                  "name": "Task",
+                  "subtask": false,
+                  "avatarId": 10618,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "48761",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48761",
+            "type": {
+              "id": "10500",
+              "name": "SOW",
+              "inward": "SOW of",
+              "outward": "in SOW",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10500"
+            },
+            "inwardIssue": {
+              "id": "114102",
+              "key": "NBPTS-263",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114102",
+              "fields": {
+                "summary": "Document in confluence",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10934",
+                  "description": "Stories are created during the grooming process. This status is for issues that are still being analyzed or are still getting signoff from the client.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Grooming",
+                  "id": "10934",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+                    "id": 4,
+                    "key": "indeterminate",
+                    "colorName": "yellow",
+                    "name": "In Progress"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+                  "name": "Minor",
+                  "id": "4"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/3",
+                  "id": "3",
+                  "description": "A task that needs to be done.",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10618&avatarType=issuetype",
+                  "name": "Task",
+                  "subtask": false,
+                  "avatarId": 10618,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          }
+        ],
+        "assignee": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=557058%3A51214233-7e05-49e6-ba14-27fbee6f66a5",
+          "accountId": "557058:51214233-7e05-49e6-ba14-27fbee6f66a5",
+          "emailAddress": "smiller@thebrightlink.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:51214233-7e05-49e6-ba14-27fbee6f66a5/fede75cc-f30c-418d-9480-03da545db900/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:51214233-7e05-49e6-ba14-27fbee6f66a5/fede75cc-f30c-418d-9480-03da545db900/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:51214233-7e05-49e6-ba14-27fbee6f66a5/fede75cc-f30c-418d-9480-03da545db900/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:51214233-7e05-49e6-ba14-27fbee6f66a5/fede75cc-f30c-418d-9480-03da545db900/32"
+          },
+          "displayName": "Sarah Miller",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "atlassian"
+        },
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        },
+        "customfield_14932": null,
+        "customfield_14930": null,
+        "customfield_13600": null,
+        "customfield_14924": null,
+        "customfield_13713": null,
+        "customfield_14925": 2000.0,
+        "customfield_14922": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12537",
+          "value": "Firm Fixed Price (based on Estimate)",
+          "id": "12537"
+        },
+        "customfield_14405": null,
+        "aggregatetimeestimate": null,
+        "customfield_14929": {
+          "id": "33",
+          "name": "Level 1 SLA",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113879/sla/33"
+          },
+          "completedCycles": []
+        },
+        "customfield_14926": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12585",
+          "value": "Tech Services Project",
+          "id": "12585"
+        },
+        "customfield_14927": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Include dropdown menu on the candidate withdrawal request screen"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Write the chosen reason to the exam application"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Add the withdrawal informatiuon to NBPTS client about"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://docs.google.com/spreadsheets/d/1RwbgNwjF8BugMTqaipvaQQog0UmBPY2llfvfUvExzuM/edit#gid=0"
+                  }
+                },
+                { "type": "text", "text": " " }
+              ]
+            }
+          ]
+        },
+        "creator": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5f6b4ee106e3420071195dec",
+          "accountId": "5f6b4ee106e3420071195dec",
+          "emailAddress": "acheeves@thebrightlink.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/32"
+          },
+          "displayName": "Andrew Cheeves",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "atlassian"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3Aefe48b69-7442-44b4-82dd-1699826fb5b7",
+          "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:efe48b69-7442-44b4-82dd-1699826fb5b7",
+          "emailAddress": "angela.street@pearson.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+          },
+          "displayName": "Angela Street",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "customer"
+        },
+        "aggregateprogress": { "progress": 0, "total": 0 },
+        "customfield_13310": null,
+        "customfield_14920": null,
+        "customfield_14800": [
+          {
+            "id": "19",
+            "name": "NBPTS",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/organization/19"
+            }
+          }
+        ],
+        "customfield_12501": [
+          {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3Aefe48b69-7442-44b4-82dd-1699826fb5b7",
+            "key": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:efe48b69-7442-44b4-82dd-1699826fb5b7",
+            "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:efe48b69-7442-44b4-82dd-1699826fb5b7",
+            "emailAddress": "angela.street@pearson.com",
+            "avatarUrls": {
+              "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+              "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+            },
+            "displayName": "Angela Street",
+            "active": true,
+            "timeZone": "America/New_York",
+            "accountType": "customer"
+          }
+        ],
+        "customfield_12500": "0|i0dhat:9",
+        "customfield_14913": null,
+        "customfield_13306": null,
+        "customfield_13305": null,
+        "customfield_14914": null,
+        "customfield_14911": "2021-07-15T12:37:55.790-0400",
+        "customfield_13308": null,
+        "customfield_13704": null,
+        "customfield_13307": null,
+        "customfield_14912": null,
+        "customfield_14917": null,
+        "customfield_14918": null,
+        "customfield_13309": null,
+        "customfield_14915": null,
+        "customfield_14916": { "languageCode": "en", "displayName": "English" },
+        "customfield_13709": null,
+        "progress": { "progress": 0, "total": 0 },
+        "votes": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-61095/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "customfield_14919": null,
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        },
+        "issuetype": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10201",
+          "id": "10201",
+          "description": "Statement of Work",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10604&avatarType=issuetype",
+          "name": "SOW",
+          "subtask": false,
+          "avatarId": 10604,
+          "hierarchyLevel": 0
+        },
+        "timespent": null,
+        "project": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/11601",
+          "id": "11601",
+          "key": "SUPPORT",
+          "name": "Client Success",
+          "projectTypeKey": "service_desk",
+          "simplified": false,
+          "avatarUrls": {
+            "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?pid=11601&avatarId=10508",
+            "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&pid=11601&avatarId=10508",
+            "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&pid=11601&avatarId=10508",
+            "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&pid=11601&avatarId=10508"
+          },
+          "projectCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/projectCategory/10602",
+            "id": "10602",
+            "description": "",
+            "name": "Client Success"
+          }
+        },
+        "aggregatetimespent": null,
+        "customfield_13302": null,
+        "customfield_13301": {
+          "hasEpicLinkFieldDependency": false,
+          "showField": false,
+          "nonEditableReason": {
+            "reason": "TOP_OF_HIERARCHY",
+            "message": "An issue at the top of the hierarchy cannot have a parent set."
+          }
+        },
+        "customfield_14910": null,
+        "customfield_13304": null,
+        "customfield_13303": null,
+        "customfield_12602": null,
+        "customfield_12601": {
+          "id": "36",
+          "name": "Resolve Time",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113879/sla/36"
+          },
+          "completedCycles": []
+        },
+        "customfield_14900": "{}",
+        "resolutiondate": null,
+        "workratio": -1,
+        "customfield_14908": null,
+        "customfield_14909": null,
+        "watches": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-61095/watchers",
+          "watchCount": 0,
+          "isWatching": false
+        },
+        "issuerestriction": { "issuerestrictions": {}, "shouldDisplay": false },
+        "created": "2021-07-15T12:37:54.729-0400",
+        "customfield_14502": null,
+        "customfield_14503": null,
+        "customfield_14500": null,
+        "updated": "2021-08-13T08:35:10.964-0400",
+        "timeoriginalestimate": null,
+        "description": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Candidates need the ability to specify a reason (from a dropdown) when asking for an exam application withdrawal. That reason needs to be retained on the exam application"
+                }
+              ]
+            },
+            { "type": "paragraph", "content": [] },
+            {
+              "type": "heading",
+              "attrs": { "level": 2 },
+              "content": [
+                { "type": "text", "text": "Project Solution and Fee:" }
+              ]
+            },
+            { "type": "paragraph", "content": [] },
+            {
+              "type": "table",
+              "attrs": { "isNumberColumnEnabled": false, "layout": "default" },
+              "content": [
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": {},
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [{ "type": "text", "text": "Desc" }]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": {},
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [{ "type": "text", "text": "Fee" }]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": {},
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Include dropdown menu on the candidate withdrawal request screen"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": {},
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": {},
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Write the chosen reason to the exam application"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": {},
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": {},
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Fixed Fee Total",
+                              "marks": [{ "type": "strong" }]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": {},
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "$ 2,000",
+                              "marks": [{ "type": "strong" }]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "customfield_13400": null,
+        "customfield_10007": null,
+        "customfield_10008": null,
+        "attachment": [],
+        "summary": "Withdraw Reason (Candidate)",
+        "customfield_14200": null,
+        "customfield_14601": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12517",
+          "value": "TechSvcs",
+          "id": "12517"
+        },
+        "customfield_10004": null,
+        "customfield_14600": null,
+        "customfield_13900": null,
+        "duedate": null,
+        "customfield_13905": null
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields,customfield_12400.requestTypePractice",
+      "id": "113663",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113663",
+      "key": "SUPPORT-60975",
+      "fields": {
+        "statuscategorychangedate": "2021-08-09T13:45:51.445-0400",
+        "customfield_13100": null,
+        "fixVersions": [],
+        "customfield_13500": null,
+        "customfield_13501": null,
+        "customfield_12403": null,
+        "customfield_14947": null,
+        "customfield_14945": null,
+        "customfield_14948": null,
+        "customfield_12806": null,
+        "customfield_12807": null,
+        "lastViewed": null,
+        "priority": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/4",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/minor.svg",
+          "name": "Minor",
+          "id": "4"
+        },
+        "customfield_12400": {
+          "_links": {
+            "jiraRest": "https://thebrightlink.atlassian.net/rest/api/2/issue/113663",
+            "web": "https://thebrightlink.atlassian.net/servicedesk/customer/portal/2/SUPPORT-60975",
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113663",
+            "agent": "https://thebrightlink.atlassian.net/browse/SUPPORT-60975"
+          },
+          "requestType": {
+            "_expands": ["field"],
+            "id": "30",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/servicedesk/2/requesttype/30"
+            },
+            "name": "Incremental Update Project",
+            "description": "",
+            "helpText": "",
+            "issueTypeId": "10201",
+            "serviceDeskId": "2",
+            "groupIds": [],
+            "icon": {
+              "id": "12032",
+              "_links": {
+                "iconUrls": {
+                  "48x48": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=large",
+                  "24x24": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=small",
+                  "16x16": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=xsmall",
+                  "32x32": "https://thebrightlink.atlassian.net/secure/viewavatar?avatarType=SD_REQTYPE&avatarId=12032&size=medium"
+                }
+              }
+            }
+          },
+          "currentStatus": {
+            "status": "In Queue",
+            "statusCategory": "INDETERMINATE",
+            "statusDate": {
+              "iso8601": "2021-07-02T12:17:59-0700",
+              "jira": "2021-07-02T15:17:59.354-0400",
+              "friendly": "02/Jul/21 12:17 PM",
+              "epochMillis": 1625253479354
+            }
+          }
+        },
+        "customfield_14940": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12595",
+          "value": "Apply and take exam",
+          "id": "12595"
+        },
+        "customfield_12402": null,
+        "customfield_12401": null,
+        "customfield_14941": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12609",
+          "value": "Modify",
+          "id": "12609"
+        },
+        "labels": ["2ndOrder", "NBPTS"],
+        "customfield_14935": {
+          "id": "37",
+          "name": "1 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113663/sla/37"
+          },
+          "completedCycles": []
+        },
+        "customfield_13207": null,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12593",
+          "value": "NBPTS",
+          "id": "12593"
+        },
+        "customfield_13206": null,
+        "customfield_14936": {
+          "id": "38",
+          "name": "5 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113663/sla/38"
+          },
+          "completedCycles": []
+        },
+        "customfield_14933": null,
+        "customfield_14934": null,
+        "timeestimate": null,
+        "aggregatetimeoriginalestimate": null,
+        "customfield_14937": {
+          "id": "39",
+          "name": "15 day tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113663/sla/39"
+          },
+          "completedCycles": []
+        },
+        "customfield_14938": {
+          "id": "40",
+          "name": "6 week tickets",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113663/sla/40"
+          },
+          "completedCycles": []
+        },
+        "issuelinks": [
+          {
+            "id": "48905",
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLink/48905",
+            "type": {
+              "id": "10002",
+              "name": "Duplicate",
+              "inward": "is duplicated by",
+              "outward": "duplicates",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issueLinkType/10002"
+            },
+            "outwardIssue": {
+              "id": "112732",
+              "key": "SUPPORT-60393",
+              "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/112732",
+              "fields": {
+                "summary": "Add exam_type to TPP upload",
+                "status": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10242",
+                  "description": "Administrative placeholder for BL",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+                  "name": "Planning",
+                  "id": "10242",
+                  "statusCategory": {
+                    "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/2",
+                    "id": 2,
+                    "key": "new",
+                    "colorName": "blue-gray",
+                    "name": "To Do"
+                  }
+                },
+                "priority": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/priority/3",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/priorities/major.svg",
+                  "name": "Major",
+                  "id": "3"
+                },
+                "issuetype": {
+                  "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10201",
+                  "id": "10201",
+                  "description": "Statement of Work",
+                  "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10604&avatarType=issuetype",
+                  "name": "SOW",
+                  "subtask": false,
+                  "avatarId": 10604,
+                  "hierarchyLevel": 0
+                }
+              }
+            }
+          }
+        ],
+        "assignee": null,
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        },
+        "customfield_14932": null,
+        "customfield_14930": null,
+        "customfield_13600": null,
+        "customfield_14924": null,
+        "customfield_13713": null,
+        "customfield_14925": 4910.0,
+        "customfield_14405": null,
+        "customfield_14922": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12537",
+          "value": "Firm Fixed Price (based on Estimate)",
+          "id": "12537"
+        },
+        "aggregatetimeestimate": null,
+        "customfield_14929": {
+          "id": "33",
+          "name": "Level 1 SLA",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113663/sla/33"
+          },
+          "completedCycles": []
+        },
+        "customfield_14926": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12585",
+          "value": "Tech Services Project",
+          "id": "12585"
+        },
+        "customfield_14927": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://docs.google.com/spreadsheets/d/1b8IyACyzriIEGKtuitDG6SSt2RFDns8zn8Ej4ATXWRc/edit?usp=drive_web&ouid=111252699656520142204"
+                  }
+                },
+                { "type": "text", "text": " " }
+              ]
+            }
+          ]
+        },
+        "creator": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=5f6b4ee106e3420071195dec",
+          "accountId": "5f6b4ee106e3420071195dec",
+          "emailAddress": "acheeves@thebrightlink.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/48",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/24",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/16",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5f6b4ee106e3420071195dec/86ae41f0-5a7b-4901-99c3-15e9ac0fdb22/32"
+          },
+          "displayName": "Andrew Cheeves",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "atlassian"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/user?accountId=qm%3Ac0a06619-60ab-4e9d-ad14-3e3c72b73d4e%3Aefe48b69-7442-44b4-82dd-1699826fb5b7",
+          "accountId": "qm:c0a06619-60ab-4e9d-ad14-3e3c72b73d4e:efe48b69-7442-44b4-82dd-1699826fb5b7",
+          "emailAddress": "angela.street@pearson.com",
+          "avatarUrls": {
+            "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png",
+            "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/default-avatar.png"
+          },
+          "displayName": "Angela Street",
+          "active": true,
+          "timeZone": "America/New_York",
+          "accountType": "customer"
+        },
+        "customfield_13310": null,
+        "aggregateprogress": { "progress": 0, "total": 0 },
+        "customfield_14920": null,
+        "customfield_14800": [
+          {
+            "id": "19",
+            "name": "NBPTS",
+            "_links": {
+              "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/organization/19"
+            }
+          }
+        ],
+        "customfield_12501": [],
+        "customfield_12500": "0|i0eeyz:",
+        "customfield_13306": null,
+        "customfield_14913": null,
+        "customfield_14914": null,
+        "customfield_13305": null,
+        "customfield_13704": null,
+        "customfield_13308": null,
+        "customfield_14911": "2021-07-02T15:17:59.960-0400",
+        "customfield_14912": null,
+        "customfield_13307": null,
+        "customfield_14917": null,
+        "customfield_13309": null,
+        "customfield_14918": null,
+        "customfield_14915": null,
+        "customfield_14916": { "languageCode": "en", "displayName": "English" },
+        "progress": { "progress": 0, "total": 0 },
+        "customfield_13709": null,
+        "customfield_14919": null,
+        "votes": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-60975/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+        },
+        "issuetype": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issuetype/10201",
+          "id": "10201",
+          "description": "Statement of Work",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/viewavatar?size=medium&avatarId=10604&avatarType=issuetype",
+          "name": "SOW",
+          "subtask": false,
+          "avatarId": 10604,
+          "hierarchyLevel": 0
+        },
+        "timespent": null,
+        "project": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/project/11601",
+          "id": "11601",
+          "key": "SUPPORT",
+          "name": "Client Success",
+          "projectTypeKey": "service_desk",
+          "simplified": false,
+          "avatarUrls": {
+            "48x48": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?pid=11601&avatarId=10508",
+            "24x24": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=small&s=small&pid=11601&avatarId=10508",
+            "16x16": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=xsmall&s=xsmall&pid=11601&avatarId=10508",
+            "32x32": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/secure/projectavatar?size=medium&s=medium&pid=11601&avatarId=10508"
+          },
+          "projectCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/projectCategory/10602",
+            "id": "10602",
+            "description": "",
+            "name": "Client Success"
+          }
+        },
+        "customfield_13302": null,
+        "aggregatetimespent": null,
+        "customfield_13301": {
+          "hasEpicLinkFieldDependency": false,
+          "showField": false,
+          "nonEditableReason": {
+            "reason": "TOP_OF_HIERARCHY",
+            "message": "An issue at the top of the hierarchy cannot have a parent set."
+          }
+        },
+        "customfield_14910": null,
+        "customfield_13304": null,
+        "customfield_13303": null,
+        "customfield_12602": null,
+        "customfield_12601": {
+          "id": "36",
+          "name": "Resolve Time",
+          "_links": {
+            "self": "https://thebrightlink.atlassian.net/rest/servicedeskapi/request/113663/sla/36"
+          },
+          "completedCycles": []
+        },
+        "customfield_14900": "{}",
+        "resolutiondate": null,
+        "workratio": -1,
+        "customfield_14908": null,
+        "customfield_14909": null,
+        "watches": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/SUPPORT-60975/watchers",
+          "watchCount": 0,
+          "isWatching": false
+        },
+        "issuerestriction": { "issuerestrictions": {}, "shouldDisplay": false },
+        "created": "2021-07-02T15:17:59.354-0400",
+        "customfield_14502": null,
+        "customfield_14503": null,
+        "customfield_14500": null,
+        "updated": "2021-08-11T10:00:58.516-0400",
+        "timeoriginalestimate": null,
+        "description": {
+          "version": 1,
+          "type": "doc",
+          "content": [
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Add exam type as an uploadable column on TPP upload"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Create error handling for TPP upload around new field"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Configure connection to Woo commerce to pass information in TPP upload exam_type field to “products” field in Woo."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Configure “My coupons” page in Clarus to indicate which coupon should be used for which specific exam. "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": { "level": 2 },
+              "content": [
+                { "type": "text", "text": "Project Solution and Fee:" }
+              ]
+            },
+            {
+              "type": "table",
+              "attrs": { "isNumberColumnEnabled": false, "layout": "default" },
+              "content": [
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [473] },
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [{ "type": "text", "text": "Desc" }]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [102] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [184] },
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [{ "type": "text", "text": "Estimate" }]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [473] },
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Add field to TPP uploader for exam type"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [102] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [184] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [473] },
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Configure uploaded data to write input to products in woo commerce coupons"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [102] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [184] },
+                      "content": [
+                        {
+                          "type": "heading",
+                          "attrs": { "level": 2 },
+                          "content": []
+                        },
+                        { "type": "paragraph", "content": [] }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [473] },
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Configure My Coupons page to indicate which coupons should be used for which exam types"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [102] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [184] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [473] },
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "Error handling for TPP upload"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [102] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [184] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableRow",
+                  "content": [
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [473] },
+                      "content": [{ "type": "paragraph", "content": [] }]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [102] },
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            { "type": "text", "text": "Fixed Fee Total" }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableCell",
+                      "attrs": { "colwidth": [184] },
+                      "content": [
+                        {
+                          "type": "heading",
+                          "attrs": { "level": 3 },
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "$ 4,910",
+                              "marks": [{ "type": "strong" }]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "customfield_13400": {
+          "id": "22",
+          "title": "2ndOrder",
+          "isShared": true
+        },
+        "customfield_10007": null,
+        "customfield_10008": null,
+        "attachment": [],
+        "summary": "Add exam_type to TPP upload",
+        "customfield_14200": null,
+        "customfield_14601": null,
+        "customfield_14600": null,
+        "customfield_10004": null,
+        "customfield_13900": null,
+        "duedate": null,
+        "customfield_13905": null
+      }
+    }
+  ]
+}

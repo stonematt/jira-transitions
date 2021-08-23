@@ -1,0 +1,308 @@
+{
+  "expand": "schema,names",
+  "startAt": 0,
+  "maxResults": 10,
+  "total": 57,
+  "issues": [
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "114656",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114656",
+      "key": "SUPPORT-61436",
+      "fields": {
+        "summary": "Manual Rauda - 649700  -  Candidate unable to schedule",
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12540",
+          "value": "NACE",
+          "id": "12540"
+        },
+        "customfield_14925": 0.0,
+        "created": "2021-08-19T11:55:47.733-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "114641",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114641",
+      "key": "SUPPORT-61426",
+      "fields": {
+        "summary": "Ericsson Launch Gaps",
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12646",
+          "value": "Pearson",
+          "id": "12646"
+        },
+        "customfield_14925": 25000.0,
+        "created": "2021-08-18T16:23:11.011-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "114621",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114621",
+      "key": "SUPPORT-61408",
+      "fields": {
+        "summary": "Pearson VUE RTI/RTEN Improvements",
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12646",
+          "value": "Pearson",
+          "id": "12646"
+        },
+        "customfield_14925": 75000.0,
+        "created": "2021-08-17T14:27:19.611-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "114607",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114607",
+      "key": "SUPPORT-61398",
+      "fields": {
+        "summary": "ATD - Candidate Record Altered by Clarus",
+        "customfield_14925": 0.0,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12539",
+          "value": "ATD",
+          "id": "12539"
+        },
+        "created": "2021-08-17T08:37:58.035-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "114395",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114395",
+      "key": "SUPPORT-61345",
+      "fields": {
+        "summary": "Updating Autodesk logo for candidate experience (Sept delivery requested)",
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12588",
+          "value": "Autodesk",
+          "id": "12588"
+        },
+        "customfield_14925": 506.0,
+        "created": "2021-08-12T12:33:17.769-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "114264",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114264",
+      "key": "SUPPORT-61294",
+      "fields": {
+        "summary": "XSS Vulnerability",
+        "customfield_14925": 0.0,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12589",
+          "value": "Apple",
+          "id": "12589"
+        },
+        "created": "2021-08-05T09:52:57.239-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "114138",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114138",
+      "key": "SUPPORT-61253",
+      "fields": {
+        "summary": "Candidate CE page blocked by \"certifications\"",
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12538",
+          "value": "IBLCE",
+          "id": "12538"
+        },
+        "customfield_14925": 0.0,
+        "created": "2021-08-02T10:13:22.087-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "114057",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/114057",
+      "key": "SUPPORT-61212",
+      "fields": {
+        "summary": "Question:  Bulk change of Credential Expiration Dates",
+        "customfield_14925": 1100.0,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12593",
+          "value": "NBPTS",
+          "id": "12593"
+        },
+        "created": "2021-07-27T16:09:38.282-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "113879",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113879",
+      "key": "SUPPORT-61095",
+      "fields": {
+        "summary": "Withdraw Reason (Candidate)",
+        "customfield_14925": 2000.0,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12593",
+          "value": "NBPTS",
+          "id": "12593"
+        },
+        "created": "2021-07-15T12:37:54.729-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "113663",
+      "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/issue/113663",
+      "key": "SUPPORT-60975",
+      "fields": {
+        "summary": "Add exam_type to TPP upload",
+        "customfield_14925": 4910.0,
+        "customfield_12513": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/customFieldOption/12593",
+          "value": "NBPTS",
+          "id": "12593"
+        },
+        "created": "2021-07-02T15:17:59.354-0400",
+        "status": {
+          "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/status/10030",
+          "description": "",
+          "iconUrl": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/images/icons/statuses/generic.png",
+          "name": "In Backlog",
+          "id": "10030",
+          "statusCategory": {
+            "self": "https://api.atlassian.com/ex/jira/029ed131-584c-4a3e-b4ae-473022fcbdd6/rest/api/3/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    }
+  ]
+}
