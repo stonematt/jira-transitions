@@ -1,3 +1,4 @@
+# %%
 import requests
 from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
@@ -185,11 +186,52 @@ def export_json(dict, file):
         json.dump(dict, fp, sort_keys=True, indent=2)
 
 
-sold_statuses = ["In Backlog", "Scheduled"]
-pending_statuses = ["Sent to Client", "Response Review"]
+def get_working_issues(status_list, source="jira"):
+    """use local or jira as issue source
 
-sold_jira_issues = get_issues_from_filter("backlog_approved_waiting")
-sold_issues = get_transistions_for_issues(sold_jira_issues, sold_statuses)
-# pprint(sold_issues)
-export_json(sold_issues, "./examples/sold_issues.json")
+    Arguments:
+        status_list -- list of jira statuses to collect transistion data for
+
+        source -- "jira" to go to jira or "local" to open local file
+
+    Returns:
+        dict of issues w/ status transition information
+    """
+
+    w_issues_file = "./examples/" + status_list["filename"]
+    if source == "jira":
+        w_jira_issues = get_issues_from_filter("backlog_approved_waiting")
+        w_issues = get_transistions_for_issues(w_jira_issues, sold_statuses["statuses"])
+        # pprint(sold_issues)
+        export_json(sold_issues, w_issues_file)
+
+    if source == "local":
+        try:
+            w_issues = json.load(open(w_issues_file))
+        except FileNotFoundError as nofile:
+            print(f"File not fount: {nofile}")
+            raise nofile
+
+    return w_issues
+
+
+# initally, we'll evaluate aging on "sold" status. but a similar evalutaion of
+# pending status is likely worthwhile.
+sold_statuses = {
+    "filename": "sold_statuses.json",
+    "statuses": ["In Backlog", "Scheduled"],
+}
+
+pending_statuses = {
+    "filename": "pending _statuses.json",
+    "statuses": ["Sent to Client", "Response Review"],
+}
+
+# %%
+# use "local" or "jira" to indicate whether to actually hit the jira api.
+pending_issues = get_working_issues(pending_statuses, "local")
+print(len(pending_statuses))
+sold_issues = get_working_issues(sold_statuses, "local")
 print(len(sold_issues))
+
+# %%
