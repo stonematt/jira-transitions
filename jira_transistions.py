@@ -203,7 +203,7 @@ def get_working_issues(status_list, source="jira"):
         w_jira_issues = get_issues_from_filter("backlog_approved_waiting")
         w_issues = get_transistions_for_issues(w_jira_issues, sold_statuses["statuses"])
         # pprint(sold_issues)
-        export_json(sold_issues, w_issues_file)
+        export_json(w_issues, w_issues_file)
 
     if source == "local":
         try:
@@ -231,7 +231,7 @@ pending_statuses = {
 # use "local" or "jira" to indicate whether to actually hit the jira api.
 pending_issues = get_working_issues(pending_statuses, "local")
 print(len(pending_statuses))
-sold_issues = get_working_issues(sold_statuses, "local")
+sold_issues = get_working_issues(sold_statuses, "jira")
 print(len(sold_issues))
 
 # %%
