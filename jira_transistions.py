@@ -156,7 +156,7 @@ def get_transistions_for_issues(jira_issues, status_list):
         # assemble the list of status transitions
         issue["transistions_sold"] = []
         issue["transistions_sold"].append(
-            get_status_changes(get_issue_changelog(i["key"]), status_list)
+            get_status_changes_summary(get_issue_changelog(i["key"]), status_list)
         )
 
         issues.append(issue)
@@ -165,6 +165,20 @@ def get_transistions_for_issues(jira_issues, status_list):
 
 
 def get_status_changes(issue_log, status_list):
+    """return an transistions dict from an issue's log"""
+    status_changes = []
+    for v in issue_log["values"]:
+        for i in v["items"]:
+            if i["field"] == "status" and i["toString"] in status_list:
+                status_change = {}
+                status_change["created"] = v["created"]
+                status_change["fromString"] = i["fromString"]
+                status_change["toString"] = i["toString"]
+                status_changes.append(status_change)
+    return status_changes
+
+
+def get_status_changes_summary(issue_log, status_list):
     """return an transistions dict from an issue's log"""
     status_changes = []
     for v in issue_log["values"]:
@@ -229,7 +243,7 @@ pending_statuses = {
 
 # %%
 # use "local" or "jira" to indicate whether to actually hit the jira api.
-pending_issues = get_working_issues(pending_statuses, "local")
+# pending_issues = get_working_issues(pending_statuses, "local")
 print(len(pending_statuses))
 sold_issues = get_working_issues(sold_statuses, "jira")
 print(len(sold_issues))
