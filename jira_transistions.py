@@ -4,7 +4,7 @@ from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
 import json
 import pandas as pd
-import collections
+from datetime import datetime
 
 # from pprint import pprint
 
@@ -108,36 +108,34 @@ def get_issue_changelog(issueid):
     return issue_log
 
 
-def get_status_changes_old(issue_log, status_list):
-    """Decided to do this a different way.
+def issues_to_pandas(status_changes):
+    """
     return dataframe of age of status
-    issure_log - dictionary of jira change log
+    issue_log - dictionary of jira change log
     status_list - list of statuses to extract"""
-    status_changes = collections.defaultdict(list)
-    for v in issue_log["values"]:
-        for i in v["items"]:
-            if i["field"] == "status" and i["toString"] in status_list:
-                status_changes["id"].append(v["id"])
-                status_changes["created"].append(v["created"])
-                status_changes["fromString"].append(i["fromString"])
-                status_changes["toString"].append(i["toString"])
-    return status_changes
-    # todo: this works, but should be later in the process
     sc = pd.DataFrame(status_changes)
+    sc["In Backlog_last"] = pd.to_datetime(sc["In Backlog_last"], utc=True)
+    sc["approved_age"] = (pd.Timestamp.now(tz="UTC") - sc["In Backlog_last"]).dt.days
 
-    sc["created"] = pd.to_datetime(sc["created"], utc=True)
-    sc["days_since"] = (sc["created"] - pd.Timestamp.now(tz="UTC")).dt.days
     return sc
 
 
 """
  # get issues from filter
  # get transistions form chage log
- #      todo: deal w/ multiple trans to same status
- # todo:calculate date delta
- # todo:put in pd.dataframe, calc date buckets for aging
+ #      deal w/ multiple trans to same status
+ # put in pd.dataframe,
+ #      todo:calc date buckets for aging
  # todo:make visualization
 """
+
+
+def _to_date(jira_date):
+    """ return datetime object of date from jira time string
+    that looks like: 2021-10-05T14:12:44.872-0400
+    """
+    d = datetime.strptime(jira_date, "%Y-%m-%dT%H:%M:%S.%f%z")
+    return d
 
 
 def get_transistions_for_issues(jira_issues, status_list):
@@ -153,42 +151,47 @@ def get_transistions_for_issues(jira_issues, status_list):
         issue["client"] = i["fields"]["customfield_12513"]["value"]
         issue["created"] = i["fields"]["created"]
         issue["current_status"] = i["fields"]["status"]["name"]
-        # assemble the list of status transitions
-        issue["transistions_sold"] = []
-        issue["transistions_sold"].append(
-            get_status_changes_summary(get_issue_changelog(i["key"]), status_list)
+
+        change_log = get_status_changes_summary(
+            get_issue_changelog(i["key"]), status_list
         )
+        issue.update(change_log)
 
         issues.append(issue)
     # pprint(issue
     return issues
 
 
-def get_status_changes(issue_log, status_list):
-    """return an transistions dict from an issue's log"""
-    status_changes = []
-    for v in issue_log["values"]:
-        for i in v["items"]:
-            if i["field"] == "status" and i["toString"] in status_list:
-                status_change = {}
-                status_change["created"] = v["created"]
-                status_change["fromString"] = i["fromString"]
-                status_change["toString"] = i["toString"]
-                status_changes.append(status_change)
-    return status_changes
-
-
 def get_status_changes_summary(issue_log, status_list):
     """return an transistions dict from an issue's log"""
-    status_changes = []
+    status_changes = {}
+    for status in status_list:
+        status_changes[status + "_name"] = status
+        status_changes[status + "_first"] = ""
+        status_changes[status + "_last"] = ""
+        status_changes[status + "_count"] = 0
+
     for v in issue_log["values"]:
         for i in v["items"]:
             if i["field"] == "status" and i["toString"] in status_list:
-                status_change = {}
-                status_change["created"] = v["created"]
-                status_change["fromString"] = i["fromString"]
-                status_change["toString"] = i["toString"]
-                status_changes.append(status_change)
+                status_changes[i["toString"] + "_count"] += 1
+                # set the first date
+                if status_changes[i["toString"] + "_first"] == "":
+                    status_changes[i["toString"] + "_first"] = v["created"]
+                elif _to_date(v["created"]) < _to_date(
+                    status_changes[i["toString"] + "_first"]
+                ):
+                    status_changes[i["toString"] + "_first"] = v["created"]
+
+                # set the most recent date
+                if status_changes[i["toString"] + "_last"] == "":
+                    status_changes[i["toString"] + "_last"] = v["created"]
+                elif _to_date(v["created"]) > _to_date(
+                    status_changes[i["toString"] + "_last"]
+                ):
+                    status_changes[i["toString"] + "_last"] = v["created"]
+
+    # export_json(status_changes, "./deleteme.json")
     return status_changes
 
 
@@ -234,18 +237,24 @@ def get_working_issues(status_list, source="jira"):
 sold_statuses = {
     "filename": "sold_statuses.json",
     "statuses": ["In Backlog", "Scheduled"],
+    "first_status": "In Backlog",
 }
 
 pending_statuses = {
     "filename": "pending _statuses.json",
     "statuses": ["Sent to Client", "Response Review"],
+    "first_status": "Sent to Client",
 }
 
 # %%
 # use "local" or "jira" to indicate whether to actually hit the jira api.
 # pending_issues = get_working_issues(pending_statuses, "local")
-print(len(pending_statuses))
+# print(len(pending_statuses))
 sold_issues = get_working_issues(sold_statuses, "jira")
 print(len(sold_issues))
+
+sc = issues_to_pandas(sold_issues)
+sc.describe()
+
 
 # %%
