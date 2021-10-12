@@ -134,7 +134,7 @@ def get_transistions_for_issues(jira_issues, status_list):
     progress = 0
     for i in jira_issues:
         progress += 1
-        if progress % 10 == 0:
+        if progress % 20 == 0:
             print(f"{progress} issues processed")
 
         issue = {}
@@ -277,13 +277,18 @@ pending_statuses = {
 
 # %%
 jira_filter = "backlog_approved_waiting"
+
+print(f"Fetching data from {jira_filter}")
 # use "local" or "jira" to indicate whether to actually hit the jira api.
 sold_issues = get_working_issues(sold_statuses, "jira")
 
 sc = issues_to_pandas(sold_issues)
-sc.describe()
+print("==== simple reivew of issues ====")
+print(sc.describe())
 
+print("\nHistogram of days since approval")
 print(category_distribution(sc, "approval_age_labeled"))
 
+print("\nHistogram of client_estimate")
 print(category_distribution(sc, "client_estimate_bins"))
 # %%
