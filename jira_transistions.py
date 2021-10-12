@@ -67,6 +67,7 @@ def get_issues_from_filter(filter, getall=False, start_at=0):
     only_issues = []
     issues = get_issues_from_filter_page(filter)
     only_issues = only_issues + issues["issues"]
+    print(f"Total issues to get: {issues['total']}")
 
     # check to see if we got them all
     nextpage = issues["startAt"] + len(only_issues)
@@ -108,18 +109,6 @@ def get_issue_changelog(issueid):
     return issue_log
 
 
-def issues_to_pandas(status_changes):
-    """
-    return dataframe of age of status
-    issue_log - dictionary of jira change log
-    status_list - list of statuses to extract"""
-    sc = pd.DataFrame(status_changes)
-    sc["In Backlog_last"] = pd.to_datetime(sc["In Backlog_last"], utc=True)
-    sc["approved_age"] = (pd.Timestamp.now(tz="UTC") - sc["In Backlog_last"]).dt.days
-
-    return sc
-
-
 """
  # get issues from filter
  # get transistions form chage log
@@ -142,7 +131,12 @@ def get_transistions_for_issues(jira_issues, status_list):
     """return dictionary of issues w/ status change information"""
     status_list = status_list
     issues = []
+    progress = 0
     for i in jira_issues:
+        progress += 1
+        if progress % 10 == 0:
+            print(f"{progress} issues processed")
+
         issue = {}
 
         issue["key"] = i["key"]
@@ -195,6 +189,41 @@ def get_status_changes_summary(issue_log, status_list):
     return status_changes
 
 
+def issues_to_pandas(status_changes):
+    """
+    return dataframe of age of status
+    issue_log - dictionary of jira change log
+    status_list - list of statuses to extract"""
+    sc = pd.DataFrame(status_changes)
+    sc["In Backlog_last"] = pd.to_datetime(sc["In Backlog_last"], utc=True)
+    sc["approved_age"] = (pd.Timestamp.now(tz="UTC") - sc["In Backlog_last"]).dt.days
+
+    # set aging bins
+    bins = [0, 7, 14, 30, 60, 90, 120, 1000]
+    lables = ["07d", "14d", "30d", "60d", "90d", "q120+", "very old"]
+    sc["approval_age_labeled"] = pd.cut(sc["approved_age"], bins=bins, labels=lables)
+
+    # set estimate bins
+    estbins = [0, 500, 1000, 2000, 5000, 10000, 20000, 1000000]
+    estlables = ["<500", "<1000", "<2000", "<5000", "<10000", "<20000", "More"]
+    sc["client_estimate_bins"] = pd.cut(
+        sc["client_estimate"], bins=estbins, labels=estlables
+    )
+    return sc
+
+
+def category_distribution(status_changes, column):
+    """show histogram and order value of approved work
+    status_changes - dataframe from issues_to_pandas()
+    column - the column to show distribution by"""
+
+    print(f"Totaling: {status_changes['client_estimate'].sum()}")
+
+    return status_changes.groupby(column)["client_estimate"].agg(
+        Count="count", Value="sum", Average="mean"
+    )
+
+
 def export_json(dict, file):
     """ save a json dictionary to a file for later
     dict - json dictionary to save
@@ -217,7 +246,7 @@ def get_working_issues(status_list, source="jira"):
 
     w_issues_file = "./examples/" + status_list["filename"]
     if source == "jira":
-        w_jira_issues = get_issues_from_filter("backlog_approved_waiting")
+        w_jira_issues = get_issues_from_filter(jira_filter)
         w_issues = get_transistions_for_issues(w_jira_issues, sold_statuses["statuses"])
         # pprint(sold_issues)
         export_json(w_issues, w_issues_file)
@@ -226,7 +255,7 @@ def get_working_issues(status_list, source="jira"):
         try:
             w_issues = json.load(open(w_issues_file))
         except FileNotFoundError as nofile:
-            print(f"File not fount: {nofile}")
+            print(f"File not found: {nofile}")
             raise nofile
 
     return w_issues
@@ -247,14 +276,14 @@ pending_statuses = {
 }
 
 # %%
+jira_filter = "backlog_approved_waiting"
 # use "local" or "jira" to indicate whether to actually hit the jira api.
-# pending_issues = get_working_issues(pending_statuses, "local")
-# print(len(pending_statuses))
 sold_issues = get_working_issues(sold_statuses, "jira")
-print(len(sold_issues))
 
 sc = issues_to_pandas(sold_issues)
 sc.describe()
 
+print(category_distribution(sc, "approval_age_labeled"))
 
+print(category_distribution(sc, "client_estimate_bins"))
 # %%
