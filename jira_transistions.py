@@ -41,15 +41,15 @@ def print_filters():
         print(f"{f['id']}, {f['name']} ")
 
 
-def get_issues_from_filter_page(filter, start_at=0):
+def get_issues_from_filter_page(jira_filter, start_at=0):
     """return dictionary of issues in filter
-    filter - filter name
+    jira_filter - filter name
     getall - if true, iterate through pagination"""
     max_results = 20
 
     url = "search"
     params = {
-        "jql": "filter=" + filter,
+        "jql": "filter=" + jira_filter,
         "fields": "key,summary,status,created,customfield_14925,customfield_12513",
         "maxResults": max_results,
         "startAt": start_at,
@@ -59,20 +59,20 @@ def get_issues_from_filter_page(filter, start_at=0):
     return issues
 
 
-def get_issues_from_filter(filter, getall=False, start_at=0):
+def get_issues_from_filter(jira_filter, getall=False, start_at=0):
     """return dictionary of issues in filter
-    filter - filter name
+    jira_filter - filter name
     getall - if true, iterate through pagination"""
 
     only_issues = []
-    issues = get_issues_from_filter_page(filter)
+    issues = get_issues_from_filter_page(jira_filter)
     only_issues = only_issues + issues["issues"]
     print(f"Total issues to get: {issues['total']}")
 
     # check to see if we got them all
     nextpage = issues["startAt"] + len(only_issues)
     while nextpage < issues["total"]:
-        next_issues = get_issues_from_filter_page(filter, start_at=nextpage)
+        next_issues = get_issues_from_filter_page(jira_filter, start_at=nextpage)
         only_issues = only_issues + next_issues["issues"]
         nextpage = next_issues["startAt"] + len(next_issues["issues"])
 
@@ -100,7 +100,7 @@ def get_issue_transistions(issueid):
 
 
 def get_issue_changelog(issueid):
-    """Return issue dictionary of issue change log"""
+    """Return issue dictionary of issue change log """
 
     issueid = issueid
     url = "issue/" + issueid + "/changelog"
@@ -145,6 +145,7 @@ def get_transistions_for_issues(jira_issues, status_list):
         issue["client"] = i["fields"]["customfield_12513"]["value"]
         issue["created"] = i["fields"]["created"]
         issue["current_status"] = i["fields"]["status"]["name"]
+        # todo: targetdate
 
         change_log = get_status_changes_summary(
             get_issue_changelog(i["key"]), status_list
@@ -228,8 +229,11 @@ def category_distribution(status_changes, column):
 
 def export_json(dict, file):
     """ save a json dictionary to a file for later
+
     dict - json dictionary to save
-    file - filename to save"""
+
+    file - filename to save
+    """
     with open(file, "w") as fp:
         json.dump(dict, fp, sort_keys=True, indent=2)
 
@@ -269,12 +273,14 @@ sold_statuses = {
     "filename": "sold_statuses.json",
     "statuses": ["In Backlog", "Scheduled"],
     "first_status": "In Backlog",
+    "phase_code": "approved_waiting",
 }
 
 pending_statuses = {
-    "filename": "pending _statuses.json",
+    "filename": "pending_statuses.json",
     "statuses": ["Sent to Client", "Response Review"],
     "first_status": "Sent to Client",
+    "phase_code": "pending_approval",
 }
 
 # %%
@@ -286,7 +292,7 @@ sold_issues = get_working_issues(sold_statuses, "jira")
 
 sc = issues_to_pandas(sold_issues)
 print("==== simple reiview of issues ====")
-print(sc.describe())
+print(sc.describe().round(2))
 
 print("\nHistogram of days since approval")
 print(category_distribution(sc, "approval_age_labeled"))
