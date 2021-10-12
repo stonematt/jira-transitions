@@ -219,8 +219,10 @@ def category_distribution(status_changes, column):
 
     print(f"Totaling: {status_changes['client_estimate'].sum()}")
 
-    return status_changes.groupby(column)["client_estimate"].agg(
-        Count="count", Value="sum", Average="mean"
+    return (
+        status_changes.groupby(column)["client_estimate"]
+        .agg(Count="count", SumVal="sum", AvgVal="mean")
+        .round(0)
     )
 
 
