@@ -283,7 +283,7 @@ print(f"Fetching data from {jira_filter}")
 sold_issues = get_working_issues(sold_statuses, "jira")
 
 sc = issues_to_pandas(sold_issues)
-print("==== simple reivew of issues ====")
+print("==== simple reiview of issues ====")
 print(sc.describe())
 
 print("\nHistogram of days since approval")
