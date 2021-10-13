@@ -197,7 +197,10 @@ def issues_to_pandas(status_changes):
     status_list - list of statuses to extract"""
     sc = pd.DataFrame(status_changes)
     sc["In Backlog_last"] = pd.to_datetime(sc["In Backlog_last"], utc=True)
+    # todo: make other dates be dates
+
     sc["approved_age"] = (pd.Timestamp.now(tz="UTC") - sc["In Backlog_last"]).dt.days
+    # todo: calculate days remaining
 
     # set aging bins
     bins = [0, 7, 14, 30, 60, 90, 120, 1000]
@@ -210,6 +213,8 @@ def issues_to_pandas(status_changes):
     sc["client_estimate_bins"] = pd.cut(
         sc["client_estimate"], bins=estbins, labels=estlables
     )
+
+    # todo: age bins on days remaining from target date.
     return sc
 
 
