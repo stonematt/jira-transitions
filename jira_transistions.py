@@ -67,7 +67,7 @@ def get_issues_from_filter(jira_filter, getall=False, start_at=0):
     only_issues = []
     issues = get_issues_from_filter_page(jira_filter)
     only_issues = only_issues + issues["issues"]
-    print(f"Total issues to get: {issues['total']}")
+    print(f"\nTotal issues to get: {issues['total']}")
 
     # check to see if we got them all
     nextpage = issues["startAt"] + len(only_issues)
@@ -205,7 +205,7 @@ def issues_to_pandas(status_changes):
     # set aging bins
     bins = [0, 7, 14, 30, 60, 90, 120, 1000]
     lables = ["07d", "14d", "30d", "60d", "90d", "q120+", "very old"]
-    sc["approval_age_labeled"] = pd.cut(sc["approved_age"], bins=bins, labels=lables)
+    sc["approval_age_bins"] = pd.cut(sc["approved_age"], bins=bins, labels=lables)
 
     # set estimate bins
     estbins = [0, 500, 1000, 2000, 5000, 10000, 20000, 1000000]
@@ -219,16 +219,22 @@ def issues_to_pandas(status_changes):
 
 
 def category_distribution(status_changes, column):
-    """show histogram and order value of approved work
-    status_changes - dataframe from issues_to_pandas()
-    column - the column to show distribution by"""
+    """Show histogram and order value of work in phase
 
-    print(f"Totaling: {status_changes['client_estimate'].sum()}")
+    Args:
+        status_changes (dataframe): from issues_to_pandas()
+        column (string): the column to calculate frequency distribution
+
+    Returns:
+        dataframe: aggregation grouped by named column
+    """
+
+    print(f"\nTotaling: ${status_changes['client_estimate'].sum()}")
 
     return (
         status_changes.groupby(column)["client_estimate"]
         .agg(Count="count", SumVal="sum", AvgVal="mean")
-        .round(0)
+        .round(2)
     )
 
 
@@ -293,15 +299,29 @@ jira_filter = "backlog_approved_waiting"
 
 print(f"Fetching data from {jira_filter}")
 # use "local" or "jira" to indicate whether to actually hit the jira api.
+# todo: refactor get working issues to take jira_filter as arg
 sold_issues = get_working_issues(sold_statuses, "jira")
 
 sc = issues_to_pandas(sold_issues)
 print("==== simple reiview of issues ====")
-print(sc.describe().round(2))
+sc_description = sc.describe(percentiles=[0.25, 0.5, 0.8, 0.9]).round(2)
+sc_description["Date"] = pd.Timestamp.now().date()
+print(sc_description)
+# print(sc.describe(percentiles=[0.25, 0.5, 0.8, 0.9]).round(2))
+
+# experiment with prepping to save historical timeseries
+approval_age_history = category_distribution(sc, "approval_age_bins")
+approval_age_history["Date"] = pd.Timestamp.now().date()
 
 print("\nHistogram of days since approval")
-print(category_distribution(sc, "approval_age_labeled"))
+print(approval_age_history)
+
+client_estimate_dist = category_distribution(sc, "client_estimate_bins")
+client_estimate_dist["Date"] = pd.Timestamp.now().date()
 
 print("\nHistogram of client_estimate")
-print(category_distribution(sc, "client_estimate_bins"))
+print(client_estimate_dist)
+# print(category_distribution(sc, "client_estimate_bins"))
+
+# todo: future program: run script w/ filtername and phase as args
 # %%
