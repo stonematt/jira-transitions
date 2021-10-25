@@ -295,7 +295,8 @@ pending_statuses = {
 }
 
 # %%
-jira_filter = "backlog_approved_waiting"
+# jira_filter = "backlog_approved_waiting"
+jira_filter = "backlog_approved_waiting_solutions_only"
 
 print(f"Fetching data from {jira_filter}")
 # use "local" or "jira" to indicate whether to actually hit the jira api.
