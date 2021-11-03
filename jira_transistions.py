@@ -10,6 +10,7 @@ from datetime import datetime
 # this includes an individuals api key.  use it carefully it.
 token = json.load(open("me.json"))
 datadir = "./data/"
+examplesdir = "./examples/"
 
 
 def _get(url, params={}):
@@ -133,7 +134,13 @@ def get_transistions_for_issues(jira_issues, status_list):
         issue["key"] = i["key"]
         issue["summary"] = i["fields"]["summary"]
         issue["client_estimate"] = i["fields"]["customfield_14925"]
-        issue["client"] = i["fields"]["customfield_12513"]["value"]
+        # somtimes client isn't set and this would blow up
+        issue["client"] = (
+            i["fields"]["customfield_12513"]["value"]
+            if i["fields"]["customfield_12513"]
+            else None
+        )
+        # var1 = 4 if var1 is None else var1
         issue["created"] = i["fields"]["created"]
         issue["current_status"] = i["fields"]["status"]["name"]
         # todo: targetdate
@@ -263,8 +270,13 @@ def export_json(dict, file):
 
     file - filename to save
     """
-    with open(file, "w") as fp:
-        json.dump(dict, fp, sort_keys=True, indent=2)
+    try:
+        with open(file, "w") as fp:
+            json.dump(dict, fp, sort_keys=True, indent=2)
+    except FileNotFoundError as nofile:
+        print(f"File not found: {nofile}")
+        print(f"Create {examplesdir} to cache the raw data")
+        # raise nofile
 
 
 def get_working_issues(status_list, jira_filter, source="jira"):
@@ -282,7 +294,8 @@ def get_working_issues(status_list, jira_filter, source="jira"):
         dict: issues w/ status transition information
     """
 
-    w_issues_file = "./examples/" + status_list["filename"]
+    w_issues_file = examplesdir + jira_filter + "_" + status_list["filename"]
+
     if source == "jira":
         w_jira_issues = get_issues_from_filter(jira_filter)
         w_issues = get_transistions_for_issues(w_jira_issues, status_list["statuses"])
@@ -414,24 +427,33 @@ estimating = {
     "jira_filters": ["backlog_estimating_all"],
 }
 
-"""List of jobs of life cycles to iterate over"""
-# lifecycles = [approved_waiting, pending_approval]
-lifecycles = [estimating, pending_approval, approved_waiting]
-# lifecycles = [estimating]
+in_flight = {
+    "filename": "in_flight.json",
+    "statuses": ["In Delivery", "Ready for Invoice", "Pending Close"],
+    "first_status": "In Delivery",
+    "phase_code": "in_flight",
+    "jira_filters": ["backlog_in_flight", "backlog_in_flight_solutions_only"],
+}
 
-# %%
 
-for lc in lifecycles:
-    for jfilter in lc["jira_filters"]:
-        new_snapshot = get_snapshot(lc, jfilter)
-        # todo: save to history here. (send to metabase?)
-        print_snapshot(
-            new_snapshot["sshot_description"],
-            new_snapshot["aging_dist"],
-            new_snapshot["client_estimate_dist"],
-        )
+def main():
 
-# %%
+    """List of jobs of life cycles to iterate over"""
+    # lifecycles = [approved_waiting, pending_approval]
+    # lifecycles = [estimating, pending_approval, approved_waiting, in_flight]
+    # lifecycles = [estimating]
+    lifecycles = [in_flight]
 
-# if __name__ == "__main__":
-# main(parse_args())
+    for lc in lifecycles:
+        for jfilter in lc["jira_filters"]:
+            new_snapshot = get_snapshot(lc, jfilter)
+            # todo: save to history here. (send to metabase?)
+            print_snapshot(
+                new_snapshot["sshot_description"],
+                new_snapshot["aging_dist"],
+                new_snapshot["client_estimate_dist"],
+            )
+
+
+if __name__ == "__main__":
+    main()
