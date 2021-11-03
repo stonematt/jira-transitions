@@ -440,9 +440,9 @@ def main():
 
     """List of jobs of life cycles to iterate over"""
     # lifecycles = [approved_waiting, pending_approval]
-    # lifecycles = [estimating, pending_approval, approved_waiting, in_flight]
+    lifecycles = [estimating, pending_approval, approved_waiting, in_flight]
     # lifecycles = [estimating]
-    lifecycles = [in_flight]
+    # lifecycles = [in_flight]
 
     for lc in lifecycles:
         for jfilter in lc["jira_filters"]:
