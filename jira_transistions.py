@@ -76,7 +76,7 @@ def get_issues_from_filter(jira_filter, getall=False, start_at=0):
         only_issues = only_issues + next_issues["issues"]
         nextpage = next_issues["startAt"] + len(next_issues["issues"])
 
-    # print(f"only issues: {len(only_issues)}")
+    # print(f"{len(only_issues)} issues processed")
 
     return only_issues
 
@@ -126,7 +126,7 @@ def get_transistions_for_issues(jira_issues, status_list):
     progress = 0
     for i in jira_issues:
         progress += 1
-        if progress % 20 == 0:
+        if progress % 20 == 0 or progress == len(jira_issues):
             print(f"{progress} issues processed")
 
         issue = {}
@@ -346,7 +346,7 @@ def get_snapshot(lifecycle, jira_filter):
 
     aging_start, aging_name, aging_bins = _generate_aging_names(lifecycle)
 
-    print(f"Fetching data from {jira_filter}")
+    print(f"\n================\nFetching data from {jira_filter}")
     # use "local" or "jira" to indicate whether to actually hit the jira api.
     snap_shot = get_working_issues(lifecycle, jira_filter, "jira")
     snap_shot_dfs = {}
@@ -375,6 +375,9 @@ def get_snapshot(lifecycle, jira_filter):
 
 
 def print_snapshot(sshot_description, aging_dist, client_estimate_dist):
+
+    print("==== Total Client Estimate ====")
+    print(aging_dist["SumVal"].sum())
 
     # print results
     print("==== simple reiview of issues ====")
@@ -408,6 +411,7 @@ approved_waiting = {
     "jira_filters": [
         "backlog_approved_waiting",
         "backlog_approved_waiting_solutions_only",
+        "backlog_approved_waiting_not_solutions_only",
     ],
 }
 
