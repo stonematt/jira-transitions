@@ -397,6 +397,11 @@ def print_snapshot(sshot_description, aging_dist, client_estimate_dist):
 # load working data (filter to job, return pd)
 # refresh data (open saved files, get new data from jira, ammend to saved file - 1/day most recent)
 
+history_dfs = {
+    "description": {"history_file": "description_history",},
+    "aging_dist_history": {"history_file": "aging_dist_history",},
+    "client_estimate_history": {"history_file": "client_estimate_history",},
+}
 """Defie list of estimating life cycle phases to analyze.  Each may have a list
 of jira filters to serve as datasets in the life cycle to evalutate"""
 
