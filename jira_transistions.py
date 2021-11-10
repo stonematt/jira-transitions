@@ -229,12 +229,20 @@ def issues_to_pandas(status_changes, lifecycle_phase):
 
     # set aging bins
     bins = [0, 7, 14, 30, 60, 90, 120, 1000]
-    lables = ["07d", "14d", "30d", "60d", "90d", "q120+", "very old"]
+    lables = ["07d", "14d", "30d", "60d", "90d", "120d", "very old"]
     sc[aging_bins] = pd.cut(sc[aging_name], bins=bins, labels=lables)
 
     # set estimate bins
     estbins = [0, 500, 1000, 2000, 5000, 10000, 20000, 1000000]
-    estlables = ["<500", "<1000", "<2000", "<5000", "<10000", "<20000", "More"]
+    estlables = [
+        "<$500",
+        "<$1,000",
+        "<$2,000",
+        "<$5,000",
+        "<$10,000",
+        "<$20,000",
+        "More",
+    ]
     sc["client_estimate_bins"] = pd.cut(
         sc["client_estimate"], bins=estbins, labels=estlables
     )
@@ -377,7 +385,8 @@ def get_snapshot(lifecycle, jira_filter):
 def print_snapshot(sshot_description, aging_dist, client_estimate_dist):
 
     print("==== Total Client Estimate ====")
-    print(aging_dist["SumVal"].sum())
+    # print(aging_dist["SumVal"].sum().style.format("${0:,.2f}"))
+    print("${:,.0f}".format(aging_dist["SumVal"].sum()))
 
     # print results
     print("==== simple reiview of issues ====")
