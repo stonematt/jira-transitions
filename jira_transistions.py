@@ -391,24 +391,28 @@ def load_all_history(history_dfs):
     # init history in memory as dataframes
 
     for history in history_dfs:
-        csv_fn = datadir + history["history_file"]
+        csv_fn = datadir + history["history_file"] + ".csv"
         try:
             history["history_df"] = pd.read_csv(csv_fn)
         except FileNotFoundError as nofile:
-            print(f"File not found: {nofile}")
-            raise nofile
+            print(f"No history file found:\n {nofile}")
+            # raise nofile
 
     return True
 
 
 def save_history(history_dfs, df_key):
     # save history file to disk
+
     return True
 
 
-def update_history(history_dfs, df_key):
-    # get df_key from history, remove "today" add snapshot
+def update_history(history_dfs, df_key, lifecycle, jira_filter):
+    # get df_key from history, remove "today" for this lc/filter, add snapshot
     # todo: assumes the make snapshop puts the df in the dict
+    history_df = history_dfs[df_key]["history_df"]  # todo try this it will be null
+    snapshot = history_dfs[df_key]["snapshot_df"]
+
     return True
 
 
@@ -423,6 +427,11 @@ def update_history(history_dfs, df_key):
 # refresh data (open saved files, get new data from jira, ammend to saved file - 1/day most recent)
 
 history_dfs = {
+    "history_key": {
+        "history_file": "description_history",
+        "history_df": "df",  # df to be added in function
+        "snapshot_df": "df",  # df to be added in function
+    },
     "description": {"history_file": "description_history",},
     "aging_dist_history": {"history_file": "aging_dist_history",},
     "client_estimate_history": {"history_file": "client_estimate_history",},
