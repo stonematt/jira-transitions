@@ -387,6 +387,31 @@ def print_snapshot(sshot_description, aging_dist, client_estimate_dist):
     print(client_estimate_dist)
 
 
+def load_all_history(history_dfs):
+    # init history in memory as dataframes
+
+    for history in history_dfs:
+        csv_fn = datadir + history["history_file"]
+        try:
+            history["history_df"] = pd.read_csv(csv_fn)
+        except FileNotFoundError as nofile:
+            print(f"File not found: {nofile}")
+            raise nofile
+
+    return True
+
+
+def save_history(history_dfs, df_key):
+    # save history file to disk
+    return True
+
+
+def update_history(history_dfs, df_key):
+    # get df_key from history, remove "today" add snapshot
+    # todo: assumes the make snapshop puts the df in the dict
+    return True
+
+
 # create running panda parquet files for
 # . summary
 # . aging
