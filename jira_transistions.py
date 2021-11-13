@@ -416,11 +416,7 @@ def update_history(history_dfs, df_key, lifecycle, jira_filter):
     return True
 
 
-# create running panda parquet files for
-# . summary
-# . aging
-# . estimate bins
-#
+# create running panda csv files for
 # for each job, script should support
 # init (load historical data)
 # load working data (filter to job, return pd)
@@ -432,60 +428,53 @@ history_dfs = {
         "history_df": "df",  # df to be added in function
         "snapshot_df": "df",  # df to be added in function
     },
-    "description": {"history_file": "description_history",},
-    "aging_dist_history": {"history_file": "aging_dist_history",},
-    "client_estimate_history": {"history_file": "client_estimate_history",},
+    "description": {"history_file": "description_history"},
+    "aging_dist_history": {"history_file": "aging_dist_history"},
+    "client_estimate_history": {"history_file": "client_estimate_history"},
 }
+
 """Defie list of estimating life cycle phases to analyze.  Each may have a list
 of jira filters to serve as datasets in the life cycle to evalutate"""
 
-approved_waiting = {
-    "filename": "approved_waiting.json",
-    "statuses": ["In Backlog", "Scheduled"],
-    "first_status": "In Backlog",
-    "phase_code": "approved_waiting",
-    "jira_filters": [
-        "backlog_approved_waiting",
-        "backlog_approved_waiting_solutions_only",
-    ],
+lifecycles = {
+    "approved_waiting": {
+        "filename": "approved_waiting.json",
+        "statuses": ["In Backlog", "Scheduled"],
+        "first_status": "In Backlog",
+        "phase_code": "approved_waiting",
+        "jira_filters": [
+            "backlog_approved_waiting",
+            "backlog_approved_waiting_solutions_only",
+        ],
+    },
+    "pending_approval": {
+        "filename": "pending_statuses.json",
+        "statuses": ["Response Review", "Pending Client Input", "Sent to Client"],
+        "first_status": "Sent to Client",
+        "phase_code": "pending_approval",
+        "jira_filters": ["backlog_sent_to_client"],
+    },
+    "estimating": {
+        "filename": "estimating.json",
+        "statuses": ["Planning", "Needs Estimate", "Prep Client SOW"],
+        "first_status": "Planning",
+        "phase_code": "estimating",
+        "jira_filters": ["backlog_estimating_all"],
+    },
+    "in_flight": {
+        "filename": "in_flight.json",
+        "statuses": ["In Delivery", "Ready for Invoice", "Pending Close"],
+        "first_status": "In Delivery",
+        "phase_code": "in_flight",
+        "jira_filters": ["backlog_in_flight", "backlog_in_flight_solutions_only"],
+    },
 }
-
-pending_approval = {
-    "filename": "pending_statuses.json",
-    "statuses": ["Response Review", "Pending Client Input", "Sent to Client"],
-    "first_status": "Sent to Client",
-    "phase_code": "pending_approval",
-    "jira_filters": ["backlog_sent_to_client"],
-}
-
-estimating = {
-    "filename": "estimating.json",
-    "statuses": ["Planning", "Needs Estimate", "Prep Client SOW"],
-    "first_status": "Planning",
-    "phase_code": "estimating",
-    "jira_filters": ["backlog_estimating_all"],
-}
-
-in_flight = {
-    "filename": "in_flight.json",
-    "statuses": ["In Delivery", "Ready for Invoice", "Pending Close"],
-    "first_status": "In Delivery",
-    "phase_code": "in_flight",
-    "jira_filters": ["backlog_in_flight", "backlog_in_flight_solutions_only"],
-}
-
 
 def main():
 
-    """List of jobs of life cycles to iterate over"""
-    # lifecycles = [approved_waiting, pending_approval]
-    lifecycles = [estimating, pending_approval, approved_waiting, in_flight]
-    # lifecycles = [estimating]
-    # lifecycles = [in_flight]
-
     for lc in lifecycles:
-        for jfilter in lc["jira_filters"]:
-            new_snapshot = get_snapshot(lc, jfilter)
+        for jfilter in lifecycles[lc]["jira_filters"]:
+            new_snapshot = get_snapshot(lifecycles[lc], jfilter)
             # todo: save to history here. (send to metabase?)
             print_snapshot(
                 new_snapshot["sshot_description"],
