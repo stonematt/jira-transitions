@@ -294,7 +294,9 @@ def get_working_issues(status_list, jira_filter, source="jira"):
         dict: issues w/ status transition information
     """
 
-    w_issues_file = examplesdir + jira_filter + "_" + status_list["filename"]
+    w_issues_file = (
+        examplesdir + status_list["phase_code"] + "_" + jira_filter + ".json"
+    )
 
     if source == "jira":
         w_jira_issues = get_issues_from_filter(jira_filter)
@@ -329,49 +331,47 @@ def _amend_df(issues_df, phase_code, jira_filter):
     return issues_df
 
 
-def get_snapshot(lifecycle, jira_filter):
+def get_snapshot(lifecycle, jira_filter, source="jira"):
     """Get current data snapshot from jira for a lifecycle phase from a jira filter
     This is the content to send to metabase
 
     Args:
         lifecycle (dict): lifecycle phase in the jira sales pipeline
         jira_filter (string): name of a saved jira filter
+        source (string): jira (default) or local
 
-    Returns:
-        dict: collection of 3 dataframes with snapshot anylysis:
-            df sshot_description: description of the snapshot
-            df aging_dist: aging distrbution
-            df client_estimate_dist: distribution of client estimates
+    Results: updates the history_dfs[key]["snap_shot"] key with the current snap_shot
+        for each of description, aging_dist_history, and client_estimates_history
     """
 
     aging_start, aging_name, aging_bins = _generate_aging_names(lifecycle)
 
     print(f"Fetching data from {jira_filter}")
     # use "local" or "jira" to indicate whether to actually hit the jira api.
-    snap_shot = get_working_issues(lifecycle, jira_filter, "jira")
-    snap_shot_dfs = {}
+
+    snap_shot = get_working_issues(lifecycle, jira_filter, source)
 
     # make relevant dataframes
     sshot = issues_to_pandas(snap_shot, lifecycle)
 
-    snap_shot_dfs["sshot_description"] = sshot.describe(
+    # snap_shot_dfs["sshot_description"] = sshot.describe(
+    history_dfs["description"]["snap_shot"] = sshot.describe(
         percentiles=[0.25, 0.5, 0.8, 0.9]
     ).round(2)
 
-    snap_shot_dfs["aging_dist"] = category_distribution(sshot, aging_bins)
+    history_dfs["aging_dist_history"]["snap_shot"] = category_distribution(
+        sshot, aging_bins
+    )
 
-    snap_shot_dfs["client_estimate_dist"] = category_distribution(
+    history_dfs["client_estimate_history"]["snap_shot"] = category_distribution(
         sshot, "client_estimate_bins"
     )
 
     # add columns for todays date, phase, and jira filter for reporting
     # snap_shot_dfs = [sshot_description, aging_dist, client_estimate_dist]
-
-    for key, df in snap_shot_dfs.items():
-        snap_shot_dfs[key] = _amend_df(df, lifecycle["phase_code"], jira_filter)
-
-    # return sshot_description, aging_dist, client_estimate_dist
-    return snap_shot_dfs
+    for hist in history_dfs:
+        hss = history_dfs[hist]["snap_shot"]
+        hss = _amend_df(hss, lifecycle["phase_code"], jira_filter)
 
 
 def print_snapshot(sshot_description, aging_dist, client_estimate_dist):
@@ -407,6 +407,10 @@ def save_history(history_dfs, df_key):
     return True
 
 
+def append_snapshot():
+    return True
+
+
 def update_history(history_dfs, df_key, lifecycle, jira_filter):
     # get df_key from history, remove "today" for this lc/filter, add snapshot
     # todo: assumes the make snapshop puts the df in the dict
@@ -423,11 +427,6 @@ def update_history(history_dfs, df_key, lifecycle, jira_filter):
 # refresh data (open saved files, get new data from jira, ammend to saved file - 1/day most recent)
 
 history_dfs = {
-    "history_key": {
-        "history_file": "description_history",
-        "history_df": "df",  # df to be added in function
-        "snapshot_df": "df",  # df to be added in function
-    },
     "description": {"history_file": "description_history"},
     "aging_dist_history": {"history_file": "aging_dist_history"},
     "client_estimate_history": {"history_file": "client_estimate_history"},
@@ -438,7 +437,7 @@ of jira filters to serve as datasets in the life cycle to evalutate"""
 
 lifecycles = {
     "approved_waiting": {
-        "filename": "approved_waiting.json",
+        "filename": "approved_waiting",
         "statuses": ["In Backlog", "Scheduled"],
         "first_status": "In Backlog",
         "phase_code": "approved_waiting",
@@ -448,21 +447,21 @@ lifecycles = {
         ],
     },
     "pending_approval": {
-        "filename": "pending_statuses.json",
+        "filename": "pending_statuses",
         "statuses": ["Response Review", "Pending Client Input", "Sent to Client"],
         "first_status": "Sent to Client",
         "phase_code": "pending_approval",
         "jira_filters": ["backlog_sent_to_client"],
     },
     "estimating": {
-        "filename": "estimating.json",
+        "filename": "estimating",
         "statuses": ["Planning", "Needs Estimate", "Prep Client SOW"],
         "first_status": "Planning",
         "phase_code": "estimating",
         "jira_filters": ["backlog_estimating_all"],
     },
     "in_flight": {
-        "filename": "in_flight.json",
+        "filename": "in_flight",
         "statuses": ["In Delivery", "Ready for Invoice", "Pending Close"],
         "first_status": "In Delivery",
         "phase_code": "in_flight",
@@ -470,16 +469,18 @@ lifecycles = {
     },
 }
 
+
 def main():
 
     for lc in lifecycles:
         for jfilter in lifecycles[lc]["jira_filters"]:
-            new_snapshot = get_snapshot(lifecycles[lc], jfilter)
+            get_snapshot(lifecycles[lc], jfilter, "jira")
             # todo: save to history here. (send to metabase?)
+            # update_histories(new_snapshot, lifecycles[lc], jfilter)
             print_snapshot(
-                new_snapshot["sshot_description"],
-                new_snapshot["aging_dist"],
-                new_snapshot["client_estimate_dist"],
+                history_dfs["description"]["snap_shot"],
+                history_dfs["aging_dist_history"]["snap_shot"],
+                history_dfs["client_estimate_history"]["snap_shot"],
             )
 
 
