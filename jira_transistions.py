@@ -425,15 +425,15 @@ def save_history(history_dfs, df_key):
 
 
 def append_snapshot(hist_df_key):
-    histdf = hist_df_key["history_df"]
+    # histdf = hist_df_key["history_df"]
     hss = hist_df_key["snap_shot"]
-    print(f"snaphot len: {len(hss)} hist len: {len(histdf)}")
-    if len(histdf) == 0:
-        new_hist = hss
-    else:
+    # print(f"snaphot len: {len(hss)} hist len: {len(histdf)}")
+    if "history_df" in hist_df_key.keys():
         # histdf.append(hss, ignore_index=False)
-        new_hist = pd.concat([histdf, hss], ignore_index=True)
-
+        new_hist = pd.concat([hist_df_key["history_df"], hss], ignore_index=True)
+    else:
+        hist_df_key["history_df"] = hss
+        new_hist = hist_df_key["history_df"]
     return new_hist
 
 
@@ -454,12 +454,14 @@ def update_histories(lifecycle, jira_filter):
     return True
 
 
-# create running panda csv files for
-# for each job, script should support
-# init (load historical data)
-# load working data (filter to job, return pd)
-# refresh data (open saved files, get new data from jira, ammend to saved file - 1/day most recent)
-
+"""history_dfs data library model:
+    aggregation key:    the various ways we aggregage data about project to plot over time:
+                        description, aging_dist_history, client_estimate_history
+        history_file:    file location to store csv of history
+        history_df:     dataframe of history data - it will be saved to csv for future use
+        snap_shot:      dataframe of most recent "get_snapshot" - it will be appended to the
+                        history data frame and then ignored or removed
+"""
 history_dfs = {
     "description": {"history_file": "description_history"},
     "aging_dist_history": {"history_file": "aging_dist_history"},
@@ -519,6 +521,8 @@ otherlc = {
     },
 }
 
+# todo: load all history
+
 
 def main():
     activelc = otherlc
@@ -527,7 +531,7 @@ def main():
         for jfilter in activelc[lc]["jira_filters"]:
             get_snapshot(activelc[lc], jfilter, "local")
             # todo: save to history here. (send to metabase?)
-            # update_histories(lifecycles[lc], jfilter)
+            update_histories(activelc[lc], jfilter)
             print_snapshot(
                 history_dfs["description"]["snap_shot"],
                 history_dfs["aging_dist_history"]["snap_shot"],
