@@ -191,7 +191,7 @@ def get_status_changes_summary(issue_log, status_list):
 def _generate_aging_names(lifecycle_phase):
     aging_start = lifecycle_phase["first_status"] + "_last"
     aging_name = lifecycle_phase["phase_code"] + "_age"
-    aging_bins = aging_name + "_bins"
+    aging_bins = "aging_bins"
 
     return aging_start, aging_name, aging_bins
 
@@ -228,8 +228,8 @@ def issues_to_pandas(status_changes, lifecycle_phase):
     # todo: calculate days remaining
 
     # set aging bins
-    bins = [0, 7, 14, 30, 60, 90, 120, 1000]
-    lables = ["07d", "14d", "30d", "60d", "90d", "q120+", "very old"]
+    bins = [0, 7, 14, 30, 60, 90, 120, 10000]
+    lables = ["07d", "14d", "30d", "60d", "90d", "120d", "very old"]
     sc[aging_bins] = pd.cut(sc[aging_name], bins=bins, labels=lables)
 
     # set estimate bins
