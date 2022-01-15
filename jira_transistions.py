@@ -388,15 +388,32 @@ def print_snapshot(sshot_description, aging_dist, client_estimate_dist):
 
 
 def load_all_history(history_dfs):
+    """loads history from csv and returns 3 dataframes"""
+
     # init history in memory as dataframes
 
     for history in history_dfs:
-        csv_fn = datadir + history["history_file"] + ".csv"
+        csv_fn = datadir + history_dfs[history]["history_file"] + ".csv"
         try:
-            history["history_df"] = pd.read_csv(csv_fn)
+            history_dfs[history]["history_df"] = pd.read_csv(csv_fn)
         except FileNotFoundError as nofile:
             print(f"No history file found:\n {nofile}")
             # raise nofile
+            history_dfs[history]["history_df"] = ""
+        else:
+            return
+
+    return True
+
+
+def _save_df_tocsv(hist_df_key):
+    csv_fn = datadir + hist_df_key["history_file"] + ".csv"
+
+    try:
+        hist_df_key["history_df"].to_csv(csv_fn)
+    except FileNotFoundError as nofile:
+        print(f"No history file found:\n {nofile}")
+        raise nofile
 
     return True
 
@@ -407,15 +424,32 @@ def save_history(history_dfs, df_key):
     return True
 
 
-def append_snapshot():
-    return True
+def append_snapshot(hist_df_key):
+    histdf = hist_df_key["history_df"]
+    hss = hist_df_key["snap_shot"]
+    print(f"snaphot len: {len(hss)} hist len: {len(histdf)}")
+    if len(histdf) == 0:
+        new_hist = hss
+    else:
+        # histdf.append(hss, ignore_index=False)
+        new_hist = pd.concat([histdf, hss], ignore_index=True)
+
+    return new_hist
 
 
-def update_history(history_dfs, df_key, lifecycle, jira_filter):
+def update_histories(lifecycle, jira_filter):
     # get df_key from history, remove "today" for this lc/filter, add snapshot
-    # todo: assumes the make snapshop puts the df in the dict
-    history_df = history_dfs[df_key]["history_df"]  # todo try this it will be null
-    snapshot = history_dfs[df_key]["snapshot_df"]
+
+    for hist in history_dfs:
+        hk = history_dfs[hist]
+        # history_dfs[hist]["history_df"] = append_snapshot(history_dfs[hist])
+        hk["history_df"] = append_snapshot(history_dfs[hist])
+
+        print(
+            f"snaphot shape: {(hk['snap_shot'].shape)} hist .shape: {(hk['history_df'].shape)}"
+        )
+        # save to file
+        _save_df_tocsv(hk)
 
     return True
 
@@ -493,7 +527,7 @@ def main():
         for jfilter in activelc[lc]["jira_filters"]:
             get_snapshot(activelc[lc], jfilter, "local")
             # todo: save to history here. (send to metabase?)
-            # update_histories(new_snapshot, lifecycles[lc], jfilter)
+            # update_histories(lifecycles[lc], jfilter)
             print_snapshot(
                 history_dfs["description"]["snap_shot"],
                 history_dfs["aging_dist_history"]["snap_shot"],
