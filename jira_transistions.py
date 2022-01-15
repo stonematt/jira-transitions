@@ -184,7 +184,7 @@ def get_status_changes_summary(issue_log, status_list):
                 ):
                     status_changes[i["toString"] + "_last"] = v["created"]
 
-    # export_json(status_changes, "./deleteme.json")
+    # export_json(status_changes, "./deleteme.statuschanges.json")
     return status_changes
 
 
@@ -468,13 +468,30 @@ lifecycles = {
         "jira_filters": ["backlog_in_flight", "backlog_in_flight_solutions_only"],
     },
 }
+otherlc = {
+    "ttc": {
+        "filename": "ttc",
+        "statuses": [
+            "In Backlog",
+            "Scheduled",
+            "In Delivery",
+            "Ready for Invoice",
+            "Pending Close",
+            "Complete",
+        ],
+        "first_status": "In Delivery",
+        "phase_code": "ttc",
+        "jira_filters": ["SuccessProjectBacklogComplete"],
+    },
+}
 
 
 def main():
+    activelc = otherlc
 
-    for lc in lifecycles:
-        for jfilter in lifecycles[lc]["jira_filters"]:
-            get_snapshot(lifecycles[lc], jfilter, "jira")
+    for lc in activelc:  # chance back to lifecycles for real
+        for jfilter in activelc[lc]["jira_filters"]:
+            get_snapshot(activelc[lc], jfilter, "local")
             # todo: save to history here. (send to metabase?)
             # update_histories(new_snapshot, lifecycles[lc], jfilter)
             print_snapshot(
