@@ -400,10 +400,9 @@ def load_all_history(history_dfs):
             print(f"No history file found:\n {nofile}")
             # raise nofile
             history_dfs[history]["history_df"] = ""
-        else:
-            return
 
-    return True
+        else:
+            return True
 
 
 def _save_df_tocsv(hist_df_key):
@@ -526,6 +525,7 @@ otherlc = {
 
 def main():
     activelc = otherlc
+    load_all_history(history_dfs)
 
     for lc in activelc:  # chance back to lifecycles for real
         for jfilter in activelc[lc]["jira_filters"]:
