@@ -4,7 +4,7 @@ from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
 import json
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, date, timedelta
 
 
 # this includes an individuals api key.  use it carefully it.

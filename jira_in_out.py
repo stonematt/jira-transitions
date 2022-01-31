@@ -3,7 +3,6 @@ import requests
 from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
 import json
-import pandas as pd
 from datetime import datetime, timedelta
 
 
@@ -61,57 +60,9 @@ def count_issues_from_jql(jql):
     return issue_count
 
 
-"""
- # get issues from filter
- # put in pd.dataframe,
- # todo:make visualization
-"""
-
-
-def _to_date(jira_date):
-    """ return datetime object of date from jira time string
-    that looks like: 2021-10-05T14:12:44.872-0400
-    """
-    d = datetime.strptime(jira_date, "%Y-%m-%dT%H:%M:%S.%f%z")
-    return d
-
-
-def issues_to_pandas(status_changes, lifecycle_phase):
-    """Converts dictionary of status changes to pandas dataframe
-    that includes aging and estimating bins
-
-    Args:
-        status_changes (dict): jira change log of status changes
-        lifecycle_phase (dict): configuration of lifecycle. need keys for
-                                 "first_status" and "phase_code"
-
-    Returns:
-        dataframe:  dataframe with age from phase start,
-                    ammended with jira filter and lifecycle phase
-    """
-
-    aging_start = ""
-    aging_name = ""
-
-    sc = pd.DataFrame(status_changes)
-    sc[aging_start] = pd.to_datetime(sc[aging_start], utc=True)
-    sc["created"] = pd.to_datetime(sc["created"], utc=True)
-
-    sc[aging_name] = (
-        (pd.Timestamp.now(tz="UTC") - sc[aging_start]).where(
-            pd.notna(sc[aging_start]), pd.Timestamp.now(tz="UTC") - sc["created"]
-        )
-    ).dt.days
-    # todo: calculate days remaining
-
-    return sc
-
-
 def export_json(dict, file):
     """ save a json dictionary to a file for later
-
     dict - json dictionary to save
-
     file - filename to save
     """
     try:
@@ -121,24 +72,6 @@ def export_json(dict, file):
         print(f"File not found: {nofile}")
         print(f"Create {examplesdir} to cache the raw data")
         # raise nofile
-
-
-def _save_df_tocsv(hist_df_key):
-    csv_fn = datadir + hist_df_key["history_file"] + ".csv"
-
-    try:
-        hist_df_key["history_df"].to_csv(csv_fn)
-    except FileNotFoundError as nofile:
-        print(f"No history file found:\n {nofile}")
-        raise nofile
-
-    return True
-
-
-# def _calc_period(date, days=28):
-#     """take a date, return start/end date based on days
-#     28 day default is 2 sprints"""
-#     end_date = date
 
 
 def date_range_from_end(end_date, dayspan=28):
@@ -195,36 +128,107 @@ def get_data_for_day(j_balance, end_date, days=28):
     return datapoint
 
 
-def get_data_for_daterange(j_balance, end_date, report_span=10):
-    report_time_span = report_span
-    report_end_date = end_date
-    report_start_date = end_date - timedelta(days=report_time_span)
+def load_history_from_file(filename):
 
-    report = []
+    try:
+        report = json.load(open(filename))
+    except FileNotFoundError as nofile:
+        print(f"File not found: {nofile}")
+        # raise nofile
+        report = []
 
-    for i in range((report_end_date - report_start_date).days):
-        rdate = report_start_date + i * timedelta(days=1)
+    return report
+
+
+def get_data_for_daterange(j_balance, end_date, start_date, history_report=[]):
+    """j_balance - balance to calculate
+        end_date: python datetime
+        start_date: python dateteime
+        history_report: dictionary of balances"""
+
+    report = history_report
+
+    for i in range((end_date - start_date).days):
+        rdate = start_date + i * timedelta(days=1)
         datapoint = datetime.strftime(rdate, "%Y-%m-%d")
         print(datapoint)
         report.append(get_data_for_day(j_balance, rdate))
 
-        export_json(report, datadir + "/report.json")
+        # probably don't need to do this on every data point...
+        export_json(report, datadir + j_balance["hist_file"])
+
+    return report
+
+
+def update_recent_days(
+    j_balance, report, end_date=datetime.today().date(), report_span=10, start_date=""
+):
+    """take a report as dictionary, find most recent date, update to now
+    this assumes the report stops at 'yesterday' """
+
+    yesterday = datetime.today().date() - timedelta(days=1)
+    yesterday_s = datetime.strftime(yesterday, "%Y-%m-%d")
+
+    # if the passed in report has history, update form last date to now
+    if len(report) > 0:
+        # get the most recent date in the report and delete it if it's yesterday
+        last_date = datetime.strptime(
+            max(report, key=lambda x: datetime.strptime(x["date"], "%Y-%m-%d"))["date"],
+            "%Y-%m-%d",
+        ).date()
+        if last_date == yesterday:
+            del report[
+                report.index(
+                    next(filter(lambda d: d.get("date") == yesterday_s, report))
+                )
+            ]
+            start_date = last_date
+        else:
+            start_date = last_date + timedelta(days=1)
+
+    # if the passed in report is empty, generate history according to params
+    else:
+        if start_date:
+            start_date = datetime.strptime(start_date, "%Y-%m-%d")
+        else:
+            start_date = end_date - timedelta(days=report_span)
+
+    report = get_data_for_daterange(j_balance, end_date, start_date, report)
 
     return report
 
 
 jira_balances = {
-    "solutions": {"in_status": "In Backlog", "out_status": "Pending Communication"},
-    "another": {"in_status": "Planning", "out_status": "Prep Client SOW"},
+    "approved": {
+        "in_status": "In Backlog",
+        "out_status": "Pending Communication",
+        "hist_file": "approved_history.json",
+    },
+    "tsps": {
+        "in_status": "In Backlog",
+        "out_status": "Pending Communication",
+        "hist_file": "tsp_history.json",
+    },
+    "estimates": {
+        "in_status": "Planning",
+        "out_status": "Prep Client SOW",
+        "hist_file": "estimates_history.json",
+    },
 }
 
 
 def main():
 
-    report_end_date = datetime.today()
-    report = get_data_for_daterange(jira_balances["solutions"], report_end_date, 5)
+    for jb in jira_balances:
+        jira_balance = jira_balances[jb]
+        history = update_recent_days(
+            jira_balance,
+            load_history_from_file(datadir + jira_balance["hist_file"]),
+            report_span=40,
+        )
 
-    print(report)
+        print(f"Recent data from {jira_balance['hist_file']}")
+        print(json.dumps(history[-1], sort_keys=True, indent=2))
 
 
 if __name__ == "__main__":
