@@ -82,27 +82,36 @@ def date_range_from_end(end_date, dayspan=28):
     return start_date, e
 
 
-def generate_jql(j_status, start_date, end_date):
+def generate_jql(j_status, start_date, end_date, from_status=[]):
     """needs a status and a date range with dates as string"""
 
-    jql = (
-        "type in (sow, 'Technical Services Project') AND status changed to '"
-        + j_status
-        + "' during ('"
-        + start_date
-        + "', '"
-        + end_date
-        + "')"
-    )
+    jql_base = "(project = 'Client Success' AND 'Customer Request Type' in ('Technical Services Project (SUPPORT)', 'Engineering Project (SUPPORT)') OR issuetype = SOW AND status not in (Suspended) AND 'General Services SOW' is EMPTY)  AND status changed to '"
+
+    during_jql = "' during ('" + start_date + "', '" + end_date + "')"
+
+        # "type in (sow, 'Technical Services Project') AND status changed to '"
+    jql = jql_base + j_status + during_jql
+
+    # todo: not sure this is the best way to do this
+    if len(from_status) > 0:
+        from_jql = " AND (status changed from '" + from_status[0] + during_jql
+        if len(from_status) > 1:
+            for s in from_status[1:]:
+                from_jql = from_jql + " OR status changed from '" + s + during_jql
+        from_jql = from_jql + ")"
+        jql = jql + from_jql
+
     # print(jql)
 
     return jql
 
 
-def get_datapoint(status, jstart, jend):
+def get_datapoint(status, jstart, jend, from_status=[]):
     """return count of issues"""
 
-    status_count = count_issues_from_jql(generate_jql(status, jstart, jend))
+    status_count = count_issues_from_jql(
+        generate_jql(status, jstart, jend, from_status)
+    )
     return status_count
 
 
@@ -111,10 +120,17 @@ def get_data_for_day(j_balance, end_date, days=28):
 
     datapoint = {"date": datetime.strftime(end_date, "%Y-%m-%d"), "days": days}
 
-    jstart, jend = date_range_from_end(end_date, days)
-    datapoint["in_count"] = get_datapoint(j_balance["in_status"], jstart, jend)
-    datapoint["out_count"] = get_datapoint(j_balance["out_status"], jstart, jend)
+    if "in_from" in j_balance.keys():
+        from_list = j_balance["in_from"]
+    else:
+        from_list = []
 
+    jstart, jend = date_range_from_end(end_date, days)
+
+    datapoint["in_count"] = get_datapoint(
+        j_balance["in_status"], jstart, jend, from_list
+    )
+    datapoint["out_count"] = get_datapoint(j_balance["out_status"], jstart, jend)
     datapoint["raw_delta"] = datapoint["out_count"] - datapoint["in_count"]
 
     def in_wks(value, days):
@@ -201,12 +217,14 @@ def update_recent_days(
 jira_balances = {
     "approved": {
         "in_status": "In Backlog",
+        "in_from": ["Response Review", "Needs Estimate"],
         "out_status": "Pending Communication",
         "hist_file": "approved_history.json",
     },
     "tsps": {
         "in_status": "In Backlog",
-        "out_status": "Pending Communication",
+        "in_from": ["Response Review", "Needs Estimate"],
+        "out_status": "Complete",
         "hist_file": "tsp_history.json",
     },
     "estimates": {
@@ -218,6 +236,8 @@ jira_balances = {
 
 
 def main():
+
+    # jira_balances = q_balances
 
     for jb in jira_balances:
         jira_balance = jira_balances[jb]
