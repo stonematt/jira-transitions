@@ -35,17 +35,22 @@ def chart_df(df, title):
     )
 
 
-# %%
-def main():
-
+def build_histories(jira_balances, print_hitory=False):
     for jb in jira_balances:
         jira_balance = jira_balances[jb]
         history = jbget.load_history_from_file(datadir + jira_balance["hist_file"])
         histories[jb] = hist_to_pd(history)
 
-        print(f"Recent data from {jira_balance['hist_file']}")
-        print(json.dumps(history[-1], sort_keys=True, indent=2))
-        chart_df(histories[jb], jb)
+        if print_hitory:
+            print(f"Recent data from {jira_balance['hist_file']}")
+            print(json.dumps(history[-1], sort_keys=True, indent=2))
+            # chart_df(histories[jb], jb)
+
+
+# %%
+def main():
+
+    build_histories(jira_balances, print_hitory=True)
 
 
 if __name__ == "__main__":

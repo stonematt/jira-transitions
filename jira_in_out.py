@@ -85,11 +85,14 @@ def date_range_from_end(end_date, dayspan=28):
 def generate_jql(j_status, start_date, end_date, from_status=[]):
     """needs a status and a date range with dates as string"""
 
-    jql_base = "(project = 'Client Success' AND 'Customer Request Type' in ('Technical Services Project (SUPPORT)', 'Engineering Project (SUPPORT)') OR issuetype = SOW AND status not in (Suspended) AND 'General Services SOW' is EMPTY)  AND status changed to '"
+    jql_base = "(project = 'Client Success' \
+        AND 'Customer Request Type' in ('Technical Services Project (SUPPORT)', 'Engineering Project (SUPPORT)') \
+        OR issuetype = SOW AND status not in (Suspended) AND 'General Services SOW' is EMPTY)  \
+        AND status changed to '"
 
     during_jql = "' during ('" + start_date + "', '" + end_date + "')"
 
-        # "type in (sow, 'Technical Services Project') AND status changed to '"
+    # "type in (sow, 'Technical Services Project') AND status changed to '"
     jql = jql_base + j_status + during_jql
 
     # todo: not sure this is the best way to do this
