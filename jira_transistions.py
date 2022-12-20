@@ -4,7 +4,11 @@ from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
 import json
 import pandas as pd
-from datetime import datetime, date, timedelta
+import logging
+
+from datetime import datetime
+
+logging.basicConfig(level=logging.INFO)
 
 
 # this includes an individuals api key.  use it carefully it.
@@ -92,7 +96,7 @@ def get_issue(issueid):
 
 
 def get_issue_changelog(issueid):
-    """Return issue dictionary of issue change log """
+    """Return issue dictionary of issue change log"""
 
     issueid = issueid
     url = "issue/" + issueid + "/changelog"
@@ -112,7 +116,7 @@ def get_issue_changelog(issueid):
 
 
 def _to_date(jira_date):
-    """ return datetime object of date from jira time string
+    """return datetime object of date from jira time string
     that looks like: 2021-10-05T14:12:44.872-0400
     """
     d = datetime.strptime(jira_date, "%Y-%m-%dT%H:%M:%S.%f%z")
@@ -272,7 +276,7 @@ def category_distribution(status_changes, column):
 
 
 def export_json(dict, file):
-    """ save a json dictionary to a file for later
+    """save a json dictionary to a file for later
 
     dict - json dictionary to save
 
@@ -301,7 +305,9 @@ def get_working_issues(status_list, jira_filter, source="jira"):
     Returns:
         dict: issues w/ status transition information
     """
-
+    logging.info(
+        f"get_working_issues: status_list {type(status_list)}, jira_filter: {jira_filter}"
+    )
     w_issues_file = examplesdir + jira_filter + "_" + status_list["filename"]
 
     if source == "jira":
@@ -316,6 +322,7 @@ def get_working_issues(status_list, jira_filter, source="jira"):
             print(f"File not found: {nofile}")
             raise nofile
 
+    logging.info(f"get_working_issues: returning {len(w_issues)} issues")
     return w_issues
 
 
@@ -360,7 +367,9 @@ def get_snapshot(lifecycle, jira_filter):
     snap_shot_dfs = {}
 
     # make relevant dataframes
+    logging.info(f"get_snapshot: start making dataframes")
     sshot = issues_to_pandas(snap_shot, lifecycle)
+    snap_shot_dfs["sshot_raw"] = sshot
 
     snap_shot_dfs["sshot_description"] = sshot.describe(
         percentiles=[0.25, 0.5, 0.8, 0.9]
