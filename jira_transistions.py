@@ -229,14 +229,14 @@ def issues_to_pandas(status_changes, lifecycle_phase):
             pd.notna(sc[aging_start]), pd.Timestamp.now(tz="UTC") - sc["created"]
         )
     ).dt.days
-    sc['phase_age'] = sc[aging_name]
+    sc["phase_age"] = sc[aging_name]
     # todo: calculate days remaining
 
     # set aging bins
     bins = [0, 7, 14, 30, 60, 90, 120, 1000]
     lables = ["07d", "14d", "30d", "60d", "90d", "120d", "very old"]
     sc[aging_bins] = pd.cut(sc[aging_name], bins=bins, labels=lables)
-    sc['phase_age_bins'] = sc[aging_bins]
+    sc["phase_age_bins"] = sc[aging_bins]
 
     # set estimate bins
     estbins = [0, 500, 1000, 2000, 5000, 10000, 20000, 1000000]
@@ -461,13 +461,18 @@ in_flight = {
 
 approved_in_flight = {
     "filename": "approved_in_flight.json",
-    "statuses": ["In Backlog", "Scheduled", "In Delivery", "Ready for Invoice", "Pending Close"],
+    "statuses": [
+        "In Backlog",
+        "Scheduled",
+        "In Delivery",
+        "Ready for Invoice",
+        "Pending Close",
+    ],
     "first_status": "In Backlog",
     "phase_code": "approved_in_flight",
-    "jira_filters": [
-        "backlog_approved_in_flight"
-    ],
+    "jira_filters": ["backlog_approved_in_flight"],
 }
+
 
 def main():
 
