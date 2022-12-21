@@ -15,7 +15,7 @@ lifecycles["estimating"] = jtrans.estimating
 lifecycles["approved_waiting"] = jtrans.approved_waiting
 lifecycles["pending_approval"] = jtrans.pending_approval
 lifecycles["in_flight"] = jtrans.in_flight
-lifecycles["approved_in_flight"] = jtrans.approved_in_flight
+lifecycles["aproved_in_flight"] = jtrans.approved_in_flight
 
 # get data (save snapshots for this session?)
 if "current_snapshots" not in st.session_state:
@@ -55,16 +55,11 @@ def df_boxplot(df, data_column, group_by, title="", xlabel="", ylabel=""):
     ).update_layout(
         yaxis_title=ylabel,
         xaxis=dict(
-            # autorange=True,
             showgrid=True,
             zeroline=True,
-            zerolinecolor="rgb(255, 255, 255)",
             zerolinewidth=2,
         ),
         xaxis_title=xlabel,
-        # legend_orientation="h",
-        # legend_groupclick="togglegroup",
-        # legend_itemclick="toggle",
     )
 
     st.plotly_chart(fig, theme="streamlit")
@@ -141,7 +136,9 @@ if (
     all_raw_data = current_snapshots["all_raw_data"]
 else:
     logging.info(f"getting data for {lifecycle_name}/{jira_filter}")
-    with st.spinner(f"getting data for {lifecycle_name}/{jira_filter}"):
+    with st.spinner(
+        f"Go make a coffee, getting data for {lifecycle_name}/{jira_filter} may take a couple minutes"
+    ):
         current_snapshots[lifecycle_name][jira_filter] = jtrans.get_snapshot(
             lifecycle, jira_filter
         )
