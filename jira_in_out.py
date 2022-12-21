@@ -51,17 +51,14 @@ def count_issues_from_jql(jql):
     }
 
     r = _get(url, params)
-    try:
-        issue_count = r["total"]
-    except:
-        issue_count = 0
-    # print(f"total issues: {issue_count}")
+    issue_count = r.get("total") if r.get("total") else 0
+    # # print(f"total issues: {issue_count}")
 
     return issue_count
 
 
 def export_json(dict, file):
-    """ save a json dictionary to a file for later
+    """save a json dictionary to a file for later
     dict - json dictionary to save
     file - filename to save
     """
@@ -161,9 +158,9 @@ def load_history_from_file(filename):
 
 def get_data_for_daterange(j_balance, end_date, start_date, history_report=[]):
     """j_balance - balance to calculate
-        end_date: python datetime
-        start_date: python dateteime
-        history_report: dictionary of balances"""
+    end_date: python datetime
+    start_date: python dateteime
+    history_report: dictionary of balances"""
 
     report = history_report
 
@@ -183,7 +180,7 @@ def update_recent_days(
     j_balance, report, end_date=datetime.today().date(), report_span=10, start_date=""
 ):
     """take a report as dictionary, find most recent date, update to now
-    this assumes the report stops at 'yesterday' """
+    this assumes the report stops at 'yesterday'"""
 
     yesterday = datetime.today().date() - timedelta(days=1)
     yesterday_s = datetime.strftime(yesterday, "%Y-%m-%d")
