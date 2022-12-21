@@ -1,7 +1,7 @@
 from collections import defaultdict
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import plotly.express as px
 import logging
 
 # import my stuff.
@@ -40,32 +40,53 @@ def list_jira_filter_url(jira_filter):
     return jira_base_url + jira_filter
 
 
-def df_boxplot_with_groupby(
-    df, column, group_by, title="", xlabel="", ylabel="", **kwargs
-):
+def df_boxplot(df, data_column, group_by, title="", xlabel="", ylabel=""):
+    title = data_column if not title else title
+    xlabel = group_by if not xlabel else xlabel
+    ylabel = data_column if not ylabel else ylabel
 
-    title = column if not title else title
-    xlabel = column if not xlabel else xlabel
-    ylabel = column if not ylabel else ylabel
+    fig = px.box(
+        df,
+        x=data_column,
+        y=group_by,
+        points="all",
+        title=title,
+        hover_data=["client", "key", "summary"],
+    ).update_layout(
+        yaxis_title=ylabel,
+        xaxis=dict(
+            # autorange=True,
+            showgrid=True,
+            zeroline=True,
+            zerolinecolor="rgb(255, 255, 255)",
+            zerolinewidth=2,
+        ),
+        xaxis_title=xlabel,
+        # legend_orientation="h",
+        # legend_groupclick="togglegroup",
+        # legend_itemclick="toggle",
+    )
 
-    fig, ax = plt.subplots()
-    df.boxplot(column=[column], by=group_by, ax=ax, patch_artist=True)
-    plt.rc("font", size=8)
-    plt.title(title)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.xticks(rotation=75)
-
-    st.pyplot(fig)
+    st.plotly_chart(fig, theme="streamlit")
 
 
 def df_to_histogram(df, data_column, group_by):
-    grouped_df = df.groupby(group_by)
-    values = grouped_df[data_column].apply(lambda x: x.tolist())
-    results_df = pd.DataFrame({"values": values, group_by: values.index}).reset_index(
-        drop=True
+    counts = df.groupby([group_by, data_column]).size().reset_index(name="Count")
+    counts_pivot = counts.pivot_table(
+        index=data_column, columns=group_by, values="Count"
     )
-    return results_df
+    return counts_pivot
+
+
+# make a bar chart of aging using px
+def grouped_bar_chart(df, y_title=""):
+    fig = px.bar(df, barmode="group").update_layout(
+        yaxis_title=y_title,
+        legend_orientation="h",
+        legend_groupclick="togglegroup",
+        legend_itemclick="toggle",
+    )
+    st.plotly_chart(fig, theme="streamlit")
 
 
 def to_comma(x):
@@ -141,6 +162,9 @@ else:
 
     all_raw_data = current_snapshots["all_raw_data"]
 
+# some data helpers.
+all_age_hist = df_to_histogram(all_raw_data, "phase_age_bins", "jira_filter")
+all_estimate_hist = df_to_histogram(all_raw_data, "client_estimate_bins", "jira_filter")
 
 # Tab 1: summary
 # Tab 2: detail
@@ -179,31 +203,30 @@ with tab1:
         st.header("Aging Summary")
         st.write(quick_df_summary(all_raw_data, "jira_filter", "phase_age"))
 
-        df_boxplot_with_groupby(
+        df_boxplot(
             all_raw_data,
             "phase_age",
             "jira_filter",
             "Box plot of age by jira filter",
+            "Aage in days",
             "Jira filter",
-            "Age in days",
         )
+
+        grouped_bar_chart(all_age_hist, "Count of issues")
 
     with col2:
         st.header("Estimate Summary")
         st.write(quick_df_summary(all_raw_data, "jira_filter", "client_estimate"))
 
-        df_boxplot_with_groupby(
+        df_boxplot(
             all_raw_data,
             "client_estimate",
             "jira_filter",
             "Box plot of client estimate by jira filter",
-            "Jira filter",
             "Estimate Value in USD",
+            "Jira filter",
         )
-
-    st.write(quick_df_summary(all_raw_data, "jira_filter", "phase_age"))
-    quick_hist = df_to_histogram(all_raw_data, "phase_age_bins", "jira_filter")
-    st.write(quick_hist)
+        grouped_bar_chart(all_estimate_hist, "Count of issues")
 
     # full list of items pick from LC/filter
     st.write("All Records")
