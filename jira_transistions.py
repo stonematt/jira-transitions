@@ -5,6 +5,7 @@ from requests.exceptions import HTTPError
 import json
 import pandas as pd
 import logging
+import streamlit as st
 
 from datetime import datetime
 
@@ -12,7 +13,10 @@ logging.basicConfig(level=logging.INFO)
 
 
 # this includes an individuals api key.  use it carefully it.
-token = json.load(open("me.json"))
+# token = json.load(open("me.json"))
+token = {}
+token["user"] = st.secrets["user"]
+token["token"] = st.secrets["token"]
 datadir = "./data/"
 examplesdir = "./examples/"
 
