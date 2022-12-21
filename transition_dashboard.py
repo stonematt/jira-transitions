@@ -41,6 +41,16 @@ def list_jira_filter_url(jira_filter):
 
 
 def df_boxplot(df, data_column, group_by, title="", xlabel="", ylabel=""):
+    """render a px.box plot with standardized formatting
+
+    Args:
+        df (dataframe): _description_
+        data_column (df column): series with numeric values
+        group_by (df column): series to group values by
+        title (str, optional): title of chart. Defaults to "".
+        xlabel (str, optional): x axis label. Defaults to "".
+        ylabel (str, optional): y axis label. Defaults to "".
+    """
     title = data_column if not title else title
     xlabel = group_by if not xlabel else xlabel
     ylabel = data_column if not ylabel else ylabel
@@ -48,18 +58,20 @@ def df_boxplot(df, data_column, group_by, title="", xlabel="", ylabel=""):
     fig = px.box(
         df,
         x=data_column,
-        y=group_by,
+        color=group_by,
         points="all",
         title=title,
         hover_data=["client", "key", "summary"],
     ).update_layout(
-        yaxis_title=ylabel,
+        # yaxis_title=ylabel,
         xaxis=dict(
             showgrid=True,
             zeroline=True,
             zerolinewidth=2,
         ),
         xaxis_title=xlabel,
+        legend_orientation="h",
+        legend_groupclick="togglegroup",
     )
 
     st.plotly_chart(fig, theme="streamlit")
@@ -111,7 +123,7 @@ def quick_df_summary(df, group_by, data_column):
 # layout config
 st.set_page_config(
     page_title="TSP pipeline",
-    page_icon="🧊",
+    page_icon="random",
     layout="wide",
     initial_sidebar_state="auto",
 )
