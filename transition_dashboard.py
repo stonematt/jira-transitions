@@ -15,7 +15,7 @@ lifecycles["estimating"] = jtrans.estimating
 lifecycles["approved_waiting"] = jtrans.approved_waiting
 lifecycles["pending_approval"] = jtrans.pending_approval
 lifecycles["in_flight"] = jtrans.in_flight
-lifecycles["aproved_in_flight"] = jtrans.approved_in_flight
+lifecycles["approved_in_flight"] = jtrans.approved_in_flight
 
 # get data (save snapshots for this session?)
 if "current_snapshots" not in st.session_state:
@@ -224,7 +224,7 @@ with tab1:
         grouped_bar_chart(all_age_hist, "Count of issues")
 
     with col2:
-        st.header("Estimate Summary")
+        st.header("Revenue Estimate Summary")
         st.write(quick_df_summary(all_raw_data, "jira_filter", "client_estimate"))
 
         df_boxplot(
