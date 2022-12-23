@@ -1,7 +1,4 @@
 # %%
-# import requests
-# from requests.auth import HTTPBasicAuth
-# from requests.exceptions import HTTPError
 import json
 import pandas as pd
 import logging
@@ -13,97 +10,8 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO)
 
 
-# this includes an individuals api key.  use it carefully it.
-# token = json.load(open("me.json"))
-# todo: move to bl_jira
-# token = {}
-# token["user"] = st.secrets["user"]
-# token["token"] = st.secrets["token"]
 datadir = "./data/"
 examplesdir = "./examples/"
-
-
-# todo: move to bl_jira
-# def _get(url, params={}):
-#     cloudID = "029ed131-584c-4a3e-b4ae-473022fcbdd6"
-#     urlbase = "https://api.atlassian.com/ex/jira/" + cloudID + "/rest/api/3/"
-#     auth = HTTPBasicAuth(token["user"], token["token"])
-#     headers = {"Accept": "application/json"}
-
-#     url = urlbase + url
-#     params = params
-
-#     try:
-#         r = requests.request("GET", url, headers=headers, auth=auth, params=params)
-#     except HTTPError as hterr:
-#         print(f"HTTPError: {hterr}")
-#         raise hterr
-#     else:
-#         return json.loads(r.text)
-
-
-# todo: move to bl_jira
-# def get_issues_from_filter_page(jira_filter, start_at=0):
-#     """return dictionary of issues in filter
-#     jira_filter - filter name
-#     getall - if true, iterate through pagination"""
-#     max_results = 20
-
-#     url = "search"
-#     params = {
-#         "jql": "filter=" + jira_filter,
-#         "fields": "key,summary,status,created,customfield_14925,customfield_12513",
-#         "maxResults": max_results,
-#         "startAt": start_at,
-#     }
-
-#     issues = _get(url, params)
-#     return issues
-
-
-# todo: move to bl_jira
-# def get_issues_from_filter(jira_filter, getall=False, start_at=0):
-#     """return dictionary of issues in filter
-#     jira_filter - filter name
-#     getall - if true, iterate through pagination"""
-
-#     only_issues = []
-#     issues = blj.get_issues_from_filter_page(jira_filter)
-#     only_issues = only_issues + issues["issues"]
-#     print(f"\nTotal issues to get: {issues['total']}")
-
-#     # check to see if we got them all
-#     nextpage = issues["startAt"] + len(only_issues)
-#     while nextpage < issues["total"]:
-#         next_issues = blj.get_issues_from_filter_page(jira_filter, start_at=nextpage)
-#         only_issues = only_issues + next_issues["issues"]
-#         nextpage = next_issues["startAt"] + len(next_issues["issues"])
-
-#     # print(f"{len(only_issues)} issues processed")
-
-#     return only_issues
-
-
-# todo: move to bl_jira
-# def get_issue(issueid):
-#     """returns a json blob of issue details"""
-#     issueid = issueid
-#     url = "issue/" + issueid
-
-#     params = {"expand": "transitions"}
-#     issue = _get(url, params)
-#     return issue
-
-
-# todo: move to bl_jira
-# def get_issue_changelog(issueid):
-#     """Return issue dictionary of issue change log"""
-
-#     issueid = issueid
-#     url = "issue/" + issueid + "/changelog"
-
-#     issue_log = _get(url)
-#     return issue_log
 
 
 """
@@ -112,11 +20,10 @@ examplesdir = "./examples/"
  #      deal w/ multiple trans to same status
  # put in pd.dataframe,
  #      todo:calc date buckets for aging
- # todo:make visualization
+ # make visualization (see streamlit dashboard)
 """
 
 
-# todo: move to bl_jira
 def _to_date(jira_date):
     """return datetime object of date from jira time string
     that looks like: 2021-10-05T14:12:44.872-0400
@@ -129,9 +36,14 @@ def get_transistions_for_issues(jira_issues, status_list):
     """return dictionary of issues w/ status change information"""
     status_list = status_list
     issues = []
+    total_issues = len(jira_issues)
+    progress_count = st.empty()
+    progress_bar = st.progress(0)
     progress = 0
     for i in jira_issues:
         progress += 1
+        progress_count.text(f"{progress} of {total_issues}")
+        progress_bar.progress(progress / total_issues)
         if progress % 20 == 0 or progress == len(jira_issues):
             print(f"{progress} issues processed")
 
@@ -158,6 +70,8 @@ def get_transistions_for_issues(jira_issues, status_list):
 
         issues.append(issue)
     # pprint(issue
+    progress_count.empty()
+    progress_bar.empty()
     return issues
 
 
