@@ -146,6 +146,7 @@ def issues_to_pandas(status_changes, lifecycle_phase):
         )
     ).dt.days
     sc["phase_age"] = sc[aging_name]
+    sc["total_age"] = (pd.Timestamp.now(tz="UTC") - sc["created"]).dt.days
     # todo: calculate days remaining
 
     # set aging bins

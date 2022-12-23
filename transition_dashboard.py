@@ -136,7 +136,10 @@ lifecycle_name = st.sidebar.selectbox("Lifecycle:", lifecycles.keys())
 lifecycle = lifecycles[lifecycle_name]
 jira_filter = st.sidebar.selectbox("Filter", lifecycle["jira_filters"])
 
-st.sidebar.write(f"Jira links for {lifecycle_name}:")
+age_baseline = st.sidebar.radio("Baseline for aging:", ("Phase Age", "Created"))
+boxplot_age = "phase_age" if age_baseline == "Phase Age" else "total_age"
+
+st.sidebar.write(f"\nGo to Jira {lifecycle_name}:")
 for j_filter in lifecycle["jira_filters"]:
     st.sidebar.write(f"[{j_filter}]({list_jira_filter_url(j_filter)})")
 
@@ -159,7 +162,6 @@ else:
 
     # Add raw data to the all raw data if it's new
     new_raw_data = snap_shot["sshot_raw"]
-    # all_raw_data = current_snapshots.get('all_raw_data')
 
     if "all_raw_data" not in current_snapshots:
         logging.info("Creating all raw data the first time")
@@ -172,6 +174,7 @@ else:
 
     all_raw_data = current_snapshots["all_raw_data"]
 
+
 # some data helpers.
 all_age_hist = df_to_histogram(all_raw_data, "phase_age_bins", "jira_filter")
 all_estimate_hist = df_to_histogram(all_raw_data, "client_estimate_bins", "jira_filter")
@@ -180,7 +183,7 @@ all_estimate_hist = df_to_histogram(all_raw_data, "client_estimate_bins", "jira_
 # Tab 2: detail
 tab1, tab2 = st.tabs(["Pipeline Summary", "Filter Details"])
 
-with tab2:
+with tab2:  # details of lifecyle/filter
     # desc.aging. estimate in columns
     st.title(f"Project Lifecyle: {lifecycle_name}")
     # st.write(snap_shot.keys())
@@ -206,16 +209,16 @@ with tab2:
     with col3:
         st.write(client_estimate_dist[["Count", "SumVal", "AvgVal"]])
 
-with tab1:
+with tab1:  # summary of downloaded data
     # box chart of filters for comparison
     col1, col2 = st.columns(2)
     with col1:
         st.header("Aging Summary")
-        st.write(quick_df_summary(all_raw_data, "jira_filter", "phase_age"))
+        st.write(quick_df_summary(all_raw_data, "jira_filter", boxplot_age))
 
         df_boxplot(
             all_raw_data,
-            "phase_age",
+            boxplot_age,
             "jira_filter",
             "phase_code",
             "Box plot of age by jira filter",
@@ -249,6 +252,7 @@ with tab1:
                 "summary",
                 "client",
                 "client_estimate",
+                "total_age",
                 "current_status",
                 "phase_age",
                 "phase_age_bins",
