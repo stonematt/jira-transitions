@@ -40,12 +40,13 @@ def list_jira_filter_url(jira_filter):
     return jira_base_url + jira_filter
 
 
-def df_boxplot(df, data_column, group_by, title="", xlabel="", ylabel=""):
+def df_boxplot(df, data_column, color_by, group_by="", title="", xlabel="", ylabel=""):
     """render a px.box plot with standardized formatting
 
     Args:
         df (dataframe): _description_
         data_column (df column): series with numeric values
+        colorby (df column): series to color boxes by
         group_by (df column): series to group values by
         title (str, optional): title of chart. Defaults to "".
         xlabel (str, optional): x axis label. Defaults to "".
@@ -53,17 +54,17 @@ def df_boxplot(df, data_column, group_by, title="", xlabel="", ylabel=""):
     """
     title = data_column if not title else title
     xlabel = group_by if not xlabel else xlabel
-    ylabel = data_column if not ylabel else ylabel
 
     fig = px.box(
         df,
         x=data_column,
-        color=group_by,
+        color=color_by,
+        y=group_by,
         points="all",
         title=title,
         hover_data=["client", "key", "summary"],
     ).update_layout(
-        # yaxis_title=ylabel,
+        yaxis_title=ylabel,
         xaxis=dict(
             showgrid=True,
             zeroline=True,
@@ -86,8 +87,8 @@ def df_to_histogram(df, data_column, group_by):
 
 
 # make a bar chart of aging using px
-def grouped_bar_chart(df, y_title=""):
-    fig = px.bar(df, barmode="group").update_layout(
+def grouped_bar_chart(df, title='', y_title=""):
+    fig = px.bar(df, barmode="group", title=title).update_layout(
         yaxis_title=y_title,
         legend_orientation="h",
         legend_groupclick="togglegroup",
@@ -216,12 +217,12 @@ with tab1:
             all_raw_data,
             "phase_age",
             "jira_filter",
+            "phase_code",
             "Box plot of age by jira filter",
             "Aage in days",
-            "Jira filter",
         )
 
-        grouped_bar_chart(all_age_hist, "Count of issues")
+        grouped_bar_chart(all_age_hist, 'Histogram of Age by Filter', "Count of issues")
 
     with col2:
         st.header("Revenue Estimate Summary")
@@ -231,11 +232,11 @@ with tab1:
             all_raw_data,
             "client_estimate",
             "jira_filter",
+            "phase_code",
             "Box plot of client estimate by jira filter",
             "Estimate Value in USD",
-            "Jira filter",
         )
-        grouped_bar_chart(all_estimate_hist, "Count of issues")
+        grouped_bar_chart(all_estimate_hist, "Histogram of Estimates by Filer", "Count of issues")
 
     # full list of items pick from LC/filter
     st.write("All Records")
