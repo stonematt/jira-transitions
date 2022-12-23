@@ -87,7 +87,7 @@ def df_to_histogram(df, data_column, group_by):
 
 
 # make a bar chart of aging using px
-def grouped_bar_chart(df, title='', y_title=""):
+def grouped_bar_chart(df, title="", y_title=""):
     fig = px.bar(df, barmode="group", title=title).update_layout(
         yaxis_title=y_title,
         legend_orientation="h",
@@ -222,7 +222,7 @@ with tab1:
             "Aage in days",
         )
 
-        grouped_bar_chart(all_age_hist, 'Histogram of Age by Filter', "Count of issues")
+        grouped_bar_chart(all_age_hist, "Histogram of Age by Filter", "Count of issues")
 
     with col2:
         st.header("Revenue Estimate Summary")
@@ -236,11 +236,13 @@ with tab1:
             "Box plot of client estimate by jira filter",
             "Estimate Value in USD",
         )
-        grouped_bar_chart(all_estimate_hist, "Histogram of Estimates by Filer", "Count of issues")
+        grouped_bar_chart(
+            all_estimate_hist, "Histogram of Estimates by Filer", "Count of issues"
+        )
 
     # full list of items pick from LC/filter
-    st.write("All Records")
-    st.write(
+    st.write("All Records Retreived")
+    st.dataframe(
         all_raw_data[
             [
                 "key",
