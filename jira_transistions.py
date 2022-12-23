@@ -1,11 +1,12 @@
 # %%
-import requests
-from requests.auth import HTTPBasicAuth
-from requests.exceptions import HTTPError
+# import requests
+# from requests.auth import HTTPBasicAuth
+# from requests.exceptions import HTTPError
 import json
 import pandas as pd
 import logging
 import streamlit as st
+import bl_jira as blj
 
 from datetime import datetime
 
@@ -14,99 +15,95 @@ logging.basicConfig(level=logging.INFO)
 
 # this includes an individuals api key.  use it carefully it.
 # token = json.load(open("me.json"))
-token = {}
-token["user"] = st.secrets["user"]
-token["token"] = st.secrets["token"]
+# todo: move to bl_jira
+# token = {}
+# token["user"] = st.secrets["user"]
+# token["token"] = st.secrets["token"]
 datadir = "./data/"
 examplesdir = "./examples/"
 
 
-def _get(url, params={}):
-    cloudID = "029ed131-584c-4a3e-b4ae-473022fcbdd6"
-    urlbase = "https://api.atlassian.com/ex/jira/" + cloudID + "/rest/api/3/"
-    auth = HTTPBasicAuth(token["user"], token["token"])
-    headers = {"Accept": "application/json"}
+# todo: move to bl_jira
+# def _get(url, params={}):
+#     cloudID = "029ed131-584c-4a3e-b4ae-473022fcbdd6"
+#     urlbase = "https://api.atlassian.com/ex/jira/" + cloudID + "/rest/api/3/"
+#     auth = HTTPBasicAuth(token["user"], token["token"])
+#     headers = {"Accept": "application/json"}
 
-    url = urlbase + url
-    params = params
+#     url = urlbase + url
+#     params = params
 
-    try:
-        r = requests.request("GET", url, headers=headers, auth=auth, params=params)
-    except HTTPError as hterr:
-        print(f"HTTPError: {hterr}")
-        raise hterr
-    else:
-        return json.loads(r.text)
-
-
-def list_filters():
-    filters = _get("filter/my")
-    return filters
+#     try:
+#         r = requests.request("GET", url, headers=headers, auth=auth, params=params)
+#     except HTTPError as hterr:
+#         print(f"HTTPError: {hterr}")
+#         raise hterr
+#     else:
+#         return json.loads(r.text)
 
 
-def print_filters():
-    for f in list_filters():
-        print(f"{f['id']}, {f['name']} ")
+# todo: move to bl_jira
+# def get_issues_from_filter_page(jira_filter, start_at=0):
+#     """return dictionary of issues in filter
+#     jira_filter - filter name
+#     getall - if true, iterate through pagination"""
+#     max_results = 20
+
+#     url = "search"
+#     params = {
+#         "jql": "filter=" + jira_filter,
+#         "fields": "key,summary,status,created,customfield_14925,customfield_12513",
+#         "maxResults": max_results,
+#         "startAt": start_at,
+#     }
+
+#     issues = _get(url, params)
+#     return issues
 
 
-def get_issues_from_filter_page(jira_filter, start_at=0):
-    """return dictionary of issues in filter
-    jira_filter - filter name
-    getall - if true, iterate through pagination"""
-    max_results = 20
+# todo: move to bl_jira
+# def get_issues_from_filter(jira_filter, getall=False, start_at=0):
+#     """return dictionary of issues in filter
+#     jira_filter - filter name
+#     getall - if true, iterate through pagination"""
 
-    url = "search"
-    params = {
-        "jql": "filter=" + jira_filter,
-        "fields": "key,summary,status,created,customfield_14925,customfield_12513",
-        "maxResults": max_results,
-        "startAt": start_at,
-    }
+#     only_issues = []
+#     issues = blj.get_issues_from_filter_page(jira_filter)
+#     only_issues = only_issues + issues["issues"]
+#     print(f"\nTotal issues to get: {issues['total']}")
 
-    issues = _get(url, params)
-    return issues
+#     # check to see if we got them all
+#     nextpage = issues["startAt"] + len(only_issues)
+#     while nextpage < issues["total"]:
+#         next_issues = blj.get_issues_from_filter_page(jira_filter, start_at=nextpage)
+#         only_issues = only_issues + next_issues["issues"]
+#         nextpage = next_issues["startAt"] + len(next_issues["issues"])
 
+#     # print(f"{len(only_issues)} issues processed")
 
-def get_issues_from_filter(jira_filter, getall=False, start_at=0):
-    """return dictionary of issues in filter
-    jira_filter - filter name
-    getall - if true, iterate through pagination"""
-
-    only_issues = []
-    issues = get_issues_from_filter_page(jira_filter)
-    only_issues = only_issues + issues["issues"]
-    print(f"\nTotal issues to get: {issues['total']}")
-
-    # check to see if we got them all
-    nextpage = issues["startAt"] + len(only_issues)
-    while nextpage < issues["total"]:
-        next_issues = get_issues_from_filter_page(jira_filter, start_at=nextpage)
-        only_issues = only_issues + next_issues["issues"]
-        nextpage = next_issues["startAt"] + len(next_issues["issues"])
-
-    # print(f"{len(only_issues)} issues processed")
-
-    return only_issues
+#     return only_issues
 
 
-def get_issue(issueid):
-    """returns a json blob of issue details"""
-    issueid = issueid
-    url = "issue/" + issueid
+# todo: move to bl_jira
+# def get_issue(issueid):
+#     """returns a json blob of issue details"""
+#     issueid = issueid
+#     url = "issue/" + issueid
 
-    params = {"expand": "transitions"}
-    issue = _get(url, params)
-    return issue
+#     params = {"expand": "transitions"}
+#     issue = _get(url, params)
+#     return issue
 
 
-def get_issue_changelog(issueid):
-    """Return issue dictionary of issue change log"""
+# todo: move to bl_jira
+# def get_issue_changelog(issueid):
+#     """Return issue dictionary of issue change log"""
 
-    issueid = issueid
-    url = "issue/" + issueid + "/changelog"
+#     issueid = issueid
+#     url = "issue/" + issueid + "/changelog"
 
-    issue_log = _get(url)
-    return issue_log
+#     issue_log = _get(url)
+#     return issue_log
 
 
 """
@@ -119,6 +116,7 @@ def get_issue_changelog(issueid):
 """
 
 
+# todo: move to bl_jira
 def _to_date(jira_date):
     """return datetime object of date from jira time string
     that looks like: 2021-10-05T14:12:44.872-0400
@@ -154,7 +152,7 @@ def get_transistions_for_issues(jira_issues, status_list):
         # todo: targetdate
 
         change_log = get_status_changes_summary(
-            get_issue_changelog(i["key"]), status_list
+            blj.get_issue_changelog(i["key"]), status_list
         )
         issue.update(change_log)
 
@@ -317,7 +315,7 @@ def get_working_issues(status_list, jira_filter, source="jira"):
     w_issues_file = examplesdir + jira_filter + "_" + status_list["filename"]
 
     if source == "jira":
-        w_jira_issues = get_issues_from_filter(jira_filter)
+        w_jira_issues = blj.get_issues_from_filter(jira_filter)
         w_issues = get_transistions_for_issues(w_jira_issues, status_list["statuses"])
         export_json(w_issues, w_issues_file)
 
@@ -482,9 +480,9 @@ def main():
 
     """List of jobs of life cycles to iterate over"""
     # lifecycles = [approved_waiting, pending_approval]
-    lifecycles = [estimating, pending_approval, approved_waiting, in_flight]
+    # lifecycles = [estimating, pending_approval, approved_waiting, in_flight]
     # lifecycles = [estimating]
-    # lifecycles = [in_flight]
+    lifecycles = [in_flight]
 
     for lc in lifecycles:
         for jfilter in lc["jira_filters"]:
