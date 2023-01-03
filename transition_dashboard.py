@@ -112,7 +112,7 @@ def to_comma(x):
     return "{:,.0f}".format(x)
 
 
-def quick_df_summary(df, group_by, data_column):
+def quick_df_summary(df, group_by, data_column, percentile=0.85):
     """Create a dataframe with count of rows and median value of a data column
 
     Args:
@@ -123,17 +123,29 @@ def quick_df_summary(df, group_by, data_column):
     Returns:
         dataframe: Dataframe of results
     """
-
     grouped_df = df.groupby(group_by)
     count = grouped_df["key"].count()
     median = grouped_df[data_column].median()
     total = grouped_df[data_column].sum()
 
+    # calculate the sum of the key below the percentile
+    sum_below_percentile = grouped_df[data_column].apply(
+        lambda x: x[x < x.quantile(percentile)].sum()
+    )
+
     results_df = pd.DataFrame(
-        {"count": count, "median": median, "total": total}
+        {
+            "count": count,
+            "median": median,
+            "total": total,
+            f"sum_below_{percentile*100}-tile": sum_below_percentile,
+        }
     ).reset_index()
     results_df["median"] = results_df["median"].map(to_comma)
     results_df["total"] = results_df["total"].map(to_comma)
+    results_df[f"sum_below_{percentile*100}-tile"] = results_df[
+        f"sum_below_{percentile*100}-tile"
+    ].map(to_comma)
     return results_df
 
 
@@ -254,7 +266,9 @@ with tab1:  # summary of downloaded data
 
         grouped_bar_chart(all_age_hist, "Histogram of Age by Filter", "Count of issues")
         grouped_bar_chart(
-            all_age_wt_hist, "Value of Projects by Age and Filter", "Value of issues"
+            all_age_wt_hist,
+            "Value of Projects by Age and Filter",
+            "Sum of Client Estimate",
         )
 
     with col2:
@@ -275,7 +289,7 @@ with tab1:  # summary of downloaded data
         grouped_bar_chart(
             all_estimate_wt_hist,
             "Value of Projects by Size and Filter",
-            "Sum of estimate",
+            "Sum of Client Estimate",
         )
 
     # full list of items pick from LC/filter
