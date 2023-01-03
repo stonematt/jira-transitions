@@ -78,10 +78,21 @@ def df_boxplot(df, data_column, color_by, group_by="", title="", xlabel="", ylab
     st.plotly_chart(fig, theme="streamlit")
 
 
-def df_to_histogram(df, data_column, group_by):
-    counts = df.groupby([group_by, data_column]).size().reset_index(name="Count")
+def get_jira_url(key):
+    return f"https://thebrightlink.atlassian.net/browse/{key}"
+
+
+def df_to_histogram(df, data_column, group_by, sum_column=None):
+    if sum_column:
+        counts = (
+            df.groupby([group_by, data_column])[sum_column]
+            .sum()
+            .reset_index(name="Sum")
+        )
+    else:
+        counts = df.groupby([group_by, data_column]).size().reset_index(name="Count")
     counts_pivot = counts.pivot_table(
-        index=data_column, columns=group_by, values="Count"
+        index=data_column, columns=group_by, values=counts.columns[2]
     )
     return counts_pivot
 
@@ -112,12 +123,17 @@ def quick_df_summary(df, group_by, data_column):
     Returns:
         dataframe: Dataframe of results
     """
+
     grouped_df = df.groupby(group_by)
     count = grouped_df["key"].count()
     median = grouped_df[data_column].median()
+    total = grouped_df[data_column].sum()
 
-    results_df = pd.DataFrame({"count": count, "median": median}).reset_index()
+    results_df = pd.DataFrame(
+        {"count": count, "median": median, "total": total}
+    ).reset_index()
     results_df["median"] = results_df["median"].map(to_comma)
+    results_df["total"] = results_df["total"].map(to_comma)
     return results_df
 
 
@@ -173,11 +189,18 @@ else:
         ).reset_index(drop=True)
 
     all_raw_data = current_snapshots["all_raw_data"]
+    all_raw_data["URL"] = all_raw_data["key"].apply(get_jira_url)
 
 
 # some data helpers.
 all_age_hist = df_to_histogram(all_raw_data, "phase_age_bins", "jira_filter")
+all_age_wt_hist = df_to_histogram(
+    all_raw_data, "phase_age_bins", "jira_filter", sum_column="client_estimate"
+)
 all_estimate_hist = df_to_histogram(all_raw_data, "client_estimate_bins", "jira_filter")
+all_estimate_wt_hist = df_to_histogram(
+    all_raw_data, "client_estimate_bins", "jira_filter", sum_column="client_estimate"
+)
 
 # Tab 1: summary
 # Tab 2: detail
@@ -214,7 +237,11 @@ with tab1:  # summary of downloaded data
     col1, col2 = st.columns(2)
     with col1:
         st.header("Aging Summary")
-        st.write(quick_df_summary(all_raw_data, "jira_filter", boxplot_age))
+        st.write(
+            quick_df_summary(all_raw_data, "jira_filter", boxplot_age)[
+                ["jira_filter", "count", "median"]
+            ]
+        )
 
         df_boxplot(
             all_raw_data,
@@ -226,6 +253,9 @@ with tab1:  # summary of downloaded data
         )
 
         grouped_bar_chart(all_age_hist, "Histogram of Age by Filter", "Count of issues")
+        grouped_bar_chart(
+            all_age_wt_hist, "Value of Projects by Age and Filter", "Value of issues"
+        )
 
     with col2:
         st.header("Revenue Estimate Summary")
@@ -240,11 +270,17 @@ with tab1:  # summary of downloaded data
             "Estimate Value in USD",
         )
         grouped_bar_chart(
-            all_estimate_hist, "Histogram of Estimates by Filer", "Count of issues"
+            all_estimate_hist, "Histogram of Estimates by Filter", "Count of issues"
+        )
+        grouped_bar_chart(
+            all_estimate_wt_hist,
+            "Value of Projects by Size and Filter",
+            "Sum of estimate",
         )
 
     # full list of items pick from LC/filter
     st.write("All Records Retreived")
+
     st.dataframe(
         all_raw_data[
             [
@@ -258,6 +294,7 @@ with tab1:  # summary of downloaded data
                 "phase_age_bins",
                 "phase_code",
                 "jira_filter",
+                "URL",
             ]
         ]
     )
