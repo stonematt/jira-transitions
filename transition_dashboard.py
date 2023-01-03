@@ -289,7 +289,7 @@ with tab2:
 
 with tab1:  # summary of downloaded data
     # box chart of filters for comparison
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2, gap="medium")
     with col1:
         st.header("Aging Summary")
         st.write(
