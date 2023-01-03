@@ -12,8 +12,8 @@ logging.basicConfig(level=logging.INFO)
 # side bar: pick life cycle
 lifecycles = {}
 lifecycles["estimating"] = jtrans.estimating
-lifecycles["approved_waiting"] = jtrans.approved_waiting
 lifecycles["pending_approval"] = jtrans.pending_approval
+lifecycles["approved_waiting"] = jtrans.approved_waiting
 lifecycles["in_flight"] = jtrans.in_flight
 lifecycles["approved_in_flight"] = jtrans.approved_in_flight
 lifecycles["recently_completed"] = jtrans.recently_completed
@@ -74,6 +74,7 @@ def df_boxplot(df, data_column, color_by, group_by="", title="", xlabel="", ylab
         xaxis_title=xlabel,
         legend_orientation="h",
         legend_groupclick="togglegroup",
+        height=600,
     )
 
     st.plotly_chart(fig, theme="streamlit")
@@ -217,9 +218,9 @@ all_estimate_wt_hist = df_to_histogram(
 
 # Tab 1: summary
 # Tab 2: detail
-tab1, tab2 = st.tabs(["Pipeline Summary", "Filter Details"])
+tab1, tab2, tab3 = st.tabs(["Pipeline Summary", "Scatter Plot", "Filter Details"])
 
-with tab2:  # details of lifecyle/filter
+with tab3:  # details of lifecyle/filter
     # desc.aging. estimate in columns
     st.title(f"Project Lifecyle: {lifecycle_name}")
     # st.write(snap_shot.keys())
@@ -244,6 +245,47 @@ with tab2:  # details of lifecyle/filter
     chart_count_sum(client_estimate_dist)
     with col3:
         st.write(client_estimate_dist[["Count", "SumVal", "AvgVal"]])
+
+with tab2:
+    fig = px.scatter(
+        all_raw_data,
+        size="total_age",
+        y="client_estimate",
+        x="phase_age",
+        color="jira_filter",
+        symbol="phase_code",
+        hover_name="key",
+        hover_data=["client", "key", "summary"],
+        title="Phase age v. Client Estimate (size is total age)",
+    ).update_layout(
+        height=700,
+        legend_orientation="h",
+        legend_groupclick="togglegroup",
+        legend_itemclick="toggle",
+    )
+    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+
+    # full list of items pick from LC/filter
+    st.write("All Records Retreived")
+
+    st.dataframe(
+        all_raw_data[
+            [
+                "key",
+                "summary",
+                "client",
+                "client_estimate",
+                "total_age",
+                "current_status",
+                "phase_age",
+                "phase_age_bins",
+                "phase_code",
+                "jira_filter",
+                "URL",
+            ]
+        ]
+    )
+
 
 with tab1:  # summary of downloaded data
     # box chart of filters for comparison
@@ -292,24 +334,3 @@ with tab1:  # summary of downloaded data
             "Value of Projects by Size and Filter",
             "Sum of Client Estimate",
         )
-
-    # full list of items pick from LC/filter
-    st.write("All Records Retreived")
-
-    st.dataframe(
-        all_raw_data[
-            [
-                "key",
-                "summary",
-                "client",
-                "client_estimate",
-                "total_age",
-                "current_status",
-                "phase_age",
-                "phase_age_bins",
-                "phase_code",
-                "jira_filter",
-                "URL",
-            ]
-        ]
-    )
