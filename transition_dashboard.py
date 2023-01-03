@@ -16,6 +16,7 @@ lifecycles["approved_waiting"] = jtrans.approved_waiting
 lifecycles["pending_approval"] = jtrans.pending_approval
 lifecycles["in_flight"] = jtrans.in_flight
 lifecycles["approved_in_flight"] = jtrans.approved_in_flight
+lifecycles["recently_completed"] = jtrans.recently_completed
 
 # get data (save snapshots for this session?)
 if "current_snapshots" not in st.session_state:

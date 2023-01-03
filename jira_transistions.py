@@ -390,6 +390,27 @@ approved_in_flight = {
     "jira_filters": ["backlog_approved_in_flight"],
 }
 
+recently_completed = {
+    "filename": "recently_completed.json",
+    "statuses": [
+        "Planning",  # estimating
+        "Needs Estimate",
+        "Prep Client SOW",
+        "Response Review",  # pending approval
+        "Pending Client Input",
+        "Sent to Client",
+        "In Backlog",  # approved
+        "Scheduled",
+        "In Delivery",  # in_flight
+        "Ready for Invoice",
+        "Pending Close",
+        "Complete",  # Complete
+    ],
+    "first_status": "Planning",
+    "phase_code": "recently_completed",
+    "jira_filters": ["backlog_recently_completed"],
+}
+
 
 def main():
 
@@ -397,7 +418,7 @@ def main():
     # lifecycles = [approved_waiting, pending_approval]
     # lifecycles = [estimating, pending_approval, approved_waiting, in_flight]
     # lifecycles = [estimating]
-    lifecycles = [in_flight]
+    lifecycles = [recently_completed]
 
     for lc in lifecycles:
         for jfilter in lc["jira_filters"]:
