@@ -261,7 +261,7 @@ with tab1:  # summary of downloaded data
             "jira_filter",
             "phase_code",
             "Box plot of age by jira filter",
-            "Aage in days",
+            "Age in days",
         )
 
         grouped_bar_chart(all_age_hist, "Histogram of Age by Filter", "Count of issues")
