@@ -63,6 +63,7 @@ def df_boxplot(df, data_column, color_by, group_by="", title="", xlabel="", ylab
         y=group_by,
         points="all",
         title=title,
+        hover_name="key",
         hover_data=["client", "key", "summary"],
     ).update_layout(
         yaxis_title=ylabel,
@@ -179,7 +180,7 @@ if (
 ):
     logging.info(f"found data for {lifecycle_name}/{jira_filter}")
     snap_shot = current_snapshots[lifecycle_name][jira_filter]
-    all_raw_data = current_snapshots["all_raw_data"]
+    all_raw_data_master = current_snapshots["all_raw_data"]
 else:
     logging.info(f"getting data for {lifecycle_name}/{jira_filter}")
     with st.spinner(
@@ -202,8 +203,17 @@ else:
             [current_snapshots["all_raw_data"], new_raw_data], axis=0, join="outer"
         ).reset_index(drop=True)
 
-    all_raw_data = current_snapshots["all_raw_data"]
-    all_raw_data["URL"] = all_raw_data["key"].apply(get_jira_url)
+    all_raw_data_master = current_snapshots["all_raw_data"]
+    all_raw_data_master["URL"] = all_raw_data_master["key"].apply(get_jira_url)
+    all_raw_data = all_raw_data_master
+
+client_focus_options = ["All"] + sorted(all_raw_data_master["client"].unique().tolist())
+client_focus = st.sidebar.selectbox("Focus on one client:", client_focus_options)
+if client_focus == "All":
+    all_raw_data_master = current_snapshots["all_raw_data"]
+    all_raw_data = all_raw_data_master
+else:
+    all_raw_data = all_raw_data_master[all_raw_data_master["client"] == client_focus]
 
 
 # some data helpers.
@@ -253,7 +263,7 @@ with tab2:
         y="client_estimate",
         x="phase_age",
         color="jira_filter",
-        symbol="phase_code",
+        # symbol="phase_code",
         hover_name="key",
         hover_data=["client", "key", "summary"],
         title="Phase age v. Client Estimate (size is total age)",
