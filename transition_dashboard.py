@@ -208,7 +208,7 @@ else:
     all_raw_data = all_raw_data_master
 
 client_focus_options = ["All"] + sorted(all_raw_data_master["client"].unique().tolist())
-client_focus = st.sidebar.selectbox("Focus on one client:", client_focus_options)
+client_focus = st.selectbox("Focus on one client:", client_focus_options)
 if client_focus == "All":
     all_raw_data_master = current_snapshots["all_raw_data"]
     all_raw_data = all_raw_data_master
