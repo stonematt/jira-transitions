@@ -48,7 +48,7 @@ def get_issues_from_jql_page(jql, start_at=0):
     url = "search"
     params = {
         "jql": jql,
-        "fields": "key,summary,status,created,customfield_14925,customfield_12513",
+        "fields": "key,summary,status,created,customfield_14925,customfield_12513,customfield_14922",
         "maxResults": max_results,
         "startAt": start_at,
     }
@@ -66,7 +66,7 @@ def get_issues_from_filter_page(jira_filter, start_at=0):
     url = "search"
     params = {
         "jql": "filter=" + jira_filter,
-        "fields": "key,summary,status,created,customfield_14925,customfield_12513",
+        "fields": "key,summary,status,created,customfield_14925,customfield_12513,customfield_14922",
         "maxResults": max_results,
         "startAt": start_at,
     }

@@ -51,14 +51,11 @@ def get_transistions_for_issues(jira_issues, status_list):
 
         issue["key"] = i["key"]
         issue["summary"] = i["fields"]["summary"]
+        issue["client"] = i["fields"].get("customfield_12513", {}).get("value", None)
         issue["client_estimate"] = i["fields"]["customfield_14925"]
-        # somtimes client isn't set and this would blow up
-        issue["client"] = (
-            i["fields"]["customfield_12513"]["value"]
-            if i["fields"]["customfield_12513"]
-            else None
+        issue["billable_type"] = (
+            i.get("fields", {}).get("customfield_14922", {}).get("value", None)
         )
-        # var1 = 4 if var1 is None else var1
         issue["created"] = i["fields"]["created"]
         issue["current_status"] = i["fields"]["status"]["name"]
         # todo: targetdate

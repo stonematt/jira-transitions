@@ -180,7 +180,7 @@ if (
 ):
     logging.info(f"found data for {lifecycle_name}/{jira_filter}")
     snap_shot = current_snapshots[lifecycle_name][jira_filter]
-    all_raw_data_master = current_snapshots["all_raw_data"]
+    # all_raw_data_master = current_snapshots["all_raw_data"]
 else:
     logging.info(f"getting data for {lifecycle_name}/{jira_filter}")
     with st.spinner(
@@ -203,17 +203,37 @@ else:
             [current_snapshots["all_raw_data"], new_raw_data], axis=0, join="outer"
         ).reset_index(drop=True)
 
-    all_raw_data_master = current_snapshots["all_raw_data"]
-    all_raw_data_master["URL"] = all_raw_data_master["key"].apply(get_jira_url)
-    all_raw_data = all_raw_data_master
+all_raw_data_master = current_snapshots["all_raw_data"]
+all_raw_data_master["URL"] = all_raw_data_master["key"].apply(get_jira_url)
+all_raw_data = all_raw_data_master.copy()
+# all_raw_data = all_raw_data_master
 
-client_focus_options = ["All"] + sorted(all_raw_data_master["client"].unique().tolist())
-client_focus = st.selectbox("Focus on one client:", client_focus_options)
-if client_focus == "All":
-    all_raw_data_master = current_snapshots["all_raw_data"]
-    all_raw_data = all_raw_data_master
-else:
-    all_raw_data = all_raw_data_master[all_raw_data_master["client"] == client_focus]
+# overall filter of data in the dashboard:
+col1, col2 = st.columns([1, 2])
+with col1:
+    # Create a multi-select widget for the billable_type column
+    billable_type_options = all_raw_data_master["billable_type"].unique().tolist()
+    billable_type_selection = st.multiselect(
+        "Select billable types", billable_type_options, default=billable_type_options
+    )
+
+    # Filter the dataframe based on the selected billable types
+    # if billable_type_selection:
+    if billable_type_selection:
+        all_raw_data = all_raw_data[
+            all_raw_data["billable_type"].isin(billable_type_selection)
+        ]
+    else:
+        all_raw_data = all_raw_data_master.copy()
+
+with col2:
+    # Create a dropdown menu for the client column
+    client_options = ["All"] + sorted(all_raw_data_master["client"].unique().tolist())
+    client_focus = st.selectbox("Focus on one client:", client_options)
+
+    # Filter the dataframe based on the selected client
+    if client_focus != "All":
+        all_raw_data = all_raw_data[all_raw_data["client"] == client_focus]
 
 
 # some data helpers.
@@ -226,8 +246,6 @@ all_estimate_wt_hist = df_to_histogram(
     all_raw_data, "client_estimate_bins", "jira_filter", sum_column="client_estimate"
 )
 
-# Tab 1: summary
-# Tab 2: detail
 tab1, tab2, tab3 = st.tabs(["Pipeline Summary", "Scatter Plot", "Filter Details"])
 
 with tab3:  # details of lifecyle/filter
@@ -285,6 +303,7 @@ with tab2:
                 "summary",
                 "client",
                 "client_estimate",
+                "billable_type",
                 "total_age",
                 "current_status",
                 "phase_age",
