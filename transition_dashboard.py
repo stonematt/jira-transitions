@@ -209,7 +209,7 @@ all_raw_data = all_raw_data_master.copy()
 # all_raw_data = all_raw_data_master
 
 # overall filter of data in the dashboard:
-col1, col2 = st.columns([1, 2])
+col1, col2, col3 = st.columns([2, 1, 2])
 with col1:
     # Create a multi-select widget for the billable_type column
     billable_type_options = all_raw_data_master["billable_type"].unique().tolist()
@@ -234,6 +234,17 @@ with col2:
     # Filter the dataframe based on the selected client
     if client_focus != "All":
         all_raw_data = all_raw_data[all_raw_data["client"] == client_focus]
+
+with col3:
+    # Create a dropdown menu for the jira filter
+    jira_filter_options = ["All"] + sorted(
+        all_raw_data_master["jira_filter"].unique().tolist()
+    )
+    jira_filter_focus = st.selectbox("Focus on one jira_filter:", jira_filter_options)
+
+    # Filter the dataframe based on the selected jira filter
+    if jira_filter_focus != "All":
+        all_raw_data = all_raw_data[all_raw_data["jira_filter"] == jira_filter_focus]
 
 
 # some data helpers.
