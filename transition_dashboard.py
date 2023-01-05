@@ -75,7 +75,7 @@ def df_boxplot(df, data_column, color_by, group_by="", title="", xlabel="", ylab
         xaxis_title=xlabel,
         legend_orientation="h",
         legend_groupclick="togglegroup",
-        height=600,
+        height=500,
     )
 
     st.plotly_chart(fig, theme="streamlit")
@@ -301,6 +301,10 @@ with tab2:
         legend_orientation="h",
         legend_groupclick="togglegroup",
         legend_itemclick="toggle",
+    )
+    fig.update_traces(
+        marker=dict(line=dict(width=2, color="DarkSlateGrey")),
+        selector=dict(mode="markers"),
     )
     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
