@@ -190,13 +190,12 @@ def category_distribution(status_changes, column):
         .round(2)
     )
 
-
 def export_json(dict, file):
-    """save a json dictionary to a file for later
+    """Save a json dictionary to a file for later.
 
-    dict - json dictionary to save
-
-    file - filename to save
+    Args:
+        dict (dict): JSON dictionary to save.
+        file (str): Filename to save.
     """
     try:
         with open(file, "w") as fp:
