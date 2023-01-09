@@ -11,9 +11,9 @@ logging.basicConfig(level=logging.INFO)
 
 # side bar: pick life cycle
 lifecycles = {}
+lifecycles["approved_waiting"] = jtrans.approved_waiting
 lifecycles["estimating"] = jtrans.estimating
 lifecycles["pending_approval"] = jtrans.pending_approval
-lifecycles["approved_waiting"] = jtrans.approved_waiting
 lifecycles["in_flight"] = jtrans.in_flight
 lifecycles["approved_in_flight"] = jtrans.approved_in_flight
 lifecycles["recently_completed"] = jtrans.recently_completed
@@ -257,7 +257,9 @@ all_estimate_wt_hist = df_to_histogram(
     all_raw_data, "client_estimate_bins", "jira_filter", sum_column="client_estimate"
 )
 
-tab1, tab2, tab3 = st.tabs(["Pipeline Summary", "Scatter Plot", "Filter Details"])
+tab1, tab2, tab3, tab4 = st.tabs(
+    ["Pipeline Summary", "Scatter Plot", "Filter Details", "Billable Type"]
+)
 
 with tab3:  # details of lifecyle/filter
     # desc.aging. estimate in columns
@@ -292,7 +294,7 @@ with tab2:
         y="client_estimate",
         x="phase_age",
         color="jira_filter",
-        # symbol="phase_code",
+        symbol="billable_type",
         hover_name="key",
         hover_data=["client", "key", "summary"],
         title="Phase age v. Client Estimate (size is total age)",
@@ -343,12 +345,12 @@ with tab1:  # summary of downloaded data
         )
 
         df_boxplot(
-            all_raw_data,
-            boxplot_age,
-            "jira_filter",
-            "phase_code",
-            "Box plot of age by jira filter",
-            "Age in days",
+            df=all_raw_data,  # df
+            data_column=boxplot_age,  # data column
+            color_by="jira_filter",  # colorby
+            group_by="phase_code",
+            title="Box plot of age by jira filter",
+            xlabel="Age in days",
         )
 
         grouped_bar_chart(all_age_hist, "Histogram of Age by Filter", "Count of issues")
@@ -378,3 +380,22 @@ with tab1:  # summary of downloaded data
             "Value of Projects by Size and Filter",
             "Sum of Client Estimate",
         )
+
+with tab4:
+    df_boxplot(
+        df=all_raw_data,  # df
+        data_column=boxplot_age,  # data column
+        color_by="billable_type",  # colorby
+        group_by="phase_code",
+        title="Box plot of age by billable type",
+        xlabel="Age in days",
+    )
+
+    df_boxplot(
+        df=all_raw_data,
+        data_column="client_estimate",
+        color_by="billable_type",
+        group_by="phase_code",
+        title="Box plot of client estimate by billable type",
+        xlabel="Estimate Value in USD",
+    )
