@@ -190,6 +190,7 @@ def category_distribution(status_changes, column):
         .round(2)
     )
 
+
 def export_json(dict, file):
     """Save a json dictionary to a file for later.
 
@@ -405,6 +406,29 @@ recently_completed = {
     "first_status": "Planning",
     "phase_code": "recently_completed",
     "jira_filters": ["backlog_recently_completed"],
+}
+
+
+recently_rejected = {
+    "filename": "recently_rejected.json",
+    "statuses": [
+        "Planning",  # estimating
+        "Needs Estimate",
+        "Prep Client SOW",
+        "Response Review",  # pending approval
+        "Pending Client Input",
+        "Sent to Client",
+        "In Backlog",  # approved
+        "Scheduled",
+        "In Delivery",  # in_flight
+        "Ready for Invoice",
+        "Pending Close",
+        "Complete",  # Complete
+        "",
+    ],
+    "first_status": "Planning",
+    "phase_code": "recently_rejected",
+    "jira_filters": ["backlog_recently_rejected"],
 }
 
 
